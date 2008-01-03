@@ -1,0 +1,13 @@
+# ChangeLog for dev-python/pyclutter
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  25 Nov 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml, pyclutter-0.4.2.ebuild:
+  Fixed license.
+
+  13 Nov 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +pyclutter-0.4.2.ebuild:
+  Initial import of clutter. Fixed bug #21.
+  Thanks to Guillaume Seguin (iXce) for providing the ebuilds.
+

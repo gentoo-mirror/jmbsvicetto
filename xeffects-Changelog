@@ -1,0 +1,441 @@
+# ChangeLog for Gentoo XEffects Overlay
+# $Header: $
+
+  20 Sep 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  profiles/use.local.desc, +x11-wm/compiz/files/compiz-drop-xcb.patch:
+  Removed some old clutter from use.local.desc
+
+  04 Sep 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -x11-libs/ccs-backend-gconf/metadata.xml,
+  -x11-libs/ccs-backend-kconfig/metadata.xml,
+  -x11-libs/ccs-lib/metadata.xml:
+  Removed ccs-lib, ccs-backend-gconf and ccs-backend-kconfig. Changed bugs
+  link to http://bugs.gentoo-xeffects.org/
+
+  03 Sep 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +x11-plugins/compiz-plugins-screensaver/metadata.xml:
+  Re-added pafy's screen saver plugin as compiz-plugins-screensaver.
+
+  02 Sep 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -x11-plugins/compiz-users-pafy-screensaver/metadata.xml:
+  Removed paffy-screensaver plugin as it's currently broken (no updates in
+  over 6 weeks)
+
+  31 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  dev-python/compizconfig-python/metadata.xml,
+  dev-python/gnome-python-desktop/metadata.xml,
+  dev-python/pysvn/metadata.xml, gnome-extra/akamaru/metadata.xml,
+  gnome-extra/avant-window-navigator-extras/metadata.xml,
+  gnome-extra/avant-window-navigator/metadata.xml,
+  gnome-extra/gnome-macmenu-applet/metadata.xml,
+  gnome-extra/kiba-dock/metadata.xml, gnome-extra/kiba-plugins/metadata.xml,
+  kde-base/kcontrol/metadata.xml, kde-base/kdelibs/metadata.xml,
+  kde-base/kdesktop/metadata.xml, kde-base/kdm/metadata.xml,
+  kde-base/kicker/metadata.xml, kde-base/konqueror/metadata.xml,
+  kde-base/ksmserver/metadata.xml, kde-base/libkonq/metadata.xml,
+  kde-misc/autostart/metadata.xml, kde-misc/kcometen3/metadata.xml,
+  kde-misc/kfile_wine/metadata.xml, kde-misc/kio-resources/metadata.xml,
+  kde-misc/kio-wine/metadata.xml, kde-misc/knetworkmanager/metadata.xml,
+  kde-misc/kwine-meta/metadata.xml, kde-misc/kwine/metadata.xml,
+  kde-misc/kwine_startmenu/metadata.xml, kde-misc/kwinedcop/metadata.xml,
+  kde-misc/kwinetools/metadata.xml,
+  kde-misc/kxdocker-arpmanager/metadata.xml,
+  kde-misc/kxdocker-bluetooth/metadata.xml,
+  kde-misc/kxdocker-configurator/metadata.xml,
+  kde-misc/kxdocker-dcop/metadata.xml,
+  kde-misc/kxdocker-gaclock/metadata.xml,
+  kde-misc/kxdocker-gamarok/metadata.xml,
+  kde-misc/kxdocker-gapager/metadata.xml,
+  kde-misc/kxdocker-gbattery/metadata.xml,
+  kde-misc/kxdocker-gdate/metadata.xml,
+  kde-misc/kxdocker-gipcontrack/metadata.xml,
+  kde-misc/kxdocker-gmail/metadata.xml,
+  kde-misc/kxdocker-gmount/metadata.xml,
+  kde-misc/kxdocker-gnetio/metadata.xml,
+  kde-misc/kxdocker-gpipe/metadata.xml,
+  kde-misc/kxdocker-gthrottle/metadata.xml,
+  kde-misc/kxdocker-gtrash/metadata.xml,
+  kde-misc/kxdocker-i18n/metadata.xml,
+  kde-misc/kxdocker-mountmanager/metadata.xml,
+  kde-misc/kxdocker-networker/metadata.xml,
+  kde-misc/kxdocker-resources/metadata.xml,
+  kde-misc/kxdocker-taskmanager/metadata.xml,
+  kde-misc/kxdocker-thememanager/metadata.xml,
+  kde-misc/kxdocker-trayiconlogger/metadata.xml,
+  kde-misc/kxdocker-wizard/metadata.xml, kde-misc/kxdocker/metadata.xml,
+  kde-misc/taskbar-compiz/metadata.xml, x11-apps/ccsm/metadata.xml,
+  x11-apps/fusion-icon/metadata.xml, x11-base/xgl/metadata.xml,
+  x11-libs/cairo/metadata.xml, x11-libs/ccs-backend-gconf/metadata.xml,
+  x11-libs/ccs-backend-kconfig/metadata.xml, x11-libs/ccs-lib/metadata.xml,
+  x11-libs/compiz-bcop/metadata.xml,
+  x11-libs/compizconfig-backend-gconf/metadata.xml,
+  x11-libs/compizconfig-backend-kconfig/metadata.xml,
+  x11-libs/gtk+/metadata.xml, x11-libs/libXft/metadata.xml,
+  x11-libs/libcm/metadata.xml, x11-libs/libcompizconfig/metadata.xml,
+  x11-libs/libwnck/metadata.xml, x11-libs/qt/metadata.xml,
+  x11-libs/seom/metadata.xml, x11-libs/vte/metadata.xml,
+  x11-misc/devilspie/metadata.xml, x11-misc/transset/metadata.xml,
+  x11-misc/xlaunch/metadata.xml, x11-misc/xwinwrap/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-atlantis/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-extra/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-main/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-threed/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-unsupported/metadata.xml,
+  x11-plugins/compiz-fusion-plugins-wallpaper/metadata.xml,
+  x11-plugins/compiz-users-pafy-screensaver/metadata.xml,
+  x11-plugins/screenlets/metadata.xml,
+  x11-themes/emerald-themes/metadata.xml,
+  x11-themes/gtk-engines-aurora/metadata.xml,
+  x11-wm/compiz-fusion/metadata.xml, x11-wm/compiz/metadata.xml,
+  x11-wm/emerald/metadata.xml, x11-wm/metacity/metadata.xml,
+  xfce-extra/xfce4-macmenu-plugin/metadata.xml:
+  Another round of metadata.xml updates
+
+  31 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +eclass/bzr.eclass, +eclass/bzr.eclass.orig,
+  +gnome-extra/avant-window-navigator-extras/metadata.xml:
+  Added our first eclass to the overlay - the bzr eclass.
+  Many thanks to m0zes for the first draft and crdlb for testing.
+
+  24 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +profiles/package.mask:
+  Removed old gnome-base dir and a few stray files.
+  Added profiles/package.mask.
+
+  13 Aug 2007; <roderick_greening@hotmail.com>
+  -x11-plugins/compiz-fusion-plugins-shift/compiz-fusion-plugins-shift-9999.
+  ebuild:
+  Removed x11-plugins/compiz-fusion-plugins-shift - Included in main plugins now.
+
+  06 May 2007; Alex Heck <nesl247@gmail.com> -x11-misc/beryl-manager,
+  -x11-misc/beryl-manager/files, -x11-misc/beryl-manager/metadata.xml,
+  -x11-misc/beryl-settings-bindings/files, -x11-plugins/beryl-plugins,
+  -x11-misc/beryl-manager/files/beryl-manager-0.1.9999.2-emerald-detect.diff
+  , -x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  -x11-plugins/beryl-plugins-unsupported/files,
+  -x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  -x11-plugins/beryl-plugins-unsupported/metadata.xml,
+  -x11-plugins/beryl-plugins-vidcap, -x11-plugins/beryl-plugins/files,
+  -x11-wm/heliodor,
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.2.1.ebu
+  ild, -x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  -x11-wm/aquamarine,
+  -x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-9999.ebuild,
+  -x11-misc/beryl-settings/beryl-settings-9999.ebuild,
+  -x11-misc/beryl-settings, -x11-misc/beryl-settings-bindings,
+  -x11-misc/beryl-settings-bindings/metadata.xml,
+  -x11-misc/beryl-settings/files, -x11-misc/beryl-settings/metadata.xml,
+  -x11-wm/aquamarine/files,
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-9999.ebui
+  ld, -x11-plugins/beryl-plugins-unsupported,
+  -x11-plugins/beryl-plugins-vidcap/metadata.xml,
+  -x11-plugins/beryl-plugins/metadata.xml, -x11-wm/aquamarine/metadata.xml,
+  -x11-wm/beryl-core/files, -x11-wm/heliodor/files,
+  -x11-wm/aquamarine/aquamarine-9999.ebuild, -x11-wm/heliodor/metadata.xml,
+  -x11-wm/beryl-core/beryl-core-9999.ebuild,
+  -x11-wm/heliodor/heliodor-9999.ebuild, -x11-wm/beryl-core,
+  -x11-wm/beryl-core/metadata.xml:
+  xeffects/trunk: Removed beryl 9999. Please use the latest release in
+  portage, or switch to compcomm
+
+  02 May 2007; Rafal Boniecki <rfb@onet.eu>
+  -x11-libs/cairo/cairo-1.2.4.ebuild,
+  -x11-libs/cairo/files/cairo-newspr.patch,
+  -x11-libs/cairo/cairo-1.4.2.ebuild, +x11-libs/cairo/cairo-1.4.6.ebuild:
+  Cairo bump.
+
+  28 Apr 2007; Rafal Boniecki <rfb@onet.eu>
+  +media-libs/freetype/freetype-2.3.4_p20070428.ebuild:
+  New freetype snapshot.
+
+  15 Apr 2007; Rafal Boniecki <rfb@onet.eu>
+  +x11-libs/cairo/files/cairo-updated-newspr.patch,
+  -x11-libs/cairo/cairo-1.4.0.ebuild, +x11-libs/cairo/cairo-1.4.4.ebuild:
+  Cairo bump to 1.4.4. I have slightly modified Daves patch so it applies
+  cleanly. WFM.
+
+  13 Apr 2007; Rafal Boniecki <rfb@onet.eu>
+  -media-libs/freetype/freetype-2.3.2_p20070330.ebuild,
+  -media-libs/freetype/freetype-2.3.2_p20070402.ebuild,
+  +media-libs/freetype/freetype-2.3.4_p20070414.ebuild:
+  New freetype snapshot.
+
+  02 Apr 2007; Rafal Boniecki <rfb@onet.eu>
+  -media-libs/freetype/freetype-2.3.2_p20070320.ebuild,
+  +media-libs/freetype/freetype-2.3.2_p20070402.ebuild:
+  New freetype snapshot.
+
+  30 Mar 2007; Rafal Boniecki <rfb@onet.eu> media-libs/freetype/Manifest:
+  Really fix manifest. Sorry for this mess.
+
+  30 Mar 2007; Rafal Boniecki <rfb@onet.eu>
+  -media-libs/freetype/freetype-2.3.2.ebuild,
+  +media-libs/freetype/freetype-2.3.2_p20070330.ebuild:
+  New freetype snapshot.
+
+  21 Mar 2007; Alex Heck <nesl247@gmail.com>
+  -x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-0.1.9999.2.ebuild,
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.
+  2.ebuild, -x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.2.ebuild,
+  -x11-wm/aquamarine/aquamarine-0.1.9999.2.ebuild,
+  -x11-wm/beryl-core/beryl-core-0.1.9999.2.ebuild,
+  -x11-wm/heliodor/heliodor-0.1.9999.2.ebuild,
+  -x11-wm/emerald/emerald-0.1.9999.2.ebuild,
+  -x11-wm/beryl/beryl-0.1.9999.2.ebuild,
+  -x11-themes/emerald-themes/emerald-themes-0.1.9999.2.ebuild,
+  -x11-misc/beryl-manager/beryl-manager-0.1.9999.2.ebuild,
+  -x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.9999.2.ebuil
+  d, -x11-misc/beryl-settings/beryl-settings-0.1.9999.2.ebuild:
+  Remove beryl 0.1.9999.2
+
+  21 Mar 2007; Alex Heck <nesl247@gmail.com>
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.2.0.ebu
+  ild, -x11-plugins/beryl-plugins/beryl-plugins-0.2.0.ebuild,
+  -x11-wm/aquamarine/aquamarine-0.2.0.ebuild,
+  -x11-wm/beryl-core/beryl-core-0.2.0.ebuild,
+  -x11-wm/heliodor/heliodor-0.2.0.ebuild,
+  -x11-wm/emerald/emerald-0.2.0.ebuild, -x11-wm/beryl/beryl-0.2.0.ebuild,
+  -x11-themes/emerald-themes/emerald-themes-0.2.0.ebuild,
+  -x11-misc/beryl-manager/beryl-manager-0.2.0.ebuild,
+  -x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.2.0.ebuild,
+  -x11-misc/beryl-settings/beryl-settings-0.2.0.ebuild,
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.2.1.ebu
+  ild, -x11-plugins/beryl-plugins/beryl-plugins-0.2.1.ebuild,
+  -x11-wm/aquamarine/aquamarine-0.2.1.ebuild,
+  -x11-wm/beryl-core/beryl-core-0.2.1.ebuild,
+  -x11-wm/heliodor/heliodor-0.2.1.ebuild,
+  -x11-wm/emerald/emerald-0.2.1.ebuild, -x11-wm/beryl/beryl-0.2.1.ebuild,
+  -x11-themes/emerald-themes/emerald-themes-0.2.1.ebuild,
+  -x11-misc/beryl-manager/beryl-manager-0.2.1.ebuild,
+  -x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.2.1.ebuild,
+  -x11-misc/beryl-settings/beryl-settings-0.2.1.ebuild:
+  Remove beryl-0.2.0/0.2.1, it's in portage
+
+  10 Mar 2007; Alex Heck <nesl247@gmail.com>
+  x11-base/xgl/xgl-0.0.1_pre20061108.ebuild,
+  x11-base/xgl/xgl-0.0.1_pre20070105.ebuild,
+  kde-misc/taskbar-compiz/taskbar-compiz-0.1.ebuild,
+  sys-libs/liblazy/liblazy-0.1.ebuild,
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-0.1.9999.2.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.2
+  .ebuild, x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.2.ebuild,
+  x11-wm/aquamarine/aquamarine-0.1.9999.2.ebuild,
+  x11-wm/beryl-core/beryl-core-0.1.9999.2.ebuild,
+  x11-wm/heliodor/heliodor-0.1.9999.2.ebuild,
+  x11-wm/emerald/emerald-0.1.9999.2.ebuild,
+  x11-themes/emerald-themes/emerald-themes-0.1.9999.2.ebuild,
+  x11-misc/beryl-manager/beryl-manager-0.1.9999.2.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.9999.2.ebuild
+  , x11-misc/beryl-settings/beryl-settings-0.1.9999.2.ebuild,
+  kde-misc/kio-resources/kio-resources-0.2.ebuild,
+  kde-misc/autostart/autostart-0.5.ebuild,
+  gnome-extra/gnome-macmenu-applet/gnome-macmenu-applet-1.0.14.ebuild,
+  xfce-extra/xfce4-macmenu-plugin/xfce4-macmenu-plugin-1.0.14.ebuild:
+  Replace nomirror with mirror
+
+  04 Mar 2007; <roderick_greening@hotmail.com> +kde-base/konsole,
+  profiles/use.local.desc:
+  Moved konsole from exp to trunk
+
+  26 Feb 2007; Alex Heck <nesl247@gmail.com>
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-0.1.9999.2.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.2
+  .ebuild, x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.2.ebuild,
+  x11-wm/aquamarine/aquamarine-0.1.9999.2.ebuild,
+  x11-wm/beryl-core/beryl-core-0.1.9999.2.ebuild,
+  x11-wm/heliodor/heliodor-0.1.9999.2.ebuild,
+  x11-wm/emerald/emerald-0.1.9999.2.ebuild,
+  x11-wm/beryl/beryl-0.1.9999.2.ebuild,
+  x11-themes/emerald-themes/emerald-themes-0.1.9999.2.ebuild,
+  x11-misc/beryl-manager/beryl-manager-0.1.9999.2.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.9999.2.ebuild
+  , x11-misc/beryl-settings/beryl-settings-0.1.9999.2.ebuild,
+  gnome-extra/kiba-dock/kiba-dock-9999.ebuild,
+  gnome-extra/avant-window-navigator/avant-window-navigator-9999.ebuild,
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-9999.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-9999.ebuil
+  d, x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-wm/aquamarine/aquamarine-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild, x11-wm/emerald/emerald-9999.ebuild,
+  x11-wm/beryl/beryl-9999.ebuild,
+  kde-misc/kberylsettings/kberylsettings-9999.ebuild,
+  x11-themes/emerald-themes/emerald-themes-9999.ebuild,
+  x11-libs/seom/seom-9999.ebuild, x11-misc/bdock/bdock-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild:
+  Update bug link
+
+  25 Feb 2007; Rafal Boniecki <rfb@onet.eu>
+  x11-libs/cairo/cairo-1.2.4.ebuild, -x11-libs/cairo/cairo-1.3.12.ebuild,
+  x11-libs/cairo/cairo-1.3.14.ebuild, x11-libs/libXft/libXft-2.1.12.ebuild:
+  Updated dependencies on freetype related ebuilds when using newspr. Only
+  >=media-libs/freetype-2.3.1.ebuild in official portage tree has support for
+  new subpixel rendering
+
+  24 Feb 2007; Alex Heck <nesl247@gmail.com>
+  -x11-wm/aquamarine/aquamarine-0.1.4.ebuild,
+  -x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-0.1.9999.1.ebuild,
+  -x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.
+  1.ebuild, -x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.1.ebuild,
+  -x11-wm/aquamarine/aquamarine-0.1.9999.1.ebuild,
+  -x11-wm/beryl-core/beryl-core-0.1.9999.1.ebuild,
+  -x11-wm/heliodor/heliodor-0.1.9999.1.ebuild,
+  -x11-wm/beryl/beryl-0.1.9999.1.ebuild,
+  -x11-themes/emerald-themes/emerald-themes-0.1.9999.1.ebuild,
+  -x11-misc/beryl-manager/beryl-manager-0.1.9999.1.ebuild,
+  -x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.9999.1.ebuil
+  d, -x11-misc/beryl-settings/beryl-settings-0.1.9999.1.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.2
+  .ebuild, x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.2.ebuild,
+  x11-wm/beryl-core/beryl-core-0.1.9999.2.ebuild,
+  x11-wm/heliodor/heliodor-0.1.9999.2.ebuild,
+  x11-misc/beryl-manager/beryl-manager-0.1.9999.2.ebuild,
+  x11-misc/beryl-settings/beryl-settings-0.1.9999.2.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-9999.ebuil
+  d, x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild:
+  Fix a bunch of build deps. No cause to worry, just adding some that should
+  have been there but that you already had installed
+
+  17 Feb 2007; Alex Heck <nesl247@gmail.com>
+  kde-misc/kberylsettings/kberylsettings-9999.ebuild,
+  x11-misc/bdock/bdock-9999.ebuild, beryl-svn-ebuilds:
+  Fixed bug with beryl-svn-ebuilds and old repo uri
+
+  12 Feb 2007; Alex Heck <nesl247@gmail.com> beryl-svn-ebuilds:
+  Add --noask argument to beryl-svn-ebuilds beryl-svn-ebuilds
+
+  04 Feb 2007; Alex Heck <nesl247@gmail.com>
+  x11-misc/beryl-manager/beryl-manager-0.1.9999.1.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.9999.1.ebuild
+  , x11-misc/beryl-settings/beryl-settings-0.1.9999.1.ebuild,
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-0.1.9999.1.ebuild,
+  x11-plugins/beryl-plugins-unsupported/beryl-plugins-unsupported-0.1.9999.1
+  .ebuild, x11-plugins/beryl-plugins/beryl-plugins-0.1.9999.1.ebuild,
+  x11-wm/aquamarine/aquamarine-0.1.9999.1.ebuild,
+  x11-wm/beryl-core/beryl-core-0.1.9999.1.ebuild,
+  x11-wm/heliodor/heliodor-0.1.9999.1.ebuild,
+  x11-wm/emerald/emerald-0.1.9999.1.ebuild,
+  x11-themes/emerald-themes/emerald-themes-0.1.9999.1.ebuild:
+  Add RESTRICT="nomirror" to beryl 0.1.9999.1 ebuilds
+
+  31 Jan 2007; Alex Heck <nesl247@gmail.com>
+  x11-plugins/beryl-plugins/beryl-plugins-0.1.99.2.ebuild,
+  x11-wm/aquamarine/aquamarine-0.1.99.2.ebuild,
+  x11-wm/beryl-core/beryl-core-0.1.99.2.ebuild,
+  x11-wm/heliodor/heliodor-0.1.99.2.ebuild,
+  x11-wm/emerald/emerald-0.1.99.2.ebuild,
+  x11-wm/beryl/beryl-0.1.99.2.ebuild,
+  x11-themes/emerald-themes/emerald-themes-0.1.99.2.ebuild,
+  x11-misc/beryl-manager/beryl-manager-0.1.99.2.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.99.2.ebuild,
+  x11-misc/beryl-settings/beryl-settings-0.1.99.2.ebuild,
+  gnome-extra/kiba-dock/kiba-dock-9999.ebuild,
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-9999.ebuild,
+  x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-plugins/beryl-plugins-extra/beryl-plugins-extra-9999.ebuild,
+  x11-wm/aquamarine/aquamarine-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild, x11-wm/emerald/emerald-9999.ebuild,
+  x11-wm/beryl/beryl-9999.ebuild,
+  kde-misc/kberylsettings/kberylsettings-9999.ebuild,
+  x11-themes/emerald-themes/emerald-themes-9999.ebuild,
+  x11-libs/seom/seom-9999.ebuild, x11-misc/bdock/bdock-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild:
+  Update all pkg_postinst to warn DO NOT REPORT BUGS TO GENTOO'S BUGZILLA
+
+  27 Jan 2007; Alex Heck <nesl247@gmail.com> beryl-svn-ebuilds:
+  Use the newly rewritten python beryl-svn-ebuilds. Masking/unmasking features
+  currently broken
+
+  25 Jan 2007; Alex Heck <nesl247@gmail.com>
+  +x11-misc/beryl-manager/beryl-manager-0.1.99.2.ebuild,
+  +x11-misc/beryl-settings-bindings/beryl-settings-bindings-0.1.99.2.ebuild,
+  +x11-misc/beryl-settings/beryl-settings-0.1.99.2.ebuild,
+  +x11-plugins/beryl-plugins/beryl-plugins-0.1.99.2.ebuild,
+  +x11-wm/aquamarine/aquamarine-0.1.99.2.ebuild,
+  +x11-wm/beryl-core/beryl-core-0.1.99.2.ebuild,
+  +x11-wm/heliodor/heliodor-0.1.99.2.ebuild,
+  +x11-wm/emerald/emerald-0.1.99.2.ebuild,
+  +x11-wm/beryl/beryl-0.1.99.2.ebuild:
+  Version bump to beryl to 0.1.99.2 AKA 0.2.0 beta2
+
+  25 Jan 2007; Alex Heck <nesl247@gmail.com> x11-libs/seom/seom-9999.ebuild,
+  x11-misc/bdock/bdock-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild,
+  gnome-extra/kiba-dock/kiba-dock-9999.ebuild,
+  x11-plugins/beryl-plugins-vidcap/beryl-plugins-vidcap-9999.ebuild,
+  x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-plugins/beryl-plugins-extra/beryl-plugins-extra-9999.ebuild,
+  x11-wm/aquamarine/aquamarine-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild, x11-wm/emerald/emerald-9999.ebuild,
+  x11-wm/beryl/beryl-9999.ebuild,
+  x11-themes/emerald-themes/emerald-themes-9999.ebuild,
+  kde-misc/kberylsettings/kberylsettings-9999.ebuild:
+  Change to the new portage 2.1.2-r3/4 style of live ebuild KEYWORDS
+
+  21 Jan 2007; Alex Heck <nesl247@gmail.com> x11-libs/seom/seom-9999.ebuild:
+  Removed WANT_AUTO{CONF,MAKE} stuff (This was done previously, just needed to
+  update a file, this was best
+
+  06 Jan 2007; Alex Heck <nesl247@gmail.com>
+  gnome-extra/kiba-dock/kiba-dock-9999.ebuild,
+  x11-plugins/beryl-vidcap/beryl-vidcap-9999.ebuild,
+  x11-plugins/beryl-dbus/beryl-dbus-9999.ebuild,
+  x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-wm/aquamarine/aquamarine-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild, x11-wm/emerald/emerald-9999.ebuild,
+  x11-themes/emerald-themes/emerald-themes-9999.ebuild,
+  x11-libs/seom/seom-9999.ebuild, x11-misc/bdock/bdock-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild:
+  Change WANT_AUTOMAKE to latest, and add WANT_AUTOCONF="latest"
+
+  06 Jan 2007; Alex Heck <nesl247@gmail.com>
+  -x11-base/xgl/xgl-0.0.1_pre20061020-r2.ebuild,
+  +x11-base/xgl/xgl-0.0.1_pre20070105.ebuild,
+  gnome-extra/kiba-dock/kiba-dock-9999.ebuild,
+  x11-plugins/beryl-vidcap/beryl-vidcap-9999.ebuild,
+  x11-plugins/beryl-dbus/beryl-dbus-9999.ebuild,
+  x11-plugins/beryl-plugins/beryl-plugins-9999.ebuild,
+  x11-wm/aquamarine/aquamarine-9999.ebuild,
+  x11-wm/beryl-core/beryl-core-9999.ebuild,
+  x11-wm/heliodor/heliodor-9999.ebuild, x11-wm/emerald/emerald-9999.ebuild,
+  x11-themes/emerald-themes/emerald-themes-9999.ebuild,
+  x11-libs/seom/seom-9999.ebuild, x11-misc/bdock/bdock-9999.ebuild,
+  x11-misc/beryl-manager/beryl-manager-9999.ebuild,
+  x11-misc/beryl-settings-bindings/beryl-settings-bindings-9999.ebuild,
+  x11-misc/beryl-settings/beryl-settings-9999.ebuild:
+  Add WANT_AUTOMAKE="1.9" to all live ebuilds that use the autotools eclass
+
+  10 Dec 2006; Alex Heck <nesl247@gmail.com>:
+  Remove kiba-dock until ebuilds can be redone, they are in horrible shape.
+  Bumped all beryl ebuilds except for aquamarine to 0.1.3 until it gets into
+  portage. Moved x11-misc/emerald-themes to x11-themes/emerald-themes
+
+  25 Nov 2006; Alex Heck <nesl247@gmail.com:
+  Switched beryl apps from beryl repo to gentoo-xeffects
+  beryl repo
+
+  06 Nov 2006; Alex Heck <nesl247@gmail.com:
+  Updated Ebuilds
+
+  03 Nov 2006; Alex Heck <nesl247@gmail.com>:
+  Modified beryl-svn-ebuilds. Few new features
+
+  03 Nov 2006; Alex Heck <nesl247@gmail.com> +beryl-svn-ebuilds:
+  Added beryl-svn-ebuilds, script originally by Smoked, edited by
+  myself. It will maintain the 9999 ebuilds such as:
+  unmasking/masking/(re)emerging/quickpkg

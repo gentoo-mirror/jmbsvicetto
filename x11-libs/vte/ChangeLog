@@ -1,0 +1,25 @@
+# ChangeLog for Gentoo XEffects Overlay
+# $Header: $
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  vte-0.16.0-r1.ebuild:
+  Some QA fixes.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  vte-0.16.0-r1.ebuild:
+  Dropped keywords for unsupported arches.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Update metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml, vte-0.16.0-r1.ebuild:
+  Minor ebuild syntax fix.
+  Added metadata.xml
+
+  22 Mar 2007; <roderick_greening@hotmail.com>
+  +files/vte-0.13.2-no-lazy-bindings.patch, +vte-0.16.0-r1.ebuild,
+  +files/vte-0.16.0-fix-transparency.patch:
+  Initial import. Required for Gnome Terminal 2.18 w/ transparancy.
+

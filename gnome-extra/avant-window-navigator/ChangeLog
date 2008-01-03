@@ -1,0 +1,30 @@
+# ChangeLog for x11-misc/avant-window-navigator
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  31 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  avant-window-navigator-9999.ebuild:
+  Updated avant-window-navigator ebuild as its development
+  has moved from subversion to bazaar.
+  Many thanks to m0zes for the ebuild and crdlb for testing.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Added my details to metadata.xml
+
+  08 Mar 2007; Alex Heck <nesl247@gmail.com>
+  avant-window-navigator-9999.ebuild:
+  Fix build
+
+  18 Feb 2007; Alex Heck <nesl247@gmail.com>
+  avant-window-navigator-9999.ebuild:
+  Fixed typo in gtk+ dep
+
+  18 Feb 2007; Alex Heck <nesl247@gmail.com>
+  +avant-window-navigator-9999.ebuild:
+  Initial import, thanks to peka
+

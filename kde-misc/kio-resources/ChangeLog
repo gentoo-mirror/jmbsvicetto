@@ -1,0 +1,15 @@
+# ChangeLog for kde-misc/kberylsettings
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml:
+  missing metadata.xml
+
+  01 Mar 2007; <roderick_greening@hotmail.com> kio-resources-0.2.ebuild:
+  Updated ebuild with post install warn for reporting bugs.
+
+  23 Feb 2007; <roderick_greening@hotmail.com> +kio-resources-0.2.ebuild:
+  Initial commit. A KIO slave which provides the "resources" protocol for KDE.
+  See http://www.kde-look.org/content/show.php?content=26521 for additional
+  details.
+

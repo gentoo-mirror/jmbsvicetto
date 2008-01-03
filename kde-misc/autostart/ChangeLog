@@ -1,0 +1,14 @@
+# ChangeLog for kde-misc/kberylsettings
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml:
+  missing metadata.xml
+
+  01 Mar 2007; <roderick_greening@hotmail.com> autostart-0.5.ebuild:
+  Updated ebuild with post install warn for reporting bugs.
+
+  23 Feb 2007; <roderick_greening@hotmail.com> +autostart-0.5.ebuild:
+  Initial commit. A Control Center module for editing your ~/.kde/Autostart
+  entries. See http://beta.smileaf.org/ for additional details.
+

@@ -1,0 +1,17 @@
+# ChangeLog for x11-misc/xwinwrap
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  xwinwrap-1.1.1_alpha20060318-r2.ebuild:
+  Some QA fixes.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  18 Mar 2007; Alex Heck <nesl247@gmail.com>
+  -xwinwrap-1.1.1_alpha20060318.ebuild,
+  -xwinwrap-1.1.1_alpha20060318-r1.ebuild, +metadata.xml:
+  Cleanup
+

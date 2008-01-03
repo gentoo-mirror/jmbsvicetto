@@ -1,0 +1,12 @@
+# ChangeLog for kde-misc/kxdocker-configurator
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml,
+  -kxdocker-configurator-1.0.1.ebuild,
+  -kxdocker-configurator-1.0.1-r1.ebuild:
+  Cleanup some ebuilds and missing metadata.xml
+
+  22 Aug 2007; <roderick_greening@hotmail.com> ChangeLog:
+  Added missing Changelog
+

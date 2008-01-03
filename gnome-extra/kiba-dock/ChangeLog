@@ -1,0 +1,54 @@
+# ChangeLog for kde-misc/kiba-dock
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  24 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kiba-dock-9999.ebuild:
+  Corrected SRC_URI for QA.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, kiba-dock-9999.ebuild:
+  Updated description of the ebuild and fix minor syntax issues.
+  Added my details to metadata.xml
+
+  31 Jul 2007; <roderick_greening@hotmail.com> kiba-dock-9999.ebuild:
+  Fixed line wrap
+
+  31 Jul 2007; <roderick_greening@hotmail.com> kiba-dock-9999.ebuild:
+  Updated svn repo
+
+  23 Jun 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  gnome-extra/kiba-dock: Add libxml2 as a dep
+
+  21 Apr 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Fixed build issue, thanks Pse
+
+  11 Mar 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Add missing cat in built_with_use check
+
+  01 Mar 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Add kiba-plugins as a pdep
+
+  01 Mar 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Update to use the latest svn (move from old cvs)
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild,
+  +metadata.xml:
+  Fixes for repoman
+
+  15 Jan 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Add missing gnome2_pkg_postinst
+
+  10 Jan 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Experimental fix
+
+  07 Jan 2007; Alex Heck <nesl247@gmail.com> kiba-dock-9999.ebuild:
+  Add gnome-base/libgtop to dep
+
+  27 Dec 2006; Alex Heck <nesl247@gmail.com> +kiba-dock-9999.ebuild:
+  Initial import... again
+

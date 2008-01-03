@@ -1,0 +1,16 @@
+# ChangeLog for x11-misc/transset
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  transset-0.1_pre20060110.ebuild:
+  Some QA fixes.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com>
+  transset-0.1_pre20060110.ebuild, +metadata.xml:
+  Fixes for repoman
+

@@ -1,0 +1,9 @@
+# ChangeLog for Gentoo XEffects Overlay
+# $Header: $
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml:
+  missing metadata.xml
+
+  15 Mar 2007; <roderick_greening@hotmail.com> +kfile_wine-0.1.ebuild:
+  Initial Commit
+

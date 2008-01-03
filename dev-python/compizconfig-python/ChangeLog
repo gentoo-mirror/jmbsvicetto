@@ -1,0 +1,44 @@
+# ChangeLog for Gentoo XEffects Overlay
+# $Header: $
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -compizconfig-python-0.5.2.ebuild, -compizconfig-python-0.6.0.ebuild:
+  Removed 0.5.2 and 0.6.0 version.
+
+  29 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.5.2.ebuild, compizconfig-python-0.6.0.ebuild,
+  compizconfig-python-0.6.0.1.ebuild:
+  Removed default S definition. Removed old cruft.
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-0.5.2.ebuild, compizconfig-python-0.6.0.ebuild,
+  +compizconfig-python-0.6.0.1.ebuild, compizconfig-python-9999.ebuild:
+  Added version 0.6.0.1 that includes the missing VERSION file.
+
+  21 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +compizconfig-python-0.6.0.ebuild:
+  Bumped package to 0.6.0 release.
+
+  22 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Removed dep on compiz-0.5.2 for the live ebuild as it doesn't work.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Added missing dep for libcompizconfig to compizconfig-python-9999.
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +metadata.xml:
+  Added metadata.xml.
+
+  19 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  compizconfig-python-9999.ebuild:
+  Update to allow compiz-0.5.2 or compiz-9999 as deps.
+
+  13 May 2007; Alex Heck <nesl247@gmail.com> +ccs-python-9999.ebuild:
+  dev-python/ccs-python: Initial import
+

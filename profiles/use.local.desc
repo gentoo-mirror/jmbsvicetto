@@ -1,0 +1,28 @@
+dev-python/gnome-python-desktop:rsvg -
+dev-python/gnome-python-desktop:wnck -
+dev-python/gnome-python-desktop:nognome -
+gnome-extra/kiba-dock:akamaru - Enables akamaru support
+gnome-extra/kiba-dock:glitz - Enables glitz support
+gnome-extra/kiba-plugins:glitz - Enables glitz support
+kde-base/libkonq:pertty - Enables the KDE Improvement Project patches
+kde-base/kcontrol:pertty - Enables the KDE Improvement Project patches
+kde-base/kdelibs:kickoff - Enables the SUSE Kickoff patches
+kde-base/kdelibs:pertty - Enables the KDE Improvement Project patches
+kde-base/kdesktop:pertty - Enables the KDE Improvement Project patches
+kde-base/kdesktop:transparency - Enables true transparency support
+kde-base/kdm:pertty - Enables the KDE Improvement Project patches
+kde-base/kicker:kickoff - Enables the SUSE Kickoff patches
+kde-base/kicker:pertty - Enables the KDE Improvement Project patches
+kde-base/konqueror:pertty - Enables the KDE Improvement Project patches
+kde-base/ksmserver:pertty - Enables the KDE Improvement Project patches
+kde-misc/kxdocker:net -
+x11-libs/cairo:newspr - Enables better font rendering
+x11-libs/gtk+:macmenu - Enables the macmenu style menu
+x11-libs/libXft:newspr - Enables better font rendering
+x11-libs/qt:pertty - Enables the KDE Improvement Project patches
+x11-libs/qt:qt-copy - Enables kdesvn qt-copy patches
+x11-libs/qt:risky - Enables Qt to build itself with hidden-visibility
+x11-wm/compiz:fuse - 
+x11-wm/compiz:xcb - Support the X C-language Binding, a replacement for Xlib (can break proprietary binaries, for example Sun Java)
+x11-wm/compiz-fusion:unsupported - Enable compiz-fusion-plugins-unsupported
+x11-wm/metacity:xcomposite - Compositing support for metacity

@@ -1,0 +1,48 @@
+--- ./src/actions.c.orig	2006-09-30 14:54:47.000000000 -0400
++++ ./src/actions.c	2006-09-30 14:57:08.000000000 -0400
+@@ -285,6 +285,23 @@
+ }
+ 
+ /**
++ * Stick the current window to all viewports.
++ */
++ESExpResult *func_stick(ESExp *f, int argc, ESExpResult **argv, Context *c) {
++  wnck_window_stick (c->window);
++  if (debug) g_printerr(_("Setting stick\n"));
++  return e_sexp_result_new_bool (f, TRUE);
++}
++
++/**
++ * Unstick the current window from all viewports.
++ */
++ESExpResult *func_unstick(ESExp *f, int argc, ESExpResult **argv, Context *c) {
++  wnck_window_unstick (c->window);
++  if (debug) g_printerr(_("Unsetting stick\n"));
++  return e_sexp_result_new_bool (f, TRUE);
++}
++/**
+  * Move the window to a specific workspace number, counting from 1.
+  */
+ ESExpResult *func_set_workspace(ESExp *f, int argc, ESExpResult **argv, Context *c) {
+--- ./src/parser.c.orig	2006-09-30 14:54:43.000000000 -0400
++++ ./src/parser.c	2006-09-30 14:55:20.000000000 -0400
+@@ -61,6 +61,8 @@
+   { "close", func_close, FALSE },
+   { "pin", func_pin, FALSE },
+   { "unpin", func_unpin, FALSE },
++  { "stick", func_stick, FALSE },
++  { "unstick", func_unstick, FALSE },
+   { "set_workspace", func_set_workspace, FALSE },
+   { "skip_pager", func_skip_pager, FALSE },
+   { "skip_tasklist", func_skip_tasklist, FALSE },
+--- ./src/actions.h.orig	2006-09-30 14:59:11.000000000 -0400
++++ ./src/actions.h	2006-09-30 14:59:28.000000000 -0400
+@@ -38,6 +38,8 @@
+ 
+ ESExpResult *func_pin(ESExp *f, int argc, ESExpResult **argv, Context *c);
+ ESExpResult *func_unpin(ESExp *f, int argc, ESExpResult **argv, Context *c);
++ESExpResult *func_stick(ESExp *f, int argc, ESExpResult **argv, Context *c);
++ESExpResult *func_unstick(ESExp *f, int argc, ESExpResult **argv, Context *c);
+ ESExpResult *func_set_workspace(ESExp *f, int argc, ESExpResult **argv, Context *c);
+ 
+ ESExpResult *func_skip_tasklist(ESExp *f, int argc, ESExpResult **argv, Context *c);

@@ -1,0 +1,12 @@
+diff -purN kwine_startmenu-0.1.orig/src/kwine_startmenu.h kwine_startmenu-0.1/src/kwine_startmenu.h
+--- kwine_startmenu-0.1.orig/src/kwine_startmenu.h	2006-08-03 17:30:22.000000000 -0500
++++ kwine_startmenu-0.1/src/kwine_startmenu.h	2006-08-27 07:08:56.000000000 -0500
+@@ -50,7 +50,7 @@ class KWineMenu : public KPanelMenu
+ 	void mouseMoveEvent(QMouseEvent* e);
+ 
+     private:
+-        bool KWineMenu::loadicon(const QString &path, QPixmap &pix);
++        bool loadicon(const QString &path, QPixmap &pix);
+         void append(const QString &icon, const KURL &url, const QString &label);
+         void append_sub(const QString &icon, const KURL &url, const QString &label);
+         KDirLister m_dirLister;

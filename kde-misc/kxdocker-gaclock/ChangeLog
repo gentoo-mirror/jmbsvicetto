@@ -1,0 +1,10 @@
+# ChangeLog for kde-misc/kxdocker-gaclock
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml:
+  Cleanup some ebuilds and missing metadata.xml
+
+  22 Aug 2007; <roderick_greening@hotmail.com> ChangeLog:
+  Added missing Changelog
+

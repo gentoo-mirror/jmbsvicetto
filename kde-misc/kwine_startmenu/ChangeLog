@@ -1,0 +1,14 @@
+# ChangeLog for Gentoo XEffects Overlay
+# $Header: $
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kwine_startmenu-0.1.ebuild:
+  Some QA fixes.
+
+  22 Aug 2007; <roderick_greening@hotmail.com> +metadata.xml:
+  missing metadata.xml
+
+  15 Mar 2007; <roderick_greening@hotmail.com> +kwine_startmenu-0.1.ebuild,
+  +files/kwine_startmenu-0.1-gcc-4.1.patch:
+  Initial Commit
+

@@ -1,0 +1,38 @@
+# ChangeLog for x11-base/xgl
+# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+  22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  xgl-0.0.1_pre20070105.ebuild:
+  Some QA fixes.
+
+  21 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml:
+  Updated metadata.xml
+
+  20 Aug 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  metadata.xml, -xgl-0.0.1_pre20061108.ebuild:
+  Removed old xgl-0.0.1_pre20061108 version.
+  Added my details to metadata.xml
+
+  28 Jan 2007; Alex Heck <nesl247@gmail.com> xgl-0.0.1_pre20061108.ebuild,
+  xgl-0.0.1_pre20070105.ebuild:
+  Fix with FEATURES="collision-protect" according to pal_gene
+
+  06 Jan 2007; Alex Heck <nesl247@gmail.com>
+  -xgl-0.0.1_pre20061020-r2.ebuild, +xgl-0.0.1_pre20070105.ebuild:
+  Version bump
+
+  17 Dec 2006; Alex Heck <nesl247@gmail.com> xgl-0.0.1_pre20061108.ebuild:
+  Change SRC_URI
+
+  12 Nov 2006; Alex Heck <nesl247@gmail.com> +xgl-0.0.1_pre20061108.ebuild:
+  Version bump
+
+  04 Nov 2006; Alex Heck <nesl247@gmail.com>
+  -xgl-0.0.1_pre20061020-r1.ebuild, +xgl-0.0.1_pre20061020-r2.ebuild:
+  Bumped xgl to dep on masked mesa
+
+  27 Oct 2006; Alex Heck <nesl247@gmail.com> +xgl-0.1.0-20061020-r1.ebuild,
+  +files/xgl-java-wmhack.patch:
+  Initial ChangeLog. Added java wm patch
