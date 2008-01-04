@@ -1,6 +1,10 @@
 # ChangeLog for x11-base/xgl
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  04 Jan 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  xgl-0.0.1_pre20070105.ebuild:
+  Updated SRC_URI for the xgl snapshot.
 
   22 Oct 2007; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   xgl-0.0.1_pre20070105.ebuild:

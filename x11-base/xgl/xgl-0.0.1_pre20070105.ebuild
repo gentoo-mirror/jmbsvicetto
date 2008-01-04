@@ -1,4 +1,4 @@
-# Copyright 1999-2007 Gentoo Foundation
+# Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -13,7 +13,8 @@ XGL_SRC_P="${PN}-${SNAPSHOT_DATE}"
 
 #SRC_URI="http://dev.gentoo.org/~joshuabaergen/distfiles/${MESA_SRC_P}.tar.bz2
 SRC_URI="mirror://sourceforge/mesa3d/${MESA_SRC_P}.tar.bz2
-	http://distfiles.gentoo-xeffects.org/snapshots/${PN}/${XGL_SRC_P}.tar.bz2"
+	http://dev.gentoo.org/~jmbsvicetto/distfiles/xeffects/${XGL_SRC_P}.tar.bz2"
+#	http://distfiles.gentoo-xeffects.org/snapshots/${PN}/${XGL_SRC_P}.tar.bz2"
 #	http://www.schokokeks.org/~hanno/snapshots/${XGL_SRC_P}.tar.bz2"
 
 PATCHES="${FILESDIR}/${PN}-java-wmhack.patch
