@@ -1,8 +1,0 @@
-# ChangeLog for kde-misc/kcometen3
-# Copyright 1999-2007 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  14 Mar 2007; Alex Heck <nesl247@gmail.com> +kcometen3-1.1.ebuild,
-  +metadata.xml:
-  Initial import - original ebuild by CodAv on kde-look.org
-
