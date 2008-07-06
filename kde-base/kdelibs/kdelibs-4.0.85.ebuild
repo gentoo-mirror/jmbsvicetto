@@ -1,6 +1,6 @@
 # Copyright 1999-2008 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/kde-base/kdelibs/kdelibs-4.0.5.ebuild,v 1.1 2008/06/05 21:32:09 keytoaster Exp $
+# $Header: $
 
 EAPI="1"
 

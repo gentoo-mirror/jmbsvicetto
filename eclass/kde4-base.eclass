@@ -50,7 +50,7 @@ kde4-base_set_qt_dependencies() {
 
 	# allow monolithic qt for PV < 4.1
 	case "${PV}" in
-		scm|9999.4|4.1*) : ;;
+		scm|9999*|4.1*|4.0.8*) : ;;
 		*)
 		qtdepend="|| ( ( ${qtdepend} ) >=x11-libs/qt-4.3.3:4${qt} )"
 		qtopengldepend="|| ( ${qtopengldepend} >=x11-libs/qt-4.3.3:4 )"
