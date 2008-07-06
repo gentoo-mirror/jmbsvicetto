@@ -12,7 +12,7 @@ SRC_URI="http://dev.gentoo.org/~jmbsvicetto/distfiles/jmbsvicetto/${P}.tar.bz2"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE=""
 
 DEPEND="x11-libs/qt-core:4"
