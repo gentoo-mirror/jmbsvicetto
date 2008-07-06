@@ -7,7 +7,7 @@ EAPI="1"
 inherit cmake-utils
 
 DESCRIPTION="KDE multimedia API"
-KEYWORDS=""
+KEYWORDS="~amd64"
 IUSE="debug gstreamer"
 SRC_URI="http://dev.gentoo.org/~jmbsvicetto/distfiles/jmbsvicetto/${P}.tar.bz2"
 SLOT="0"

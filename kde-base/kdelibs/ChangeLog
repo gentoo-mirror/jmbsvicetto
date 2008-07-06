@@ -2,6 +2,10 @@
 # Copyright 1999-2008 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  06 Jul 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdelibs-4.0.85.ebuild:
+  Added dep on media-sound/phonon.
+
 *kdelibs-4.0.85 (05 Jul 2008)
 
   05 Jul 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
