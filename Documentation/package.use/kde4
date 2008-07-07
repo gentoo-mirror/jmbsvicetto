@@ -1,0 +1,21 @@
+# KDE deps
+dev-libs/soprano redland sesame2
+
+app-misc/strigi clucene
+kde-base/ark archive zip
+kde-base/libtaskmanager xcomposite
+kde-base/kdeartwork-kscreensaver xscreensaver
+kde-base/kdebase-kioslaves openexr
+kde-base/kdebase-workspace bluetooth usb xcomposite xscreensaver
+kde-base/kdemultimedia-kioslaves flac vorbis
+kde-base/klinkstatus:kde-4 tidy
+kde-base/kopete icq msn qq sms
+kde-base/krdc rdesktop vnc
+kde-base/krunner xcomposite xscreensaver
+kde-base/kwin xcomposite
+kde-base/marble htmlhandbook
+kde-base/okular chm djvu pdf tiff
+kde-base/plasma xcomposite
+kde-misc/rsibreak plasma
+net-p2p/kmldonkey plasma
+x11-libs/qt:4 accessibility dbus gif jpeg png qt3support ssl zlib
