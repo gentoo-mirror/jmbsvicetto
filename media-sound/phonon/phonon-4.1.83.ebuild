@@ -9,7 +9,7 @@ inherit cmake-utils
 DESCRIPTION="KDE multimedia API"
 KEYWORDS="~amd64"
 IUSE="debug gstreamer"
-SRC_URI="http://dev.gentoo.org/~jmbsvicetto/distfiles/jmbsvicetto/${P}.tar.bz2"
+SRC_URI="mirror://kde/unstable/4.0.83/support//${P}.tar.bz2"
 SLOT="0"
 
 LICENSE="GPL-2"

@@ -1,2 +1,11 @@
+# KDE deps
+>=kde-base/qimageblitz-0.0.4
+
+# KDE base packages
 kde-base/kdelibs:4.1
+kde-base/kdepimlibs:4.1
 kde-base/libkonq:4.1
+
+# KDE packages
+kde-base/dolphin:4.1
+kde-base/nepomuk:4.1
