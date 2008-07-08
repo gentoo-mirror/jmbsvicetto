@@ -7,12 +7,13 @@ EAPI="1"
 inherit cmake-utils
 
 DESCRIPTION="KDE multimedia API"
-KEYWORDS="~amd64"
-IUSE="debug gstreamer"
+HOMEPAGE="http://phonon.kde.org/"
 SRC_URI="mirror://kde/unstable/4.0.83/support//${P}.tar.bz2"
-SLOT="0"
 
 LICENSE="GPL-2"
+SLOT="0"
+KEYWORDS="~amd64"
+IUSE="debug gstreamer"
 
 RDEPEND="!kde-base/phonon:kde-svn
 	>=x11-libs/qt-dbus-4.4.0:4
