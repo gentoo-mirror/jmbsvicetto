@@ -12,10 +12,11 @@ DESCRIPTION="A KDE filemanager focusing on usability"
 KEYWORDS="~amd64"
 IUSE="debug htmlhandbook +semantic-desktop"
 
-DEPEND="kde-base/kdelibs:${SLOT}[semantic-desktop?]
-	>=kde-base/libkonq-${PV}:${SLOT}
-	semantic-desktop? ( >=kde-base/nepomuk-${PV}:${SLOT}
-						>=dev-libs/soprano-2.0.7 )"
+DEPEND=">=kde-base/libkonq-${PV}:${SLOT}
+	semantic-desktop? ( kde-base/kdelibs:${SLOT}[semantic-desktop]
+						>=kde-base/nepomuk-${PV}:${SLOT}
+						>=dev-libs/soprano-2.0.7 )
+	!semantic-desktop? ( kde-base/kdelibs:${SLOT}[-semantic-desktop] )"
 RDEPEND="${DEPEND}"
 
 KMEXTRA="apps/doc/${PN}"
