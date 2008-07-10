@@ -8,5 +8,6 @@ kde-base/libkonq:4.1
 
 # KDE packages
 kde-base/dolphin:4.1
-kde-base/nepomuk:4.1
+kde-base/kcminit:4.1
 kde-base/kcontrol:4.1
+kde-base/nepomuk:4.1
