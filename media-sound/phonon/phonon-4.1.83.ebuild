@@ -10,7 +10,7 @@ DESCRIPTION="KDE multimedia API"
 HOMEPAGE="http://phonon.kde.org/"
 SRC_URI="mirror://kde/unstable/4.0.83/support//${P}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="LGPL-2.1"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE="debug gstreamer"
