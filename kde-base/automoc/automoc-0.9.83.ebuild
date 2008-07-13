@@ -10,7 +10,7 @@ DESCRIPTION="KDE Meta Object Compiler"
 HOMEPAGE="http://www.kde.org"
 SRC_URI="mirror://kde/unstable/4.0.83/support/${PN}4-${PV}.tar.bz2"
 
-LICENSE="GPL-2"
+LICENSE="as-is"
 SLOT="0"
 KEYWORDS="~amd64"
 IUSE=""
