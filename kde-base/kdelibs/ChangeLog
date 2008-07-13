@@ -4,6 +4,10 @@
 
   13 Jul 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   kdelibs-4.0.98.ebuild:
+  Fixed the license as it's LGPL-2.1
+
+  13 Jul 2008; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  kdelibs-4.0.98.ebuild:
   Updated kde4-base.eclass and fixed name of the profile.d rebuild path
   file.
 
