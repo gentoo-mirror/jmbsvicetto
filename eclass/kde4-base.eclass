@@ -145,7 +145,7 @@ case ${NEED_KDE} in
 		if [[ "${KDEBASE}" == "kde-base" ]]; then
 			case ${PV} in
 				3.9*)	_kdedir="3.9" ;;
-				4.0.8*| 4.1*)	_kdedir="4.1"
+				4.0.8*| 4.0.9* | 4.1*)	_kdedir="4.1"
 					_pv="-${PV}:4.1" ;;
 				4.0*)	_kdedir="4.0"
 					_pv="-${PV}:4.0" ;;
@@ -155,7 +155,7 @@ case ${NEED_KDE} in
 		else
 			case ${PV} in
 				3.9*)	_kdedir="3.9" ;;
-				4.0.8*| 4.1*)	_kdedir="4.1" ;;
+				4.0.8*| 4.0.9* | 4.1*)	_kdedir="4.1" ;;
 				4.0*)	_kdedir="4.0" ;;
 				*)		die "NEED_KDE=latest not supported for PV=${PV}" ;;
 			esac
@@ -201,7 +201,7 @@ case ${NEED_KDE} in
 		_operator=">="
 		_pv="-${NEED_KDE}:kde-4"
 		;;
-	4.0.8*)
+	4.0.8* | 4.0.9*)
 		_kdedir="4.1"
 		_operator=">="
 		_pv="-${NEED_KDE}:4.1"
@@ -229,7 +229,7 @@ if [[ ${NEED_KDE} != none ]]; then
 			SLOT="kde-svn"
 		else
 			case ${PV} in
-				4.0.8* | 4.1*) SLOT="4.1" ;;
+				4.0.8* | 4.0.9* | 4.1*) SLOT="4.1" ;;
 				*) SLOT="kde-4" ;;
 			esac
 		fi

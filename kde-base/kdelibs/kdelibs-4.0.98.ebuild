@@ -174,7 +174,7 @@ src_install() {
 
 	# make sure 'source /etc/profile' doesn't hose the PATH
 	dodir /etc/profile.d
-	cat <<-'EOF' > "${D}"/etc/profile.d/44kdereorderpaths-${SLOT}.sh
+	cat <<-'EOF' > "${D}"/etc/profile.d/43kdereorderpaths-${SLOT}.sh
 	if [ -n "${KDEDIR}" ]; then
 		export PATH=${KDEDIR}/bin:$(echo ${PATH} | sed "s#${KDEDIR}/s\?bin:##g")
 		export ROOTPATH=${KDEDIR}/sbin:${KDEDIR}/bin:$(echo ${PATH} | sed "s#${KDEDIR}/s\?bin:##g")
