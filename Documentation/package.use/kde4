@@ -8,6 +8,7 @@ kde-base/kdeartwork-kscreensaver xscreensaver
 kde-base/kdebase-kioslaves openexr
 kde-base/kdebase-workspace bluetooth usb xcomposite xscreensaver
 kde-base/kdemultimedia-kioslaves flac vorbis
+kde-base/kdepimlibs sasl
 kde-base/klinkstatus:kde-4 tidy
 kde-base/kopete icq msn qq sms
 kde-base/krdc rdesktop vnc
