@@ -1,6 +1,0 @@
-#/bin/bash
-
-test1=9999
-test2=9999.1
-
-case 

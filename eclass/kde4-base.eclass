@@ -50,7 +50,7 @@ kde4-base_set_qt_dependencies() {
 
 	# allow monolithic qt for PV < 4.1
 	case "${PV}" in
-		scm|9999*|4.1*|4.0.8*) : ;;
+		scm|9999*|4.1*|4.0.8*|4.0.9*) : ;;
 		*)
 		qtdepend="|| ( ( ${qtdepend} ) >=x11-libs/qt-4.3.3:4${qt} )"
 		qtopengldepend="|| ( ${qtopengldepend} >=x11-libs/qt-4.3.3:4 )"
@@ -196,12 +196,7 @@ case ${NEED_KDE} in
 		_operator=">="
 		_pv="-${NEED_KDE}"
 		;;
-	3.9*)
-		_kdedir="3.9"
-		_operator=">="
-		_pv="-${NEED_KDE}:kde-4"
-		;;
-	4.0.8* | 4.0.9*)
+	4.0.8* | 4.0.9* | 4.1*)
 		_kdedir="4.1"
 		_operator=">="
 		_pv="-${NEED_KDE}:4.1"
@@ -211,10 +206,10 @@ case ${NEED_KDE} in
 		_operator=">="
 		_pv="-${NEED_KDE}:kde-4"
 		;;
-	4.1*)
-		_kdedir="4.1"
+	3.9*)
+		_kdedir="3.9"
 		_operator=">="
-		_pv="${NEED_KDE}"
+		_pv="-${NEED_KDE}:kde-4"
 		;;
 	*)	die "NEED_KDE=${NEED_KDE} currently not supported."
 		;;
@@ -265,7 +260,7 @@ if [[ -n ${KDEBASE} ]]; then
 		case ${KDEBASE} in
 			kde-base)
 			case ${PV} in
-				4.0.8* | 4.1*)
+				4.0.8* | 4.0.9*)
 					SRC_URI="mirror://kde/unstable/${PV}/src/${_kmname_pv}.tar.bz2" ;;
 				*)	SRC_URI="mirror://kde/stable/${PV}/src/${_kmname_pv}.tar.bz2";;
 			esac

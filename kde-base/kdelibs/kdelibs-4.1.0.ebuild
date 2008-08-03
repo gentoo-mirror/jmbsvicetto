@@ -2,8 +2,6 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-EAPI="1"
-
 CPPUNIT_REQUIRED="optional"
 OPENGL_REQUIRED="optional"
 inherit kde4-base
@@ -12,9 +10,9 @@ DESCRIPTION="KDE libraries needed by all KDE programs."
 HOMEPAGE="http://www.kde.org/"
 
 KEYWORDS="~amd64 ~x86"
-IUSE="3dnow acl alsa altivec bindist +bzip2 debug doc fam htmlhandbook jpeg2k
+IUSE="${IUSE} 3dnow acl alsa altivec bindist +bzip2 debug doc fam htmlhandbook jpeg2k
 kerberos mmx nls openexr +semantic-desktop spell sse sse2 ssl zeroconf"
-LICENSE="GPL-2 LGPL-2"
+LICENSE="LGPL-2.1"
 RESTRICT="test"
 
 COMMONDEPEND="
@@ -24,7 +22,7 @@ COMMONDEPEND="
 	!=kde-base/kdebase-3.5.8-r1
 	!=kde-base/kdebase-3.5.8-r2
 	!=kde-base/kdebase-startkde-3.5.8
-	>=app-misc/strigi-0.5.7
+	>=app-misc/strigi-0.5.9
 	>=dev-libs/libxml2-2.6.6
 	>=dev-libs/libxslt-1.1.17
 	media-libs/fontconfig
@@ -65,19 +63,13 @@ COMMONDEPEND="
 
 DEPEND="${COMMONDEPEND}
 	doc? ( app-doc/doxygen )
-	sys-devel/gettext"
+	sys-devel/gettext
+"
 
 RDEPEND="${COMMONDEPEND}
 	x11-apps/rgb
-	x11-apps/iceauth"
-
-# Patch to respect the sandbox when cmake tries to create symlinks,
-# or executes an external program that tries to write files.
-#PATCHES=("${FILESDIR}/e-tempdir.patch"
-PATCHES=(
-"${FILESDIR}/${PN}-4.0.2-X11-optional.patch"
-"${FILESDIR}/${PN}-4.0.2-alsa-optional.patch")
-# Create CMake switches to make Xcomposite, Xinerama & Xscreensaver optional.
+	x11-apps/iceauth
+"
 
 pkg_setup() {
 	KDE4_BUILT_WITH_USE_CHECK=("--missing true sys-apps/dbus X")
@@ -137,11 +129,6 @@ src_compile() {
 src_install() {
 	kde4-base_src_install
 
-	# Some external applications need FindXine.cmake. Therefore upstream moved it
-	# to kdelibs in trunk. Doing the same for :kde-4. See bug #209701.
-	insinto ${KDEDIR}/share/apps/cmake/modules/
-	doins "${FILESDIR}"/FindXine.cmake || die "doins FindXine failed."
-
 	if use doc; then
 		einfo "Installing API documentation. This could take a bit of time."
 		cd "${S}"/doc/api/
@@ -174,7 +161,7 @@ src_install() {
 
 	# make sure 'source /etc/profile' doesn't hose the PATH
 	dodir /etc/profile.d
-	cat <<-'EOF' > "${D}"/etc/profile.d/44kdereorderpaths-${SLOT}.sh
+	cat <<-'EOF' > "${D}"/etc/profile.d/43kdereorderpaths-${SLOT}.sh
 	if [ -n "${KDEDIR}" ]; then
 		export PATH=${KDEDIR}/bin:$(echo ${PATH} | sed "s#${KDEDIR}/s\?bin:##g")
 		export ROOTPATH=${KDEDIR}/sbin:${KDEDIR}/bin:$(echo ${PATH} | sed "s#${KDEDIR}/s\?bin:##g")
@@ -184,13 +171,6 @@ src_install() {
 	cat <<-EOF > "${D}/etc/revdep-rebuild/50-kde-${SLOT}"
 	SEARCH_DIRS="${PREFIX}/bin ${PREFIX}/lib*"
 	EOF
-}
-
-src_test() {
-	# FIXME: Disable kate tests
-	mycmakeargs="${mycmakeargs}
-		-DKHTML_BUILD_TESTREGRESSION=ON"
-	kde4-base_src_test
 }
 
 pkg_postinst() {
