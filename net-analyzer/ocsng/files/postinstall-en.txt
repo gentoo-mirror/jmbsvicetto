@@ -1,0 +1,11 @@
+0. Create a new MySQL database:
+mysqladmin create geeklog
+
+1. Edit ${VHOST_ROOT}/${PN}-${PVR}/config.php and set database settings.
+
+2. Login on
+http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/admin/install/install.php
+and follow the directions.
+
+3. Don't forget to delete the admin/install directory when you're done!
+             

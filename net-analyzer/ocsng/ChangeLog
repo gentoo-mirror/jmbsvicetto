@@ -1,0 +1,11 @@
+# ChangeLog for net-analyzer/ocsng
+# Copyright 1999-2009 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ocsng-1.02.1 (28 Jun 2009)
+*ocsng-1.01 (28 Jun 2009)
+
+  28 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-1.01.ebuild, +ocsng-1.02.1.ebuild, +files/postinstall-en.txt:
+  Added initial ebuilds for ocs-ng into the overlay.
+
