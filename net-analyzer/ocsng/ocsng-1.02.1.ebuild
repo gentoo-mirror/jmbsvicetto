@@ -16,7 +16,7 @@ SRC_URI="mirror://sourceforge/ocsinventory/${MY_P}"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64"
-IUSE="+comm deploy admin logrotate"
+IUSE="+comm admin logrotate"
 
 # INSTALL_DIR is used by webapp.eclass when USE=-vhosts
 INSTALL_DIR="ocsng"
@@ -48,19 +48,19 @@ pkg_setup() {
 	# php must be built with mysql and xml support
 	require_php_with_use mysql xml
 
-	if ! ( use admin || use comm || use deploy ); then
+	if ! ( use admin || use comm ); then
 
 		# Warn user we will install the comm server
 		elog "As you haven't specified any role for the server, we will install"
 		elog "the communication server for ocs-ng."
 		elog "If you don't want this role or want other roles, set the corresponding"
-		elog "admin, comm and deploy use flags."
+		elog "admin or comm use flags."
 	fi
 }
 
 src_compile() {
 
-	if ( use comm || ! ( use admin || use comm || use deploy )); then
+	if ( use comm || ! ( use admin || use comm )); then
 
 		pushd "Apache"
 		perl Makefile.PL || die "perl Makefile.PL failed"
@@ -75,9 +75,9 @@ src_install() {
 	webapp_src_preinst
 
 	fowners root:apache "${MY_HTDOCSDIR}"
-	fperms go-w "${MY_HTDOCSDIR}"
+	fperms g-w,o-rwx "${MY_HTDOCSDIR}"
 
-	if ( use comm || ! ( use admin || use comm || use deploy )); then
+	if ( use comm || ! ( use admin || use comm )); then
 
 		pushd "Apache"
 		emake DESTDIR="${D}" install || die "Install failed"
@@ -139,11 +139,10 @@ src_install() {
 		# set ownership and permissions
 		elog "Set ownership of download and ocsreports"
 		fowners -R root:apache "${MY_HTDOCSDIR}/download"
-		fperms -R go-w "${MY_HTDOCSDIR}/download"
+		fperms -R g-w,o-rwx "${MY_HTDOCSDIR}/download"
 		fperms g+w "${MY_HTDOCSDIR}/download"
 		fowners -R root:apache "${MY_HTDOCSDIR}/ocsreports"
-		fperms -R go-w "${MY_HTDOCSDIR}/ocsreports"
-		fperms g+w "${MY_HTDOCSDIR}/ocsreports"
+		fperms -R g-w,o-rwx "${MY_HTDOCSDIR}/ocsreports"
 		if [[ -f "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php" ]] ; then
 			fperms g-w,o-rwx "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php"
 		fi
@@ -151,19 +150,11 @@ src_install() {
 
 		# install ipdiscover-util.pl script
 		elog "Install ipdiscover-util.pl script"
-#		cp -pP ipdiscover-util/ipdiscover-util.pl "${D}${MY_HTDOCSDIR}ocsreports"
 		insinto "${MY_HTDOCSDIR}/ocsreports"
 		doins ipdiscover-util/ipdiscover-util.pl
 
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
-		fperms ugo+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
-
-	fi
-
-	if use deploy; then
-
-		# do something
-		elog "Setting deploy"
+		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
 	fi
 
