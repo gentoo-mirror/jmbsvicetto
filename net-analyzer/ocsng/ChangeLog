@@ -4,6 +4,11 @@
 
   30 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ocsng-1.02.1.ebuild:
+  Fix webapp_server_configfile function name and correct path to
+  ipdiscover-util.pl utility.
+
+  30 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.02.1.ebuild:
   Fixed MY_P and updated ebuild to use the new config files for Apache.
 
   29 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>

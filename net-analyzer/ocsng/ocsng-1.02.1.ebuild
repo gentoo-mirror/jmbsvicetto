@@ -117,7 +117,7 @@ src_install() {
 		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" Apache/etc/ocsinventory/ocsinventory-server.conf
 
 		# install the communication
-		webapp_server_config_file "Apache/etc/ocsinventory/ocsinventory-server.conf"
+		webapp_server_configfile apache "Apache/etc/ocsinventory/ocsinventory-server.conf"
 
 	fi
 
@@ -148,12 +148,12 @@ src_install() {
 		# install ipdiscover-util.pl script
 		elog "Install ipdiscover-util.pl script"
 		insinto "${MY_HTDOCSDIR}/ocsreports"
-		doins ipdiscover-util/ipdiscover-util.pl
+		doins Apache/binutils/ipdiscover-util.pl
 
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
-		webapp_server_config_file "Apache/etc/ocsinventory/ocsinventory-reports.conf"
+		webapp_server_config_file apache "Apache/etc/ocsinventory/ocsinventory-reports.conf"
 	fi
 
 	# create log dir
