@@ -6,13 +6,13 @@ EAPI="1"
 
 inherit depend.php eutils webapp
 
-MY_P="OCSNG_UNIX_SERVER-${PV}.tar.gz"
+MY_P="OCSNG_UNIX_SERVER-${PV}"
 MY_HTDOCSDIR="/usr/share/webapps/${PN}/"
 WEBAPP_MANUAL_SLOT="yes"
 
 DESCRIPTION="OCS Inventory NG Management Server"
 HOMEPAGE="http://ocsinventory.sourceforge.net/"
-SRC_URI="mirror://sourceforge/ocsinventory/${MY_P}"
+SRC_URI="mirror://sourceforge/ocsinventory/${MY_P}.tar.gz"
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64"
@@ -112,16 +112,13 @@ src_install() {
 			EOF
 		fi
 
-		# Configure Apache (include files)
-		# ocsinventory.conf
-
 		# set mod_perl version > 1.999_21
-		sed -i -e "s/VERSION_MP/2/" Apache/ocsinventory.conf
-		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" Apache/ocsinventory.conf
+		sed -i -e "s/VERSION_MP/2/" Apache/etc/ocsinventory/ocsinventory-server.conf
+		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" Apache/etc/ocsinventory/ocsinventory-server.conf
 
-#		insinto "/etc/apache2/modules.d/"
-		insinto "${MY_HTDOCSDIR}"
-		doins "Apache/ocsinventory.conf"
+		# install the communication
+		webapp_server_config_file "Apache/etc/ocsinventory/ocsinventory-server.conf"
+
 	fi
 
 	if use admin; then
@@ -156,6 +153,7 @@ src_install() {
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
+		webapp_server_config_file "Apache/etc/ocsinventory/ocsinventory-reports.conf"
 	fi
 
 	# create log dir
