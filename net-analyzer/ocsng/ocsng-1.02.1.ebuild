@@ -153,7 +153,7 @@ src_install() {
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
-		webapp_server_config_file apache "Apache/etc/ocsinventory/ocsinventory-reports.conf"
+		webapp_server_configfile apache "Apache/etc/ocsinventory/ocsinventory-reports.conf"
 	fi
 
 	# create log dir
