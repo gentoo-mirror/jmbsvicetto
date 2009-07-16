@@ -14,14 +14,21 @@ HOMEPAGE="http://code.google.com/p/webkam-kde4/"
 SRC_URI="http://webkam-kde4.googlecode.com/files/${P}.tar.gz"
 
 LICENSE="GPL-3"
-KEYWORDS="~amd64"
+KEYWORDS=""
 SLOT="4"
 IUSE=""
 
 DEPEND="
 	dev-lang/ruby
+	dev-ruby/qt4-qtruby
 	>=media-libs/gstreamer-0.10
 	x11-libs/qt-core[qt3support]
 	x11-libs/qt-dbus
 	x11-libs/qt-gui
 "
+
+src_prepare() {
+	sed -i -e "s:lib:$(get_libdir):" "${S}/bin/webkam" || die "Failed to fix lib on webkam"
+
+	kde4_base_src_prepare
+}
