@@ -1,0 +1,56 @@
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/audio and qemu-kvm-0.12.0-rc2/audio
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/block and qemu-kvm-0.12.0-rc2/block
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/bsd-user and qemu-kvm-0.12.0-rc2/bsd-user
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/compat and qemu-kvm-0.12.0-rc2/compat
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/darwin-user and qemu-kvm-0.12.0-rc2/darwin-user
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/default-configs and qemu-kvm-0.12.0-rc2/default-configs
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/fpu and qemu-kvm-0.12.0-rc2/fpu
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/gdb-xml and qemu-kvm-0.12.0-rc2/gdb-xml
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/hw and qemu-kvm-0.12.0-rc2/hw
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/kvm and qemu-kvm-0.12.0-rc2/kvm
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/linux-user and qemu-kvm-0.12.0-rc2/linux-user
+diff -u qemu-kvm-0.12.0-rc2-orig/Makefile qemu-kvm-0.12.0-rc2/Makefile
+--- qemu-kvm-0.12.0-rc2-orig/Makefile	2009-12-20 04:00:37.430550268 -0100
++++ qemu-kvm-0.12.0-rc2/Makefile	2009-12-20 04:24:35.459926075 -0100
+@@ -271,7 +271,7 @@
+ 	rm -f slirp/*.o slirp/*.d audio/*.o audio/*.d block/*.o block/*.d net/*.o net/*.d
+ 	rm -f qemu-img-cmds.h
+ 	$(MAKE) -C tests clean
+-	for d in $(ALL_SUBDIRS) libhw32 libhw64 libuser; do \
++	for d in $(ALL_SUBDIRS); do \
+ 	if test -d $$d; then $(MAKE) -C $$d $@ || exit 1; fi; \
+         done
+ 
+diff -u qemu-kvm-0.12.0-rc2-orig/Makefile.hw qemu-kvm-0.12.0-rc2/Makefile.hw
+--- qemu-kvm-0.12.0-rc2-orig/Makefile.hw	2009-12-20 04:00:37.431550278 -0100
++++ qemu-kvm-0.12.0-rc2/Makefile.hw	2009-12-20 04:00:57.733747485 -0100
+@@ -1,8 +1,8 @@
+ # Makefile for qemu target independent devices.
+ 
++include config.mak
+ include ../config-host.mak
+ include ../config-all-devices.mak
+-include config.mak
+ include $(SRC_PATH)/rules.mak
+ 
+ .PHONY: all
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/net and qemu-kvm-0.12.0-rc2/net
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/pc-bios and qemu-kvm-0.12.0-rc2/pc-bios
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/qemu and qemu-kvm-0.12.0-rc2/qemu
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/QMP and qemu-kvm-0.12.0-rc2/QMP
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/roms and qemu-kvm-0.12.0-rc2/roms
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/slirp and qemu-kvm-0.12.0-rc2/slirp
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-alpha and qemu-kvm-0.12.0-rc2/target-alpha
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-arm and qemu-kvm-0.12.0-rc2/target-arm
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-cris and qemu-kvm-0.12.0-rc2/target-cris
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-i386 and qemu-kvm-0.12.0-rc2/target-i386
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-ia64 and qemu-kvm-0.12.0-rc2/target-ia64
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-m68k and qemu-kvm-0.12.0-rc2/target-m68k
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-microblaze and qemu-kvm-0.12.0-rc2/target-microblaze
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-mips and qemu-kvm-0.12.0-rc2/target-mips
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-ppc and qemu-kvm-0.12.0-rc2/target-ppc
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-s390x and qemu-kvm-0.12.0-rc2/target-s390x
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-sh4 and qemu-kvm-0.12.0-rc2/target-sh4
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/target-sparc and qemu-kvm-0.12.0-rc2/target-sparc
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/tcg and qemu-kvm-0.12.0-rc2/tcg
+Common subdirectories: qemu-kvm-0.12.0-rc2-orig/tests and qemu-kvm-0.12.0-rc2/tests
