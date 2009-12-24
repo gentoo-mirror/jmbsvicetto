@@ -13,8 +13,10 @@ inherit eutils flag-o-matic ${GIT_ECLASS} linux-info toolchain-funcs
 
 if [[ ${PV} = *9999* ]]; then
 	SRC_URI=""
+	KEYWORDS=""
 else
 	SRC_URI="mirror://sourceforge/${PN}/${P}.tar.gz"
+	KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 fi
 
 DESCRIPTION="QEMU + Kernel-based Virtual Machine userland tools"
@@ -22,7 +24,6 @@ HOMEPAGE="http://www.linux-kvm.org"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="~amd64 ~ppc ~ppc64 ~x86"
 IUSE="+aio alsa bluetooth curl esd gnutls fdt hardened kvm-trace ncurses \
 pulseaudio sasl +sdl vde xen"
 
