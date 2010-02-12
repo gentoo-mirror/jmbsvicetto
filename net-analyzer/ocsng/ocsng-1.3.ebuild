@@ -91,7 +91,7 @@ src_install() {
 
 			dodir /etc/logrotate.d
 			cat <<- EOF > "${D}etc/logrotate.d/ocsng"
-				# Copyright 1999-2009 Gentoo Foundation
+				# Copyright 1999-2010 Gentoo Foundation
 				# Distributed under the terms of the GNU General Public License v2
 				# $Header: $
 				#
@@ -114,11 +114,11 @@ src_install() {
 		fi
 
 		# set mod_perl version > 1.999_21
-		sed -i -e "s/VERSION_MP/2/" Apache/etc/ocsinventory/ocsinventory-server.conf
-		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" Apache/etc/ocsinventory/ocsinventory-server.conf
+		sed -i -e "s/VERSION_MP/2/" etc/ocsinventory/ocsinventory-server.conf
+		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" etc/ocsinventory/ocsinventory-server.conf
 
 		# install the communication
-		webapp_server_configfile apache "Apache/etc/ocsinventory/ocsinventory-server.conf"
+		webapp_server_configfile apache "etc/ocsinventory/ocsinventory-server.conf"
 
 	fi
 
@@ -154,7 +154,7 @@ src_install() {
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
-		webapp_server_configfile apache "Apache/etc/ocsinventory/ocsinventory-reports.conf"
+		webapp_server_configfile apache "etc/ocsinventory/ocsinventory-reports.conf"
 	fi
 
 	# create log dir

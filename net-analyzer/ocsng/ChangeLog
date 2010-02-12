@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.ebuild:
+  Updating config files location.
+
 *ocsng-1.3 (12 Feb 2010)
 
   12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
