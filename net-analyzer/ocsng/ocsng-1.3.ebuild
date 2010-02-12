@@ -149,7 +149,7 @@ src_install() {
 		# install ipdiscover-util.pl script
 		elog "Install ipdiscover-util.pl script"
 		insinto "${MY_HTDOCSDIR}/ocsreports"
-		doins Apache/binutils/ipdiscover-util.pl
+		doins binutils/ipdiscover-util.pl
 
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
