@@ -30,7 +30,7 @@ src_install() {
 
 	webapp_serverowned -R "${MY_HTDOCSDIR}"
 
-	webapp_postinst_txt en "${FILESDIR}"/postinstall-en-0.7.1.txt
+	webapp_postinst_txt en "${FILESDIR}"/postinstall-en.txt
 
 	webapp_src_install
 }

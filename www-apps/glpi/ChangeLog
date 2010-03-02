@@ -2,6 +2,10 @@
 # Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  02 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  glpi-0.72.3.ebuild:
+  Fixed postinstall file name.
+
 *glpi-0.72.3 (02 Mar 2010)
 
   02 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
