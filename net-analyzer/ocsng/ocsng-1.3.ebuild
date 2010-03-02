@@ -24,8 +24,10 @@ INSTALL_DIR="ocsng"
 S="${WORKDIR}/${MY_P}"
 LOGDIR="/var/log/ocsng"
 
-DEPEND="comm? ( sys-devel/make )
-	app-admin/webapp-config"
+DEPEND="
+	comm? ( sys-devel/make )
+	app-admin/webapp-config
+"
 
 RDEPEND="${DEPEND}
 	dev-lang/perl
@@ -39,7 +41,8 @@ RDEPEND="${DEPEND}
 	admin? (
 		virtual/php
 	)
-	logrotate? ( app-admin/logrotate )"
+	logrotate? ( app-admin/logrotate )
+"
 
 pkg_setup() {
 
