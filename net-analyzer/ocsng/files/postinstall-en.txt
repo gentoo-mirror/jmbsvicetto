@@ -3,9 +3,8 @@ mysqladmin create geeklog
 
 1. Edit ${VHOST_ROOT}/${PN}-${PVR}/config.php and set database settings.
 
-2. Login on
+2. Login to
 http://${VHOST_HOSTNAME}/${VHOST_APPDIR}/admin/install/install.php
 and follow the directions.
 
-3. Don't forget to delete the admin/install directory when you're done!
-             
+3. Don't forget to delete or remove permissions from the install.php file when you're done!
