@@ -133,6 +133,10 @@ src_install() {
 		dodir "${MY_HTDOCSDIR}/download" || die "Unable to create ${MY_HTDOCSDIR}/download"
 		insinto "${MY_HTDOCSDIR}"
 		doins -r ocsreports
+
+		# Protect the db config file
+		webapp_configfile "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php"
+
 		dodir "${MY_HTDOCSDIR}/ocsreports/ipd" || die "Unable to create ${MY_HTDOCSDIR}/ocsreports/ipd"
 
 		webapp_serverowned -R "${MY_HTDOCSDIR}/download"
