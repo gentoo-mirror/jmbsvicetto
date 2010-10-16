@@ -54,8 +54,7 @@ src_unpack() {
 src_install() {
 
 	# Remove CVS subdirs
-	find "${S}" -type d -name CVS -exec rm -R {} \; 2> /dev/null
-	# || die "Failed to remove CVS dirs."
+	[[ ${PV} == *9999* ]] && ecvs_clean
 
 	# Install docs
 	local DOCS="CHANGELOG COPYRIGHT INSTALL LIB_FUNCTIONS
@@ -80,7 +79,11 @@ src_install() {
 	# Install the package
 	insinto "${MY_HTDOCSDIR}"
 	doins *.php || die "Failed to copy php files."
-	[[ ${PV} == *9999* ]] && newins config.inc.example.php config.inc.php || die "Failed to copy default config file."
+
+	if [[ ${PV} == *9999* ]]; then
+		newins config.inc.example.php config.inc.php || die "Failed to copy default config file."
+	fi
+
 	doins -r DTD || die "Failed to install the DTD dir."
 	doins -r lib || die "Failed to install the lib dir."
 	doins -r locales || die "Failed to install the locales dir."
