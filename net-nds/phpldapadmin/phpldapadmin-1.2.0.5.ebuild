@@ -26,6 +26,10 @@ src_unpack() {
 	mv config/config.php.example config/config.php
 }
 
+src_prepare() {
+	epatch "${FILESDIR}/${PN}-fix-magic-quotes.patch"
+}
+
 src_install() {
 	webapp_src_preinst
 
