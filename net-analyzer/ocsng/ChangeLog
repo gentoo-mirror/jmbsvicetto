@@ -1,6 +1,14 @@
 # ChangeLog for net-analyzer/ocsng
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+*ocsng-2.0_rc3 (18 Apr 2011)
+
+  18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.2.ebuild, +ocsng-2.0_rc3.ebuild:
+  Added initial ebuild for release 2.0rc3.
+  Fixed the php dep from virtual/php to dev-lang/php.
+  Added versionator support to drop the hardcoded values on SRC_URI.
 
   04 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   ocsng-1.3.2.ebuild:
