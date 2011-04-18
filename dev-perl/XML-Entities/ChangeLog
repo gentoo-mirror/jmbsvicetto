@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*XML-Entities-1.0.0 (18 Apr 2011)
+
+  18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -XML-Entities-1.0000.ebuild, +XML-Entities-1.0.0.ebuild:
+  Made a few corrections to follow perl's rules.
+  Added test features. Thanks to Kent Fredric (kent\n).
+
 *XML-Entities-1.0000 (18 Apr 2011)
 
   18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
