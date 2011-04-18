@@ -1,0 +1,12 @@
+# ChangeLog for dev-perl/XML-Entities
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*XML-Entities-1.0000 (18 Apr 2011)
+
+  18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +XML-Entities-1.0000.ebuild, +metadata.xml:
+  Initial import of XML-Entities to the overlay (ocsng dependency).
+  Updated ebuild in bug 340927. Thanks to Michael Alleblas <michael DOT
+  alleblas AT gmail DOT com>.
+
