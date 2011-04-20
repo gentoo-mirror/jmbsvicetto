@@ -1,6 +1,10 @@
 # ChangeLog for www-apps/glpi
-# Copyright 1999-2010 Gentoo Foundation; Distributed under the GPL v2
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
+
+  20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  glpi-0.72.3.ebuild, glpi-0.72.4.ebuild:
+  Fix php dep.
 
 *glpi-0.72.4 (24 Mar 2010)
 

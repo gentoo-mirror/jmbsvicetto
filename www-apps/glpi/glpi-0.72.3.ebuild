@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -16,7 +16,7 @@ DEPEND="
 "
 RDEPEND="
 	dev-db/mysql
-	virtual/php
+	dev-lang/php
 "
 S="${WORKDIR}/${PN}"
 
