@@ -1,0 +1,10 @@
+# ChangeLog for dev-perl/DBD-XBase
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*DBD-XBase-1.03 (03 May 2011)
+
+  03 May 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +DBD-XBase-1.03.ebuild, +metadata.xml:
+  Initial import of DBD-XBase.
+
