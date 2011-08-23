@@ -1,4 +1,4 @@
-# Copyright 1999-2010 Gentoo Foundation
+# Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -40,7 +40,7 @@ RDEPEND="${DEPEND}
 	www-apache/mod_perl
 	>=www-servers/apache-1.3
 	admin? (
-		virtual/php
+		dev-lang/php
 	)
 	logrotate? ( app-admin/logrotate )
 "
@@ -167,7 +167,7 @@ src_install() {
 	fowners root:apache "${LOGDIR}"
 	fperms 770 "${LOGDIR}"
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 
 	# call default eclass src_install
 	webapp_src_install

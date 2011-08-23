@@ -159,6 +159,14 @@ src_install() {
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 		fperms ug+x,o-rwx "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
+		# install snmp_com.txt
+		elog "Install snmp_com.txt"
+		insinto "${MY_HTDOCSDIR}/snmp"
+		doins etc/ocsinventory/snmp_com.txt
+
+		fowners root:apache  "${MY_HTDOCSDIR}/snmp/snmp_com.txt"
+		fperms g+w,o-rwx "${MY_HTDOCSDIR}/snmp/snmp_com.txt"
+
 		webapp_server_configfile apache "etc/ocsinventory/ocsinventory-reports.conf"
 	fi
 
@@ -168,7 +176,7 @@ src_install() {
 	fowners root:apache "${LOGDIR}"
 	fperms 770 "${LOGDIR}"
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 
 	# call default eclass src_install
 	webapp_src_install

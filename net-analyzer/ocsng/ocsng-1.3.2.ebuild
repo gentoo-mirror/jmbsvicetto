@@ -172,7 +172,7 @@ src_install() {
 	fowners root:apache "${LOGDIR}"
 	fperms 770 "${LOGDIR}"
 
-	webapp_postinst_txt en ${FILESDIR}/postinstall-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall-en.txt"
 
 	# call default eclass src_install
 	webapp_src_install
