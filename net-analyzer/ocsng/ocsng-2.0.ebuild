@@ -27,12 +27,12 @@ S="${WORKDIR}/${MY_P}"
 LOGDIR="/var/log/ocsng"
 
 DEPEND="
+	dev-lang/perl
 	comm? ( sys-devel/make )
 	app-admin/webapp-config
 "
 
 RDEPEND="${DEPEND}
-	dev-lang/perl
 	>=dev-perl/Apache-DBI-0.93
 	>=dev-perl/DBI-1.40
 	>=dev-perl/DBD-mysql-2.9004
@@ -96,7 +96,7 @@ src_install() {
 
 			dodir /etc/logrotate.d
 			cat <<- EOF > "${D}etc/logrotate.d/ocsng"
-				# Copyright 1999-2010 Gentoo Foundation
+				# Copyright 1999-2011 Gentoo Foundation
 				# Distributed under the terms of the GNU General Public License v2
 				# $Header: $
 				#
@@ -129,31 +129,27 @@ src_install() {
 
 	if use admin; then
 
-		# create ocsreports and download dirs and copy files
-		elog "Creating ${MY_HTDOCSDIR}/download and copying files"
-		dodir "${MY_HTDOCSDIR}/download" || die "Unable to create ${MY_HTDOCSDIR}/download"
+		# Create dirs
+		elog "Creating ${MY_HTDOCSDIR}/{download,ipd,snmp} dirs"
+		for dir in "download" "ipd" "snmp" ; do
+			dodir "${MY_HTDOCSDIR}/${dir}" || die "Unable to create ${MY_HTDOCSDIR}/${dir}"
+			webapp_serverowned -R "${MY_HTDOCSDIR}/${dir}"
+			fowners -R apache:apache "${MY_HTDOCSDIR}/${dir}"
+			fperms g+w,o-rwx "${MY_HTDOCSDIR}/${dir}"
+		done
+
+		# copy ocsreports
 		insinto "${MY_HTDOCSDIR}"
 		doins -r ocsreports
 
-		# Protect the db config file
+		# Protect the db config file and ocsreports
 		webapp_configfile "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php"
-
-		dodir "${MY_HTDOCSDIR}/ocsreports/ipd" || die "Unable to create ${MY_HTDOCSDIR}/ocsreports/ipd"
-
-		webapp_serverowned -R "${MY_HTDOCSDIR}/download"
 		webapp_serverowned -R "${MY_HTDOCSDIR}/ocsreports"
-
-		# set ownership and permissions
-		elog "Set ownership of download and ocsreports"
-		fowners -R root:apache "${MY_HTDOCSDIR}/download"
-		fperms -R g-w,o-rwx "${MY_HTDOCSDIR}/download"
-		fperms g+w "${MY_HTDOCSDIR}/download"
 		fowners -R root:apache "${MY_HTDOCSDIR}/ocsreports"
 		fperms -R g-w,o-rwx "${MY_HTDOCSDIR}/ocsreports"
 		if [[ -f "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php" ]] ; then
 			fperms g-w,o-rwx "${MY_HTDOCSDIR}/ocsreports/dbconfig.inc.php"
 		fi
-		fperms -R g+w "${MY_HTDOCSDIR}/ocsreports/ipd"
 
 		# install ipdiscover-util.pl script
 		elog "Install ipdiscover-util.pl script"
@@ -161,7 +157,7 @@ src_install() {
 		doins binutils/ipdiscover-util.pl
 
 		fowners root:apache  "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
-		fperms ug+x "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
+		fperms ug+x,o-rwx "${MY_HTDOCSDIR}/ocsreports/ipdiscover-util.pl"
 
 		webapp_server_configfile apache "etc/ocsinventory/ocsinventory-reports.conf"
 	fi

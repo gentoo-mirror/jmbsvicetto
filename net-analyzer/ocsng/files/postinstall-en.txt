@@ -1,5 +1,5 @@
 0. Create a new MySQL database:
-mysqladmin create geeklog
+mysqladmin create <database>
 
 1. Edit ${VHOST_ROOT}/${PN}-${PVR}/config.php and set database settings.
 

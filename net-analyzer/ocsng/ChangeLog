@@ -2,6 +2,13 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ocsng-2.0 (23 Aug 2011)
+
+  23 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ocsng-2.0_rc3.ebuild, -ocsng-2.0_rc4.ebuild, +ocsng-2.0.ebuild,
+  files/postinstall-en.txt:
+  [net-analyzer/ocsng-2.0] Bumped ocsng to the 2.0 release.
+
 *ocsng-2.0_rc4 (18 Apr 2011)
 
   18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
