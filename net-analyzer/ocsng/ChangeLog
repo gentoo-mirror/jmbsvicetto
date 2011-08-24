@@ -2,6 +2,16 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+*ocsng-2.0-r1 (24 Aug 2011)
+
+  24 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-2.0-r1.ebuild:
+  [net-analyzer/ocsng] Revbumped the 2.0 ebuild to use EAPI-4's REQUIRED_USE
+  and drop pkg_setup tests.
+  Reviewed dev-lang/php dependency.
+  Thanks to Maxim Koltsov (maksbotan) for poking me and getting me to work on
+  the updates.
+
   23 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
   -ocsng-1.01.ebuild, -ocsng-1.02.1.ebuild, ocsng-1.3.ebuild,
   ocsng-1.3.1.ebuild, ocsng-1.3.2.ebuild, ocsng-2.0.ebuild, +metadata.xml,
