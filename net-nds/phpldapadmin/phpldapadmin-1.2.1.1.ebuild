@@ -30,15 +30,11 @@ src_install() {
 
 	dodoc INSTALL
 
-	# Restrict config file access - bug 280836
-	chown root:apache "config/config.php"
-	chmod 640 "config/config.php"
-
 	insinto "${MY_HTDOCSDIR}"
 	doins -r *
 
 	webapp_configfile "${MY_HTDOCSDIR}/config/config.php"
-	webapp_postinst_txt en "${FILESDIR}"/postinstall2-en.txt
+	webapp_postinst_txt en "${FILESDIR}/postinstall2-en.txt"
 
 	webapp_src_install
 }
