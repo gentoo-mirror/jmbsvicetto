@@ -1,0 +1,10 @@
+# ChangeLog for dev-python/python-osmgpsmap
+# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*python-osmgpsmap-0.7.3 (21 Oct 2011)
+
+  21 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +python-osmgpsmap-0.7.3.ebuild, +metadata.xml:
+  [dev-python/python-osmgpsmap] Initial import of the python-osmgpsmap package.
+
