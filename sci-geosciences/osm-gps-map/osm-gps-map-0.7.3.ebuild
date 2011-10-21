@@ -17,12 +17,14 @@ IUSE="introspection python"
 
 DEPEND="
 	>=dev-libs/glib-2.16.0
+	gnome-base/gnome-common
 	>=net-libs/libsoup-2.4.0
 	>=x11-libs/cairo-1.6.0
 	>=x11-libs/gtk+-2.14.0
-	python? ( dev-python/pygtk )
+	introspection? ( dev-libs/gobject-introspection )
 "
 RDEPEND="${DEPEND}"
+PDEPEND="python? ( dev-python/python-osmgpsmap )"
 
 G2CONF="
 	$(use_enable introspection)
@@ -34,6 +36,7 @@ G2CONF="
 
 src_prepare() {
 	epatch "${FILESDIR}/${PN}-fix-docs-location.patch"
+#	epatch "${FILESDIR}/${PN}-disable-compiler-warnings.patch"
 	eautoreconf
 
 	gnome2_src_prepare
