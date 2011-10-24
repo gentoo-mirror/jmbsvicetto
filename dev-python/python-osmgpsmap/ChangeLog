@@ -2,6 +2,10 @@
 # Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
 # $Header: $
 
+  24 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  python-osmgpsmap-0.7.3.ebuild:
+  [dev-python/python-osmgpsmap] Fix SRC_URI.
+
 *python-osmgpsmap-0.7.3 (21 Oct 2011)
 
   21 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>

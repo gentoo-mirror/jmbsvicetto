@@ -6,9 +6,10 @@ EAPI="4"
 
 inherit autotools distutils
 
+MY_PN="osm-gps-map"
 DESCRIPTION="osm-gps-map python bindings."
 HOMEPAGE="http://nzjrs.github.com/osm-gps-map/"
-SRC_URI="http://www.johnstowers.co.nz/files/${PN}/${P}.tar.gz"
+SRC_URI="http://www.johnstowers.co.nz/files/${MY_PN}/${P}.tar.gz"
 
 LICENSE="GPL-2"
 SLOT="0"
