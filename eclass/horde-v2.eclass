@@ -45,8 +45,9 @@ fi
 
 [[ -z ${HORDE_PN} ]] && HORDE_PN="${PN/horde-}"
 [[ -z ${HORDE_MAJ} ]] && HORDE_MAJ=""
+HORDE_P="${HORDE_PN}-${PV}"
 
-SRC_URI="http://pear.horde.org/get/${P}.tgz"
+SRC_URI="http://pear.horde.org/get/${HORDE_P}.tgz"
 HOMEPAGE="http://www.horde.org/${HORDE_PN}"
 LICENSE="LGPL-2"
 S=${WORKDIR}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}
