@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.2.1.1-r1.ebuild,v 1.1 2011/10/25 18:18:43 jmbsvicetto Exp $
+# $Header: /var/cvsroot/gentoo-x86/net-nds/phpldapadmin/phpldapadmin-1.2.2-r1.ebuild,v 1.1 2012/02/02 21:18:10 jmbsvicetto Exp $
 
 EAPI="2"
 
@@ -23,6 +23,7 @@ need_php_httpd
 src_prepare() {
 	mv config/config.php.example config/config.php
 	epatch "${FILESDIR}/${PN}-1.2.1.1-fix-magic-quotes.patch"
+	# http://phpldapadmin.git.sourceforge.net/git/gitweb.cgi?p=phpldapadmin/phpldapadmin;a=commit;h=7dc8d57d6952fe681cb9e8818df7f103220457bd
 	epatch "${FILESDIR}/${P}-base.patch"
 }
 
