@@ -26,41 +26,55 @@
 # You set this via the ebuild to whatever branch you wish to grab a
 # snapshot of.  Typically this is 'HEAD' or 'RELENG'.
 
+# @ECLASS-VARIABLE: EHORDE_SNAP_PV
+# @DESCRIPTION:
+# The date of the snapshot to fetch
+
 # @ECLASS-VARIABLE: EHORDE_VCS
 # @DESCRIPTION:
 # Track whether this is a live version or not
 
-# This eclass requires at least EAPI-2
+# This eclass requires at least EAPI-3
 case ${EAPI:-0} in
-	4|3|2) : ;;
+	4|3) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
-inherit webapp eutils php-pear-r1
-
-if [[ ${PV} == 9999* ]]; then
+if [[ ${PV} == *9999 ]]; then
 	EHORDE_VCS="git-2"
-	inherit ${EHORDE_VCS}
 fi
+
+inherit webapp eutils php-pear-r1 ${EHORDE_VCS}
+
+HOMEPAGE="http://www.horde.org/${HORDE_PN}"
+LICENSE="LGPL-2"
 
 [[ -z ${HORDE_PN} ]] && HORDE_PN="${PN/horde-}"
 [[ -z ${HORDE_MAJ} ]] && HORDE_MAJ=""
 HORDE_P="${HORDE_PN}-${PV}"
 
-SRC_URI="http://pear.horde.org/get/${HORDE_P}.tgz"
-HOMEPAGE="http://www.horde.org/${HORDE_PN}"
-LICENSE="LGPL-2"
 S=${WORKDIR}/${HORDE_PN}${HORDE_MAJ}-${PV/_/-}
 
-if [[ ${PV} == 9998* ]] ; then
-	EHORDE_SNAP="true"
-#	EHORDE_SNAP_BRANCH=""
-	let date=$(date +%s)-24*60*60
-	EHORDE_SNAP_PV=$(date -s @${date} +%Y-%m-%d)
+case ${PV} in
+	*9999)
+		EGIT_REPO_URI="git://github.com/horde/${HORDE_PN}"
+		SRC_URI=""
+		RESTRICT="mirror"
+		;;
+	*9998)
+		EHORDE_SNAP="true"
+		if [[ -z ${EHORDE_SNAP_PV} ]]; then
+			let date=$(date +%s)-24*60*60
+			EHORDE_SNAP_PV=$(date -d @${date} +%Y-%m-%d)
+		fi
 
-	SRC_URI="http://ftp.horde.org/pub/snaps/${SNAP_PV}/${HORDE_PN}-git.tar.gz"
-	S=${WORKDIR}/${HORDE_PN}
-fi
+		SRC_URI="http://ftp.horde.org/pub/snaps/${EHORDE_SNAP_PV}/${HORDE_PN}-git.tar.gz"
+		S=${WORKDIR}/${HORDE_PN}
+		;;
+	*)
+		SRC_URI="http://pear.horde.org/get/${HORDE_P}.tgz"
+		;;
+esac
 
 IUSE="vhosts"
 
