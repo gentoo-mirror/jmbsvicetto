@@ -64,8 +64,8 @@ src_install () {
 	make DESTDIR="${D}" install
 
 	# install manpages
-	doman "${S}"/docs/man/{dbmmanage,htdigest,htpasswd,htdbm}.1 \
-		"${S}"/docs/man/{ab,htcacheclean,logresolve,rotatelogs}.8
+	doman "${S}"/docs/man/{ab,dbmmanage,htdigest,htpasswd,htdbm,logresolve}.1 \
+		"${S}"/docs/man/{htcacheclean,rotatelogs}.8
 
 	# Providing compatiblity symlinks for #177697 (which we'll stop to install
 	# at some point).
