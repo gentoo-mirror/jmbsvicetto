@@ -3,7 +3,7 @@
 # $Header: $
 
 # latest gentoo apache files
-GENTOO_PATCHSTAMP="20120212"
+GENTOO_PATCHSTAMP="20120213"
 GENTOO_DEVELOPER="jmbsvicetto"
 
 # IUSE/USE_EXPAND magic
