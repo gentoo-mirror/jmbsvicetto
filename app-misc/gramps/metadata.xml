@@ -9,6 +9,10 @@
   <email>fauli@gentoo.org</email>
   <name>Christian Faulhammer</name>
 </maintainer>
+<maintainer>
+  <email>jmbsvicetto@gentoo.org</email>
+  <name>Jorge Manuel B. S. Vicetto</name>
+</maintainer>
 <longdescription lang="en">
 GRAMPS helps you track your family tree. It allows you to store, edit,
 and research genealogical data. GRAMPS attempts to provide all of the
