@@ -15,7 +15,7 @@ HOMEPAGE="http://perl.apache.org/"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
-IUSE="debug"
+IUSE="debug test"
 SLOT="1"
 
 # Make sure we always use the latest Apache-Test version or even check the
@@ -23,15 +23,20 @@ SLOT="1"
 #
 # We need both, apache and perl but either apache without threads or perl with
 # ithreads, bug 373943
-DEPEND=">=www-servers/apache-2.4
+DEPEND="
+	>=www-servers/apache-2.4
 	>=dev-perl/Apache-Test-1.360
 	>=virtual/perl-CGI-3.08
 	dev-lang/perl
 	www-servers/apache
-	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )"
+	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )
+	test? ( dev-perl/HTML-Parser )
+"
 RDEPEND="${DEPEND}"
-PDEPEND=">=dev-perl/Apache-Reload-0.11
-	>=dev-perl/Apache-SizeLimit-0.95"
+PDEPEND="
+	>=dev-perl/Apache-Reload-0.11
+	>=dev-perl/Apache-SizeLimit-0.95
+"
 
 S="${WORKDIR}/httpd24"
 
@@ -100,10 +105,17 @@ src_prepare() {
 	epatch "${FILESDIR}/debian/290-httpd-transition-test-todo.patch"
 
 	# Fix Mod_Proxy test
-	epatch "${FILESDIR}/${P}-Test_Mod_Proxy-apache24-fix.patch"
+#	epatch "${FILESDIR}/${P}-Test_Mod_Proxy-apache24-fix.patch"
 
 	# Fix ModPerl-Registry test
 	epatch "${FILESDIR}/${P}-Test-ModPerl-Registry-fix.patch"
+
+	# Fix TestAPI test
+#	epatch "${FILESDIR}/${P}-TestAPI-fix.patch"
+
+	# Fix auth* module references on tests
+#	epatch "${FILESDIR}/${P}-auth-fixes.patch"
+	epatch "${FILESDIR}/${P}-auth-modules-fix.patch"
 
 #	epatch "${FILESDIR}/
 #260_fix_pipelined_response_deadlock.patch
