@@ -41,7 +41,7 @@ PDEPEND="
 S="${WORKDIR}/httpd24"
 
 APACHE2_MOD_FILE="${S}/src/modules/perl/mod_perl.so"
-APACHE2_MOD_CONF="2.0.3/75_${PN}"
+APACHE2_MOD_CONF="2.0.8/75_${PN}"
 APACHE2_MOD_DEFINE="PERL"
 
 SRC_TEST="do"
