@@ -14,7 +14,7 @@ HOMEPAGE="http://www.cacti.net/"
 SRC_URI="http://www.cacti.net/downloads/${MY_P}.tar.gz"
 
 # patches
-UPSTREAM_PATCHES="snmpv3_priv_proto_none"
+UPSTREAM_PATCHES=""
 if [[ -n ${UPSTREAM_PATCHES} ]]; then
 	for i in ${UPSTREAM_PATCHES}; do
 		SRC_URI="${SRC_URI} http://www.cacti.net/downloads/patches/${PV/_p*}/${i}.patch"
