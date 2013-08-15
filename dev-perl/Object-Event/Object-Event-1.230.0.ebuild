@@ -14,7 +14,7 @@ SLOT="0"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
 
-RDEPEND=""
+RDEPEND="dev-perl/common-sense"
 DEPEND="${RDEPEND}"
 
 SRC_TEST="do"
