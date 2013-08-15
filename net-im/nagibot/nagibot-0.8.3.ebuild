@@ -13,7 +13,6 @@ KEYWORDS="~amd64 ~x86"
 IUSE="icinga"
 
 RDEPEND="
-	dev-perl/common-sense
 	dev-perl/AnyEvent
 	dev-perl/AnyEvent-XMPP
 	dev-perl/File-Pid
