@@ -3,40 +3,31 @@
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
-get_nagibot_config() {
-	awk '$1 == "'$1'" { s=$2 } END { print s }' "$CFGFILE"
-}
-
-: ${CFGFILE:=/etc/conf.d/nagibot.conf}
+: ${CFGFILE:=/etc/nagibot/nagibot.cfg}
 
 command=/usr/bin/nagibot.pl
-command_args="--config ${CFGFILE}"
-pidfile=$(get_nagibot_config PIDFILE)
-jid=$(get_nagibot_config JID)
-fifo=$(get_nagibot_config FIFO)
-prefix=$(get_nagibot_config PREFIX)
 start_stop_daemon_args="--nicelevel ${NICE_LEVEL:-0} --wait 1500"
 extra_started_commands="reload"
-NAGIBOT_OPTS="-d -c ${CFGFILE} ${jid}"
+NAGIBOT_OPTS="-c ${CFGFILE} -d ${JID}"
 
 depend() {
 	config "$CFGFILE"
 }
 
 start_pre() {
-	checkpath -d $(dirname ${pidfile}) -o ${prefix}:${prefix} -m 0750
-	checkpath -p ${fifo} -o ${prefix}:${prefix} -m 0750
+	checkpath -o ${PREFIX}:${PREFIX} -m 0750 -d $(dirname ${PIDFILE})
+	checkpath -o ${PREFIX}:${PREFIX} -m 0750 -p ${FIFO}
 }
 
 start() {
 	ebegin "Starting ${SVCNAME}"
 
-	start-stop-daemon --start -- ${NAGIBOT} ${NAGIBOT_OPTS} -k start
+	start-stop-daemon --start --exec ${NAGIBOT} --pidfile ${PIDFILE} -- ${NAGIBOT_OPTS}
 }
 
 reload() {
 	ebegin "Reloading ${SERVICE}"
-	kill -HUP `cat ${pidfile}`
+	kill -HUP `cat ${PIDFILE}`
 	eend $?
 }
 

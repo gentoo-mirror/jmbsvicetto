@@ -46,7 +46,7 @@ src_prepare() {
 src_install() {
 	dobin nagibot.pl
 	newinitd "${FILESDIR}/nagibot.init" nagibot
-	doconfd "nagibot.conf"
+	newconfd "nagibot.conf" nagibot
 	dodir /etc/nagibot
 	insinto /etc/nagibot
 	doins nagibot.cfg
