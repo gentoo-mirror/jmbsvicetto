@@ -33,8 +33,13 @@ src_prepare() {
 	sed -i -e "s:!/opt/perl/bin/perl:!/usr/bin/perl:" nagibot.pl
 
 	cp "${FILESDIR}/nagibot.conf" "${S}"
+	cp "${FILESDIR}/nagibot.cfg" "${S}"
 	if ( use icinga ); then
-		sed -i -e "s:prefix=nagios:prefix=icinga:" nagibot.conf
+		sed -i -e "s:PREFIX=nagios:PREFIX=icinga:" nagibot.conf
+
+		sed -i -e "s:PREFIX:icinga:" nagibot.cfg
+	else
+		sed -i -e "s:PREFIX:nagios:" nagibot.cfg
 	fi
 }
 
@@ -42,6 +47,15 @@ src_install() {
 	dobin nagibot.pl
 	newinitd "${FILESDIR}/nagibot.init" nagibot
 	doconfd "nagibot.conf"
+	dodir /etc/nagibot
+	insinto /etc/nagibot
+	doins nagibot.cfg
 
 	dodoc INSTALL README TODO Changes nagios-misccommands nagibot-example.conf
+}
+
+pkg_postinst() {
+	ewarn "Please check /etc/conf.d/nagibot.conf and /etc/nagibot/nagibot.cfg"
+	ewarn "as you need to set a few variables. Don't forget to set JID, configure"
+	ewarn "the rooms and the ids to notify and set the password for the JID."
 }

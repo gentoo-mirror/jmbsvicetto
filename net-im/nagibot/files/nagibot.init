@@ -11,10 +11,13 @@ get_nagibot_config() {
 
 command=/usr/bin/nagibot.pl
 command_args="--config ${CFGFILE}"
-pidfile=$(get_nagibot_config pid_file)
-jid=$(get_nagibot_config jid)
+pidfile=$(get_nagibot_config PIDFILE)
+jid=$(get_nagibot_config JID)
+fifo=$(get_nagibot_config FIFO)
+prefix=$(get_nagibot_config PREFIX)
 start_stop_daemon_args="--nicelevel ${NICE_LEVEL:-0} --wait 1500"
 extra_started_commands="reload"
+NAGIBOT_OPTS="-d -c ${CFGFILE} ${jid}"
 
 depend() {
 	config "$CFGFILE"
@@ -22,12 +25,13 @@ depend() {
 
 start_pre() {
 	checkpath -d $(dirname ${pidfile}) -o ${prefix}:${prefix} -m 0750
+	checkpath -p ${fifo} -o ${prefix}:${prefix} -m 0750
 }
 
 start() {
 	ebegin "Starting ${SVCNAME}"
 
-	start-stop-daemon --start -- ${NAGIBOT} $jid ${NAGIBOT_OPTS} -k start
+	start-stop-daemon --start -- ${NAGIBOT} ${NAGIBOT_OPTS} -k start
 }
 
 reload() {
