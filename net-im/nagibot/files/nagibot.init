@@ -5,9 +5,10 @@
 
 : ${CFGFILE:=/etc/nagibot/nagibot.cfg}
 
-command=/usr/bin/nagibot.pl
 start_stop_daemon_args="--nicelevel ${NICE_LEVEL:-0} --wait 1500"
 extra_started_commands="reload"
+
+NAGIBOT=/usr/bin/nagibot.pl
 NAGIBOT_OPTS="-c ${CFGFILE} -d ${JID}"
 
 depend() {
