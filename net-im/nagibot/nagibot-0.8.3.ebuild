@@ -13,14 +13,15 @@ KEYWORDS="~amd64 ~x86"
 IUSE="icinga"
 
 RDEPEND="
-	dev-perl/yaml
+	dev-perl/common-sense
 	dev-perl/AnyEvent
 	dev-perl/AnyEvent-XMPP
+	dev-perl/File-Pid
 	dev-perl/Nagios-Status-HostStatus
 	dev-perl/Nagios-Status-ServiceStatus
-	virtual/perl-Text-ParseWords
 	dev-perl/Sys-CpuLoad
-	dev-perl/File-Pid
+	dev-perl/yaml
+	virtual/perl-Text-ParseWords
 	icinga? ( net-analyzer/icinga )
 	!icinga? ( net-analyzer/nagios )
 "
