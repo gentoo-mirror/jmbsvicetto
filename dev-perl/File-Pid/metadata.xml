@@ -6,7 +6,7 @@
 	<name>Jorge Manuel B. S. Vicetto</name>
 </maintainer>
 <upstream>
-  <remote-id type="cpan">AnyEvent-XMPP</remote-id>
-  <remote-id type="cpan-module">AnyEvent::XMPP</remote-id>
+  <remote-id type="cpan">File-Pid</remote-id>
+  <remote-id type="cpan-module">File::Pid</remote-id>
 </upstream>
 </pkgmetadata>
