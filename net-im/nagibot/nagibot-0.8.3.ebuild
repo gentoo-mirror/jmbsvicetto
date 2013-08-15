@@ -13,7 +13,7 @@ KEYWORDS="~amd64 ~x86"
 IUSE="icinga"
 
 RDEPEND="
-	dev-perl/YAML
+	dev-perl/yaml
 	dev-perl/AnyEvent
 	dev-perl/AnyEvent-XMPP
 	dev-perl/Nagios-Status-HostStatus
