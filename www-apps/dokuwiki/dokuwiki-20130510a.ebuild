@@ -15,15 +15,19 @@ HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://www.splitbrain.org/_media/projects/${PN}/${PN}-${MY_PV}.tgz"
 
 LICENSE="GPL-2"
-KEYWORDS="amd64 ~ppc ~sparc x86"
+KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="gd"
 
 DEPEND=""
 RDEPEND="
 	>=dev-lang/php-5.3[xml]
-	gd? ( || ( dev-lang/php[gd]
-		media-gfx/imagemagick )
-	)"
+	gd? ( ||
+		(
+			dev-lang/php[gd]
+			media-gfx/imagemagick
+		)
+	)
+"
 
 need_httpd_cgi
 need_php_httpd
