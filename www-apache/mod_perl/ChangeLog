@@ -4,7 +4,7 @@
 
 *mod_perl-2.0.8 (21 Jun 2013)
 
-  21 Jun 2013; <atlantis@gentoo.org> +mod_perl-2.0.7.ebuild,
+  21 Jun 2013; <jmbsvicetto@gentoo.org> +mod_perl-2.0.7.ebuild,
   +mod_perl-2.0.8.ebuild, +files/2.0.3/75_mod_perl.conf,
   +files/2.0.3/apache2-mod_perl-startup.pl,
   +files/debian/010-doc-no-more-send_http_header.patch,
