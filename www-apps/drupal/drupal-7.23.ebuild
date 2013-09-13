@@ -1,8 +1,8 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2013 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.17.ebuild,v 1.1 2012/11/09 22:32:44 radhermit Exp $
+# $Header: /var/cvsroot/gentoo-x86/www-apps/drupal/drupal-7.22.ebuild,v 1.1 2013/04/06 10:02:02 radhermit Exp $
 
-EAPI=4
+EAPI=5
 
 inherit webapp
 
@@ -14,14 +14,39 @@ SRC_URI="http://drupal.org/files/projects/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
-IUSE="+mysql postgres sqlite"
+IUSE="+accelerator +mysql postgres sqlite +uploadprogress"
 
-RDEPEND="virtual/httpd-php
+RDEPEND="
 	dev-lang/php[gd,pdo,postgres?,xml]
-	dev-php/pecl-apc
-	dev-php/pecl-uploadprogress
-	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )
-	sqlite? ( dev-lang/php[sqlite3] )"
+	virtual/httpd-php
+	accelerator? ( ||
+		(
+			(
+				<dev-lang/php-5.5
+				dev-php/pecl-apc
+			)
+			dev-php/xcache
+			dev-php/eaccelerator
+			(
+				>=dev-lang/php-5.5[opcache]
+				dev-php/pecl-apcu
+			)
+		)
+	)
+	uploadprogress? ( dev-php/pecl-uploadprogress )
+	mysql? (
+		|| (
+			dev-lang/php[mysql]
+			dev-lang/php[mysqli]
+		)
+	)
+	sqlite? (
+		|| (
+			dev-lang/php[sqlite]
+			dev-lang/php[sqlite3]
+		)
+	)
+"
 
 need_httpd_cgi
 
