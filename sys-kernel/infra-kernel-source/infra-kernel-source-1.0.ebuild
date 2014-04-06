@@ -26,7 +26,7 @@ KEYWORDS="~amd64 ~x86"
 
 DEPEND="
 	sys-fs/lvm2
-	sys-kernel/genkernel
+	=sys-kernel/genkernel-9999
 	=sys-kernel/${KERNEL_SOURCES}-${KERNEL_VERSION}
 "
 
@@ -34,8 +34,54 @@ S="${WORKDIR}"
 
 src_unpack() {
 	# copy the kernel sources
-	mkdir -p usr/src
-	cp -a "/usr/src/linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}" usr/src || die
+	#mkdir -p usr/src
+	#cp -a "/usr/src/linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}" usr/src || die
+	mkdir -p "${T}"/{cache,tmp,kernel-output}
+}
+
+# This deliberately runs a very sterile genkernel
+# that IGNORES the system /etc/genkernel.conf
+# so that we get more reproducable builds
+# almost all the options are easy with this except GK_SHARE
+genkernel_sterile() {
+	_DISTDIR="${DISTDIR}"
+	# the parsing of --config seems to be broken in v3.4.44.2
+	#--config="${emptyconfig}" \
+	emptyconfig="${T}"/empty
+	touch "${emptyconfig}"
+	CMD_GK_CONFIG="${emptyconfig}" \
+	GK_SHARE="${ROOT}"/usr/share/genkernel \
+	DISTDIR="${ROOT}"/var/cache/genkernel/src/ \
+	genkernel \
+		--loglevel=1 \
+		--no-menuconfig \
+		--no-gconfig \
+		--no-xconfig \
+		--no-save-config \
+		--oldconfig \
+		--no-clean \
+		--no-mrproper \
+		--no-symlink \
+		--no-mountboot \
+		--no-lvm \
+		--no-mdadm \
+		--no-dmraid \
+		--no-multipath \
+		--no-iscsi \
+		--no-disklabel \
+		--no-luks \
+		--no-gpg \
+		--no-busybox \
+		--no-postclear \
+		--no-install \
+		--no-zfs \
+		--no-keymap \
+		--no-e2fsprogs \
+		--no-unionfs \
+		--no-netboot \
+		--compress-initramfs \
+		--ramdisk-modules \
+		"$@"
 }
 
 src_compile() {
@@ -44,13 +90,18 @@ src_compile() {
 	addpredict "/dev"
 
 	# call genkernel to build the kernel + initramfs
-	genkernel --minkernpackage="/${KERNEL_PKG}" --modulespackage="/${MODULES_PKG}" \
+	genkernel_sterile \
+		--loglevel=5 \
+		--makeopts="${MAKEOPTS}" \
+		--logfile="${T}"/genkernel.log --cachedir="${T}"/cache --tempdir="${T}"/tmp \
+		--minkernpackage="${T}"/${KERNEL_PKG} --modulespackage="${T}"/${MODULES_PKG} \
 		--kernel-config="${FILESDIR}/${KERNEL_SOURCES}-${KERNEL_VERSION}".config \
+		--kerneldir="/usr/src/linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"  \
+		--kernel-outputdir="${T}/kernel-output" \
+		--module-prefix="${T}" \
+		--lvm --disklabel --busybox \
 		--mdadm --mdadm-config="${FILESDIR}/mdadm.conf" \
-		--lvm --disklabel --busybox --no-install --no-save-config \
-		--logfile=${T}/genkernel.log --cachedir=${T}/cache --tempdir=${T}/tmp \
-		--kerneldir="${S}/usr/src/linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"  \
-		--module-prefix=${T} all
+		all
 }
 
 pkg_preinst() {
