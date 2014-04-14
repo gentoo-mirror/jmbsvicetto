@@ -8,7 +8,7 @@ KERNEL_SOURCES="hardened-sources"
 KERNEL_NAME="hardened"
 KERNEL_PV="3.13.2"
 KERNEL_REVISION="r3"
-INFRA_SUFFIX="infra25"
+INFRA_SUFFIX="infra26"
 
 KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
 KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
@@ -128,7 +128,7 @@ src_install() {
 
 pkg_preinst() {
 	# copy the built kernel + initramfs
-	mkdir -p ${BUILD_DIR}
+	mkdir -p "${BUILD_DIR}"
 	cp -f "${T}"/${BINPKG_KERNEL} "${BUILD_DIR}" || die "Failed to copy kernel package"
 	cp -f "${T}"/${BINPKG_MODULES} "${BUILD_DIR}" || die "Failed to copy module package"
 	einfo "${BINPKG_KERNEL} and ${BINPKG_MODULES} are in ${BUILD_DIR}"
