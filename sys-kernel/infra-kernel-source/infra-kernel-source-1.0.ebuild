@@ -32,7 +32,7 @@ KEYWORDS="~amd64 ~x86"
 DEPEND="
 	sys-apps/fakeroot
 	sys-fs/lvm2
-	=sys-kernel/genkernel-9999
+	>=sys-kernel/genkernel-3.4.49.1
 	=sys-kernel/${KERNEL_PF}"
 RDEPEND=""
 
