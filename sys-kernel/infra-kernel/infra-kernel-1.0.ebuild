@@ -6,15 +6,30 @@ EAPI=5
 
 inherit mount-boot multilib
 
-KERNEL_SOURCES="hardened-sources"
+KERNEL_NAME="hardened"
 KERNEL_PV="3.13.2"
 KERNEL_REVISION="r3"
-KERNEL_VERSION="${KERNEL_PV}-${KERNEL_REVISION}"
-GENKERNEL_NAME="genkernel-x86_64-${KERNEL_PV}-hardened-${KERNEL_REVISION}"
-KERNEL_URI="mirror:://gentoo-infra/${PN}-kernel-${PVR}.tbz2"
-MODULES_URI="mirror:://gentoo-infra/${PN}-modules-${PVR}.tbz2"
+INFRA_SUFFIX="infra26"
+KARCH="x86_64"
 
-SRC_URI="${KERNEL_URI} ${INIT_URI}"
+KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
+KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
+
+BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
+BINPKG_KERNEL="${PN/-source/}-kernel-${BINPKG_PVR}.tbz2"
+BINPKG_MODULES="${PN/-source/}-modules-${BINPKG_PVR}.tbz2"
+
+#KERNEL_URI="http://www.jmbsvicetto.name/gentoo-infra/${BINPKG_KERNEL}"
+#MODULES_URI="http://www.jmbsvicetto.name/gentoo-infra/${BINPKG_MODULES}"
+KERNEL_URI="mirror:://gentoo/${BINPKG_KERNEL}.tbz2"
+MODULES_URI="mirror:://gentoo/${BINPKG_MODULES}.tbz2"
+
+CUSTOM_VERSION="${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}-${INFRA_SUFFIX}"
+KERNEL_BIN="kernel-${CUSTOM_VERSION}"
+INITRAMFS_BIN="initramfs-${KARCH}-${CUSTOM_VERSION}"
+SYSTEMMAP_BIN="System.map-${KARCH}-${CUSTOM_VERSION}"
+
+SRC_URI="${KERNEL_URI} ${MODULES_URI}"
 DESCRIPTION="Package to install kernel + initramfs for Gentoo infra boxes"
 HOMEPAGE="http://wiki.gentoo.org/wiki/Project:Infrastructure"
 IUSE=""
@@ -31,12 +46,13 @@ src_install() {
 
 	# copy the kernel and initramfs
 	insinto /boot
-	doins "kernel-${GENKERNEL_NAME}"
-	doins "initramfs-${GENKERNEL_NAME}"
+	doins "${KERNEL_BIN}"
+	doins "${INITRAMFS_BIN}"
+	doins "${SYSTEMMAP_BIN}"
 
 	# copy the modules dir
 	insinto /$(get_libdir)/modules
-	doins -r "${KERNEL_PV}-hardened-${KERNEL_REVISION}"
+	doins -r "lib/modules/${CUSTOM_VERSION}"
 }
 
 pkg_preinst() {
