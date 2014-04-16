@@ -3,6 +3,7 @@
 # $Header: $
 
 EAPI=5
+inherit flag-o-matic
 
 KERNEL_SOURCES="hardened-sources"
 KERNEL_NAME="hardened"
@@ -38,11 +39,31 @@ RDEPEND=""
 
 S="${WORKDIR}"
 
+pkg_setup() {
+	[ -d /usr/src/${KERNEL_DIR} ] || die "kernel dir /usr/src/${KERNEL_DIR} missing"
+	[ -f ${KERNEL_CONFIG} ] || die "${KERNEL_CONFIG} missing"
+	# we need to be using flags that will result in binaries working on all infra systems
+	strip-flags
+	filter-flags -march=* -mtune=* -mcpu=* -frecord-gcc-switches
+	use amd64 && append-flags -march=x86-64 -mtune=generic
+	use x86 && append-flags -march=pentium4 -mtune=generic
+}
+
 src_unpack() {
-	# copy the kernel sources
-	#mkdir -p usr/src
-	#cp -a "/usr/src/${KERNEL_DIR}" usr/src || die
 	mkdir -p "${T}"/{cache,tmp,kernel-output}
+}
+
+src_prepare() {
+	# copy the kernel sources, this is potentially large, but nothing we can do.
+	# if it's dirty, the build will fail
+	# symlinks do not work either
+	mkdir -p "${S}"/usr/src
+	cp -a "/usr/src/${KERNEL_DIR}" "${S}"/usr/src || die
+	cd "${S}"/usr/src/${KERNEL_DIR}
+	_ARCH="$ARCH"
+	unset ARCH
+	emake mrproper || die "Failed to cleanup"
+	export ARCH=$_ARCH
 }
 
 # This deliberately runs a very sterile genkernel
@@ -60,6 +81,8 @@ genkernel_sterile() {
 	CMD_GK_CONFIG="${emptyconfig}" \
 	GK_SHARE="${ROOT}"/usr/share/genkernel \
 	DISTDIR="${ROOT}"/var/cache/genkernel/src/ \
+	CFLAGS="${CFLAGS}" \
+	CXXFLAGS="${CXXFLAGS}" \
 	fakeroot genkernel \
 		--loglevel=1 \
 		--no-menuconfig \
@@ -89,6 +112,7 @@ genkernel_sterile() {
 		--no-netboot \
 		--compress-initramfs \
 		--ramdisk-modules \
+		--no-debug-cleanup \
 		"$@"
 }
 
@@ -118,6 +142,7 @@ src_compile() {
 		\
 		--minkernpackage="${T}"/${BINPKG_KERNEL} \
 		--modulespackage="${T}"/${BINPKG_MODULES} \
+		\
 		all \
 	|| die "genkernel failed"
 }
