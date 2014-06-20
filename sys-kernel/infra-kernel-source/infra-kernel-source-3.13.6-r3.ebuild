@@ -7,8 +7,8 @@ inherit flag-o-matic
 
 KERNEL_SOURCES="hardened-sources"
 KERNEL_NAME="hardened"
-KERNEL_PV="3.13.6"
-KERNEL_REVISION="r3"
+KERNEL_PV="$PV"
+KERNEL_REVISION="$PR"
 INFRA_SUFFIX="infra27"
 
 KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
@@ -16,8 +16,8 @@ KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
 
 KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
 BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
-BINPKG_KERNEL="${PN/-source/}-kernel-${BINPKG_PVR}.tbz2"
-BINPKG_MODULES="${PN/-source/}-modules-${BINPKG_PVR}.tbz2"
+BINPKG_KERNEL="${PN/-sources/}-kernel-${KARCH}-${BINPKG_PVR}.tbz2"
+BINPKG_MODULES="${PN/-sources/}-modules-${KARCH}-${BINPKG_PVR}.tbz2"
 KERNEL_CONFIG="${FILESDIR}"/${KERNEL_PF}-${INFRA_SUFFIX}.config
 
 BUILD_DIR="/home/upload-kernel/"
@@ -46,7 +46,7 @@ pkg_setup() {
 	strip-flags
 	filter-flags -march=* -mtune=* -mcpu=* -frecord-gcc-switches
 	use amd64 && append-flags -march=x86-64 -mtune=generic
-	use x86 && append-flags -march=pentium4 -mtune=generic
+	use x86 && append-flags -march=pentium3 -mtune=generic
 }
 
 src_unpack() {
