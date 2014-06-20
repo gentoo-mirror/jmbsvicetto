@@ -140,7 +140,7 @@ src_compile() {
 		--e2fsprogs \
 		--mdadm --mdadm-config="${FILESDIR}/mdadm.conf-1.0" \
 		\
-		--kernname=${PN}-${KARCH}
+		--kernname=${PN}-${KARCH} \
 		--minkernpackage="${T}"/${BINPKG_KERNEL} \
 		--modulespackage="${T}"/${BINPKG_MODULES} \
 		\
