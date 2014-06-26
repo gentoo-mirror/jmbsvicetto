@@ -10,6 +10,8 @@ KERNEL_NAME="hardened"
 KERNEL_PV="$PV"
 KERNEL_REVISION="$PR"
 INFRA_SUFFIX="infra27"
+use amd64 && KARCH="x86_64"
+use x86 && KARCH="x86"
 
 KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
 KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
@@ -18,7 +20,7 @@ KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
 BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
 BINPKG_KERNEL="${PN/-sources/}-kernel-${KARCH}-${BINPKG_PVR}.tbz2"
 BINPKG_MODULES="${PN/-sources/}-modules-${KARCH}-${BINPKG_PVR}.tbz2"
-KERNEL_CONFIG="${FILESDIR}"/${KERNEL_PF}-${INFRA_SUFFIX}.config
+KERNEL_CONFIG="${FILESDIR}"/${KERNEL_PF}-${KARCH}-${INFRA_SUFFIX}.config
 
 BUILD_DIR="/home/upload-kernel/"
 
@@ -80,7 +82,7 @@ genkernel_sterile() {
 	touch "${emptyconfig}"
 	CMD_GK_CONFIG="${emptyconfig}" \
 	GK_SHARE="${ROOT}"/usr/share/genkernel \
-	DISTDIR="${ROOT}"/var/cache/genkernel/src/ \
+	DISTDIR="${ROOT}"//usr/share/genkernel/distfiles \
 	CFLAGS="${CFLAGS}" \
 	CXXFLAGS="${CXXFLAGS}" \
 	fakeroot genkernel \
@@ -140,7 +142,6 @@ src_compile() {
 		--e2fsprogs \
 		--mdadm --mdadm-config="${FILESDIR}/mdadm.conf-1.0" \
 		\
-		--kernname=${PN}-${KARCH} \
 		--minkernpackage="${T}"/${BINPKG_KERNEL} \
 		--modulespackage="${T}"/${BINPKG_MODULES} \
 		\
