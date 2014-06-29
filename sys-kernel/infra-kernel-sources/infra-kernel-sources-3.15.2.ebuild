@@ -10,17 +10,9 @@ KERNEL_NAME="hardened"
 KERNEL_PV="$PV"
 KERNEL_REVISION="$PR"
 INFRA_SUFFIX="infra27"
-use amd64 && KARCH="x86_64"
-use x86 && KARCH="x86"
 
 KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
 KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
-
-KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
-BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
-BINPKG_KERNEL="${PN/-sources/}-kernel-${KARCH}-${BINPKG_PVR}.tbz2"
-BINPKG_MODULES="${PN/-sources/}-modules-${KARCH}-${BINPKG_PVR}.tbz2"
-KERNEL_CONFIG="${FILESDIR}"/${KERNEL_PF}-${KARCH}-${INFRA_SUFFIX}.config
 
 BUILD_DIR="/home/upload-kernel/"
 
@@ -42,6 +34,15 @@ RDEPEND=""
 S="${WORKDIR}"
 
 pkg_setup() {
+	use amd64 && KARCH="x86_64"
+	use x86 && KARCH="x86"
+
+	KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
+	BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
+	BINPKG_KERNEL="${PN/-sources/}-kernel-${KARCH}-${BINPKG_PVR}.tbz2"
+	BINPKG_MODULES="${PN/-sources/}-modules-${KARCH}-${BINPKG_PVR}.tbz2"
+	KERNEL_CONFIG="${FILESDIR}"/${KERNEL_PF}-${KARCH}-${INFRA_SUFFIX}.config
+
 	[ -d /usr/src/${KERNEL_DIR} ] || die "kernel dir /usr/src/${KERNEL_DIR} missing"
 	[ -f ${KERNEL_CONFIG} ] || die "${KERNEL_CONFIG} missing"
 	# we need to be using flags that will result in binaries working on all infra systems
