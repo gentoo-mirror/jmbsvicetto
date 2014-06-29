@@ -8,10 +8,16 @@ inherit flag-o-matic
 KERNEL_SOURCES="hardened-sources"
 KERNEL_NAME="hardened"
 KERNEL_PV="$PV"
-KERNEL_REVISION="$PR"
 INFRA_SUFFIX="infra27"
 
-KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
+if [[ ${PR} != r0 ]]; then
+	KERNEL_REVISION="$PR"
+	KERNEL_PVR="${KERNEL_PV}-${KERNEL_REVISION}"
+	KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
+else
+	KERNEL_PVR="${KERNEL_PV}"
+	KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}"
+fi
 KERNEL_PF="${KERNEL_SOURCES}-${KERNEL_PVR}"
 
 BUILD_DIR="/home/upload-kernel/"
@@ -37,7 +43,6 @@ pkg_setup() {
 	use amd64 && KARCH="x86_64"
 	use x86 && KARCH="x86"
 
-	KERNEL_DIR="linux-${KERNEL_PV}-${KERNEL_NAME}-${KERNEL_REVISION}"
 	BINPKG_PVR="${PVR}-${INFRA_SUFFIX}"
 	BINPKG_KERNEL="${PN/-sources/}-kernel-${KARCH}-${BINPKG_PVR}.tbz2"
 	BINPKG_MODULES="${PN/-sources/}-modules-${KARCH}-${BINPKG_PVR}.tbz2"
