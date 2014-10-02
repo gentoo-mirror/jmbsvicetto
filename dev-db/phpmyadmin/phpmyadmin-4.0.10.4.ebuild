@@ -1,8 +1,8 @@
 # Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/phpmyadmin/phpmyadmin-4.2.8.1.ebuild,v 1.1 2014/09/13 19:15:51 robbat2 Exp $
+# $Header: $
 
-EAPI="4"
+EAPI="5"
 
 inherit eutils webapp depend.php
 
