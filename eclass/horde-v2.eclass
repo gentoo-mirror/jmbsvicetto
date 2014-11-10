@@ -36,7 +36,7 @@
 
 # This eclass requires at least EAPI-3
 case ${EAPI:-0} in
-	4|3) : ;;
+	5|4|3) : ;;
 	*) die "EAPI=${EAPI} is not supported" ;;
 esac
 
