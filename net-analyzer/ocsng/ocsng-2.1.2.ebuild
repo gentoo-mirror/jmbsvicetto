@@ -1,4 +1,4 @@
-# Copyright 1999-2012 Gentoo Foundation
+# Copyright 1999-2014 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Header: $
 
@@ -19,7 +19,7 @@ SRC_URI="http://launchpad.net/${MY_LPN}/stable-${MY_PV_MAJOR}/${MY_PV}/+download
 SLOT="0"
 LICENSE="GPL-2 LGPL-2"
 KEYWORDS="~amd64"
-IUSE="+comm admin logrotate"
+IUSE="+comm admin logrotate soap"
 
 # INSTALL_DIR is used by webapp.eclass when USE=-vhosts
 INSTALL_DIR="ocsng"
@@ -36,11 +36,16 @@ RDEPEND="${DEPEND}
 	>=dev-perl/DBD-mysql-2.9004
 	>=dev-perl/Net-IP-1.21
 	>=dev-perl/XML-Simple-2.12
+	virtual/perl-Compress-Raw-Zlib
 	www-apache/mod_perl
 	>=www-servers/apache-1.3
-	admin? ( dev-lang/php[mysql,xml] )
+	admin? ( dev-lang/php[mysqlnd,xml] )
 	logrotate? ( app-admin/logrotate )
+	soap? (
+		dev-perl/SOAP-Lite
+	)
 "
+#		dev-perl/XML-Entities
 REQUIRED_USE="|| ( admin comm )"
 
 pkg_setup() {
@@ -66,6 +71,8 @@ src_install() {
 	IPDDIR="ipd"
 	SNMPDIR="snmp"
 	PACKAGESDIR="download"
+	PLUGINS_CONFIG_DIR=""
+	PLUGINS_PERL_DIR=""
 
 	# call default eclass src_preinst
 	webapp_src_preinst
@@ -86,7 +93,7 @@ src_install() {
 
 			dodir /etc/logrotate.d
 			cat <<- EOF > "${D}etc/logrotate.d/ocsng"
-				# Copyright 1999-2013 Gentoo Foundation
+				# Copyright 1999-2014 Gentoo Foundation
 				# Distributed under the terms of the GNU General Public License v2
 				# $Header: $
 				#
@@ -111,6 +118,8 @@ src_install() {
 		# set mod_perl version > 1.999_21
 		sed -i -e "s/VERSION_MP/2/" etc/ocsinventory/ocsinventory-server.conf
 		sed -i -e "s:PATH_TO_LOG_DIRECTORY:${LOGDIR}:" etc/ocsinventory/ocsinventory-server.conf
+		sed -i -e "s:PATH_TO_PLUGINS_CONFIG_DIRECTORY:${PLUGINS_CONFIG_DIR}:" etc/ocsinventory/ocsinventory-server.conf
+		sed -i -e "s:PATH_TO_PLUGINS_PERL_DIRECTORY:${PLUGINS_PERL_DIR}:" etc/ocsinventory/ocsinventory-server.conf
 
 		# install the communication
 		webapp_server_configfile apache "etc/ocsinventory/ocsinventory-server.conf"
