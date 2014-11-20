@@ -21,12 +21,7 @@ RDEPEND="
 	virtual/httpd-php
 	accelerator? ( ||
 		(
-			(
-				<dev-lang/php-5.5
-				dev-php/pecl-apc
-			)
 			dev-php/xcache
-			dev-php/eaccelerator
 			(
 				>=dev-lang/php-5.5[opcache]
 				dev-php/pecl-apcu
