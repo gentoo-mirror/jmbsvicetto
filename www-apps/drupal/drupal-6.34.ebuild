@@ -16,9 +16,15 @@ LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+mysql postgres"
 
-RDEPEND="virtual/httpd-php
+RDEPEND="
 	dev-lang/php[gd,pdo,postgres?,xml]
-	mysql? ( || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) )"
+	virtual/httpd-php
+	mysql? (
+		|| (
+			dev-lang/php[mysql]
+			dev-lang/php[mysqli]
+		)
+	)"
 
 need_httpd_cgi
 

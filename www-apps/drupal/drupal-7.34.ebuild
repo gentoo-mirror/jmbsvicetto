@@ -35,12 +35,7 @@ RDEPEND="
 			dev-lang/php[mysqli]
 		)
 	)
-	sqlite? (
-		|| (
-			dev-lang/php[sqlite]
-			dev-lang/php[sqlite3]
-		)
-	)
+	sqlite? ( dev-lang/php[sqlite] )
 "
 
 need_httpd_cgi
