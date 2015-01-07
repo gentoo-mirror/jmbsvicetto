@@ -15,7 +15,7 @@ HOMEPAGE="http://drupal.org/"
 SRC_URI="http://drupal.org/files/projects/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~alpha ~amd64 ~ppc ~x86"
 IUSE="+accelerator +mysql postgres sqlite +uploadprogress"
 
 RDEPEND="
