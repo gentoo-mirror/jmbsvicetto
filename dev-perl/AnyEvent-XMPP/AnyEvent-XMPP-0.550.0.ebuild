@@ -5,7 +5,7 @@
 EAPI=5
 
 MODULE_AUTHOR=MSTPLBG
-MODULE_VERSION=0.54
+MODULE_VERSION=0.55
 inherit perl-module
 
 DESCRIPTION="An implementation of the XMPP Protocol"
