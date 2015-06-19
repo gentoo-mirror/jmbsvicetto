@@ -1,0 +1,19 @@
+# Copyright 1999-2014 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+#
+# OCSNG logrotate config for Gentoo Linux
+# Contributed by Jorge Manuel B. S. Vicetto (jmbsvicetto) jmbsvicetto@gentoo.org
+# Based on the original ocsng logrotate file by Didier LIROULET
+
+/var/log/ocsng/*.log {
+	daily
+	# rotate 7
+	commpress
+	create 0660 root apache
+	notifyempty
+	missingok
+	# postrotate
+	/etc/init.d/apache2 reload > /dev/null 2>&1 || true
+	# endscript
+}

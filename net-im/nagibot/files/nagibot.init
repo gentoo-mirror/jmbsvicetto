@@ -1,0 +1,35 @@
+#!/sbin/runscript
+# Copyright 1999-2013 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
+# $Header: $
+
+: ${CFGFILE:=/etc/nagibot/nagibot.cfg}
+
+start_stop_daemon_args="--nicelevel ${NICE_LEVEL:-0} --wait 1500"
+extra_started_commands="reload"
+
+NAGIBOT=/usr/bin/nagibot.pl
+NAGIBOT_OPTS="-c ${CFGFILE} -d ${JID}"
+
+depend() {
+	config "$CFGFILE"
+}
+
+start_pre() {
+	checkpath -o ${PREFIX}:${PREFIX} -m 0750 -d $(dirname ${PIDFILE})
+	checkpath -o ${PREFIX}:${PREFIX} -m 0750 -p ${FIFO}
+}
+
+start() {
+	ebegin "Starting ${SVCNAME}"
+
+	start-stop-daemon --start --exec ${NAGIBOT} --pidfile ${PIDFILE} -- ${NAGIBOT_OPTS}
+}
+
+reload() {
+	ebegin "Reloading ${SERVICE}"
+	kill -HUP `cat ${PIDFILE}`
+	eend $?
+}
+
+# vim: filetype=gentoo-init-d:

@@ -1,0 +1,3 @@
+DEVICE partitions containers
+#CREATE auto=part symlinks=no
+AUTO -ddf homehost +1.x +all

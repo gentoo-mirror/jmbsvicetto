@@ -1,0 +1,12 @@
+diff -ur nagios-plugins-1.4.16-old/configure.in nagios-plugins-1.4.16/configure.in
+--- nagios-plugins-1.4.16-old/configure.in	2013-05-14 01:04:01.395679847 +0000
++++ nagios-plugins-1.4.16/configure.in	2013-05-14 01:05:42.705271900 +0000
+@@ -6,7 +6,7 @@
+ 	nagios-plugins.spec])
+ AC_CONFIG_AUX_DIR(build-aux)
+ AM_INIT_AUTOMAKE([1.8.3])
+-AM_CONFIG_HEADER(config.h)
++AC_CONFIG_HEADERS(config.h)
+ AC_CANONICAL_HOST
+ 
+ RELEASE=1

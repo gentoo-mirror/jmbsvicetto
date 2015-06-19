@@ -1,0 +1,30 @@
+# ChangeLog for www-apps/glpi
+# Copyright 1999-2013 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*glpi-0.83.7 (04 Feb 2013)
+
+  04 Feb 2013; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +glpi-0.83.7.ebuild:
+  Bump glpi to the 0.83.7 release.
+
+  20 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  glpi-0.72.3.ebuild, glpi-0.72.4.ebuild:
+  Fix php dep.
+
+*glpi-0.72.4 (24 Mar 2010)
+
+  24 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +glpi-0.72.4.ebuild:
+  Bumped glpi to the 0.72.4 version.
+
+  02 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  glpi-0.72.3.ebuild:
+  Fixed postinstall file name.
+
+*glpi-0.72.3 (02 Mar 2010)
+
+  02 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +glpi-0.72.3.ebuild, +files/postinstall-en.txt:
+  Added initial glpi version to the overlay.
+

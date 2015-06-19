@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+<maintainer>
+	<email>jmbsvicetto@gentoo.org</email>
+	<name>Jorge Manuel B. S. Vicetto</name>
+</maintainer>
+<longdescription>
+	osm-gps-map is a Gtk+ widget for displaying OpenStreetMap files.
+</longdescription>
+<use>
+	<flag name="introspection">Use dev-libs/gobject-introspection for introspection</flag>
+</use>
+</pkgmetadata>
