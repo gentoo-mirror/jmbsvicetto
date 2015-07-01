@@ -4,7 +4,7 @@
 
 EAPI=5
 
-inherit webapp depend.php
+inherit webapp
 
 # upstream uses dashes in the datestamp
 MY_BASE_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
@@ -21,6 +21,7 @@ IUSE="gd"
 DEPEND=""
 RDEPEND="
 	>=dev-lang/php-5.3[xml]
+	virtual/httpd-php:*
 	gd? ( ||
 		(
 			dev-lang/php[gd]
@@ -30,7 +31,6 @@ RDEPEND="
 "
 
 need_httpd_cgi
-need_php_httpd
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 

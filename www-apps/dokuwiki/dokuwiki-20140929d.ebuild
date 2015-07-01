@@ -4,13 +4,13 @@
 
 EAPI=5
 
-inherit webapp depend.php
+inherit webapp
 
 # upstream uses dashes in the datestamp
 MY_BASE_PV="${PV:0:4}-${PV:4:2}-${PV:6:2}"
 MY_PV="${MY_BASE_PV}${PV:8:1}"
 
-DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small company's documentation needs."
+DESCRIPTION="DokuWiki is a simple to use Wiki aimed at a small company's documentation needs"
 HOMEPAGE="http://wiki.splitbrain.org/wiki:dokuwiki"
 SRC_URI="http://download.dokuwiki.org/src/${PN}/${PN}-${MY_PV}.tgz"
 
@@ -21,6 +21,7 @@ IUSE="gd"
 DEPEND=""
 RDEPEND="
 	>=dev-lang/php-5.3[xml]
+	virtual/httpd-php:*
 	gd? ( ||
 		(
 			dev-lang/php[gd]
@@ -30,7 +31,6 @@ RDEPEND="
 "
 
 need_httpd_cgi
-need_php_httpd
 
 S="${WORKDIR}/${PN}-${MY_PV}"
 
