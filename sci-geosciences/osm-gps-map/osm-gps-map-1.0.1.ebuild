@@ -9,10 +9,11 @@ DISTUTILS_OPTIONAL=1
 
 inherit eutils autotools gnome2 distutils-r1
 
+AUTHOR="nzjrs"
 DESCRIPTION="A gtk+ viewer for OpenStreetMap files"
 HOMEPAGE="http://nzjrs.github.com/osm-gps-map/"
-SRC_URI="http://www.johnstowers.co.nz/files/${PN}/${P}.tar.gz
-python? ( http://www.johnstowers.co.nz/files/${PN}/python-osmgpsmap-${PV}.tar.gz )"
+SRC_URI="http://www.github.com/${AUTHOR}/${PN}/archive/${PV}.tar.gz"
+#python? ( http://www.johnstowers.co.nz/files/${PN}/python-osmgpsmap-${PV}.tar.gz )"
 
 LICENSE="GPL-2"
 SLOT="0"
@@ -38,7 +39,7 @@ DEPEND="${RDEPEND}
 	gnome-base/gnome-common:3
 	virtual/pkgconfig"
 
-PYTHON_S="${WORKDIR}/python-osmgpsmap-${PV}"
+PYTHON_S="${WORKDIR}/python"
 
 src_configure() {
 	# Configure script does not accept quoted EPREFIX...
@@ -50,8 +51,8 @@ src_configure() {
 }
 
 src_prepare() {
-	epatch "${FILESDIR}/${P}-fix-docs-location.patch" \
-	       "${FILESDIR}/${P}-fix-introspection.patch"
+	epatch "${FILESDIR}/${PN}-fix-docs-location.patch" \
+	       "${FILESDIR}/${PN}-fix-introspection.patch"
 	eautoreconf
 
 	gnome2_src_prepare
