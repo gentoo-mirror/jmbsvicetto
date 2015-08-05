@@ -7,8 +7,8 @@ EAPI=5
 inherit webapp
 
 DESCRIPTION="Wordpress PHP and MySQL based content management system (CMS)"
-HOMEPAGE="http://wordpress.org/"
-SRC_URI="http://wordpress.org/${P/_rc/-RC}.tar.gz"
+HOMEPAGE="https://wordpress.org/"
+SRC_URI="https://wordpress.org/${P/_rc/-RC}.tar.gz"
 
 LICENSE="GPL-2+"
 KEYWORDS="~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86"
