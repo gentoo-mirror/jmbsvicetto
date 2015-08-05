@@ -1,0 +1,13 @@
+_eclasses_=webapp	94698bf1c7a5b1acd3184e94f484017
+_md5_=c86f3881eda68a2bdbb3138bd47b2d9f
+SLOT=4.2.4
+DEFINED_PHASES=install postinst prerm setup
+EAPI=5
+DEPEND=|| ( virtual/httpd-cgi virtual/httpd-fastcgi ) >=app-admin/webapp-config-1.50.15
+DESCRIPTION=Wordpress PHP and MySQL based content management system (CMS)
+LICENSE=GPL-2+
+IUSE=+akismet examples +themes vhosts vhosts
+SRC_URI=https://wordpress.org/wordpress-4.2.4.tar.gz
+KEYWORDS=~amd64 ~arm ~hppa ~ppc ~ppc64 ~sparc ~x86
+HOMEPAGE=https://wordpress.org/
+RDEPEND=virtual/httpd-php || ( dev-lang/php[mysql] dev-lang/php[mysqli] ) >=app-admin/webapp-config-1.50.15

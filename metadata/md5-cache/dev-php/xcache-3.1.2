@@ -1,0 +1,15 @@
+_eclasses_=toolchain-funcs	42408102d713fbad60ca21349865edb4	flag-o-matic	c9602887773166fe300444712fc7ff98	multilib	62927b3db3a589b0806255f3a002d5d3	libtool	52d0e17251d04645ffaa61bfdd858944	confutils	2ab69b52fa6ea0c0669a47fb94b354b4	autotools	2264f05fbbbaaf83d34ec81e72b38ffd	php-ext-source-r2	b4d5827d04ab9f22f094e1ecab1df639	eutils	9fb270e417e0e83d64ca52586c4a79de
+_md5_=77839fc39919f2d308259775787a96aa
+SLOT=0
+DEFINED_PHASES=compile configure install postinst prepare unpack
+EAPI=5
+DEPEND=!dev-php/eaccelerator !dev-php/pecl-apc virtual/httpd-php php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) !<sys-devel/gettext-0.18.1.1-r3 || ( >=sys-devel/automake-1.15:1.15 ) >=sys-devel/autoconf-2.69 >=sys-devel/libtool-2.4 >=sys-devel/m4-1.4.3 >=sys-devel/libtool-1.5.18 php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 )
+DESCRIPTION=A fast and stable PHP opcode cacher
+LICENSE=BSD
+IUSE=php_targets_php5-4 php_targets_php5-5
+REQUIRED_USE=|| ( php_targets_php5-4 php_targets_php5-5 )
+RESTRICT=test
+SRC_URI=http://xcache.lighttpd.net/pub/Releases/3.1.2/xcache-3.1.2.tar.bz2
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://xcache.lighttpd.net/
+RDEPEND=!dev-php/eaccelerator !dev-php/pecl-apc virtual/httpd-php php_targets_php5-5? ( !dev-lang/php:5.5[opcache] ) php_targets_php5-4? ( dev-lang/php:5.4 ) php_targets_php5-5? ( dev-lang/php:5.5 )

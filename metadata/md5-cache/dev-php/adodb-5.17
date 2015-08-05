@@ -1,0 +1,12 @@
+_eclasses_=toolchain-funcs	42408102d713fbad60ca21349865edb4	php-lib-r1	2bf4d635c8f0bf4ac07a64c5d679abf0	versionator	cd0bcdb170807e4a1984115e9d53a26f	multilib	62927b3db3a589b0806255f3a002d5d3	eutils	9fb270e417e0e83d64ca52586c4a79de
+_md5_=8fb6e0403ac16f796b62ef805ec133e3
+SLOT=0
+DEFINED_PHASES=install setup
+EAPI=4
+DEPEND=app-arch/unzip dev-lang/php
+DESCRIPTION=Active Data Objects Data Base library for PHP.
+LICENSE=LGPL-2.1
+SRC_URI=mirror://sourceforge/adodb/adodb517.zip
+KEYWORDS=~alpha ~amd64 ~arm ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+HOMEPAGE=http://adodb.sourceforge.net/
+RDEPEND=dev-lang/php

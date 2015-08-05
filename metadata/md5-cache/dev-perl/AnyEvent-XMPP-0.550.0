@@ -1,0 +1,12 @@
+_eclasses_=toolchain-funcs	42408102d713fbad60ca21349865edb4	multilib	62927b3db3a589b0806255f3a002d5d3	unpacker	f300a7ca9131b1024a79762e8edd3c52	multiprocessing	d7f2985a2c76c365ee20269db5261414	eutils	9fb270e417e0e83d64ca52586c4a79de	perl-module	9ff260c452d420630500e700913be8d8
+_md5_=bd6e44903c84a79c878e515c3e242d1
+SLOT=0
+DEFINED_PHASES=compile configure install prepare test unpack
+EAPI=5
+DEPEND=dev-perl/AnyEvent dev-perl/Object-Event dev-perl/XML-Writer dev-perl/XML-Parser virtual/perl-MIME-Base64 dev-perl/Authen-SASL dev-perl/Net-LibIDN virtual/perl-Digest-SHA dev-lang/perl:=[-build(-)]
+DESCRIPTION=An implementation of the XMPP Protocol
+LICENSE=|| ( Artistic GPL-1+ )
+SRC_URI=mirror://cpan/authors/id/M/MS/MSTPLBG/AnyEvent-XMPP-0.55.tar.gz
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://search.cpan.org/dist/AnyEvent-XMPP/
+RDEPEND=dev-perl/AnyEvent dev-perl/Object-Event dev-perl/XML-Writer dev-perl/XML-Parser virtual/perl-MIME-Base64 dev-perl/Authen-SASL dev-perl/Net-LibIDN virtual/perl-Digest-SHA dev-lang/perl:=[-build(-)]

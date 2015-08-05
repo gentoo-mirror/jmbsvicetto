@@ -1,0 +1,13 @@
+_eclasses_=webapp	94698bf1c7a5b1acd3184e94f484017
+_md5_=ff572b40673d5ea35a642045e80b6cd4
+SLOT=0.85
+DEFINED_PHASES=install postinst preinst prerm setup
+EAPI=0
+DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
+DESCRIPTION=GLPI is the Information Resource-Manager with an additional Administration- Interface.
+LICENSE=GPL-2
+IUSE=vhosts
+SRC_URI=https://forge.indepnet.net/attachments/download/1899/glpi-0.85.tar.gz
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://www.glpi-project.org/
+RDEPEND=dev-db/mysql dev-lang/php >=app-admin/webapp-config-1.50.15

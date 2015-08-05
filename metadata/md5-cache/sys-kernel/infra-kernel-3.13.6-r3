@@ -1,0 +1,12 @@
+_eclasses_=toolchain-funcs	42408102d713fbad60ca21349865edb4	mount-boot	7784c1c862b665e1d6a3c1f47936987	multilib	62927b3db3a589b0806255f3a002d5d3
+_md5_=e37d5b49b4d30d385908da6c55a4143e
+SLOT=0
+DEFINED_PHASES=install postinst postrm preinst prerm pretend
+EAPI=5
+DESCRIPTION=Package to install kernel + initramfs for Gentoo infra boxes
+LICENSE=GPL-2
+RESTRICT=fetch
+SRC_URI=amd64? ( infra-kernel-kernel-x86_64-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86_64-3.13.6-r3-infra27.tbz2 ) x86? ( infra-kernel-kernel-x86-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86-3.13.6-r3-infra27.tbz2 )
+KEYWORDS=~amd64 ~x86
+HOMEPAGE=http://wiki.gentoo.org/wiki/Project:Infrastructure
+RDEPEND=sys-boot/grub:2
