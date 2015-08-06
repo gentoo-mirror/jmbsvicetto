@@ -189,6 +189,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	apache-module_pkg_postinst
 }

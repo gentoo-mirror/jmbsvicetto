@@ -34,8 +34,6 @@ PDEPEND="
 	>=dev-perl/Apache-SizeLimit-0.95
 "
 
-S="${WORKDIR}/httpd24"
-
 APACHE2_MOD_FILE="${S}/src/modules/perl/mod_perl.so"
 APACHE2_MOD_CONF="2.0.8/75_${PN}"
 APACHE2_MOD_DEFINE="PERL"
@@ -112,7 +110,7 @@ src_prepare() {
 
 	# Fix auth* module references on tests
 #	epatch "${FILESDIR}/${P}-auth-fixes.patch"
-	epatch "${FILESDIR}/${P}-auth-modules-fix.patch"
+#	epatch "${FILESDIR}/${PN}-2.0.8-auth-modules-fix.patch"
 
 #	epatch "${FILESDIR}/
 #260_fix_pipelined_response_deadlock.patch
@@ -189,6 +187,5 @@ src_install() {
 }
 
 pkg_postinst() {
-	perl-module_pkg_postinst
 	apache-module_pkg_postinst
 }
