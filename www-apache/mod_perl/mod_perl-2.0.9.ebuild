@@ -8,7 +8,7 @@ inherit depend.apache apache-module perl-module eutils
 
 DESCRIPTION="An embedded Perl interpreter for Apache2"
 HOMEPAGE="https://projects.apache.org/projects/mod_perl.html"
-SRC_URI="mirror://debian//pool/main/liba/libapache2-mod-perl2/libapache2-mod-perl2_2.0.8+httpd24-r1449661.orig.tar.gz"
+SRC_URI="mirror://apache/perl/${P}.tar.gz"
 
 LICENSE="GPL-2"
 KEYWORDS="~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86"
