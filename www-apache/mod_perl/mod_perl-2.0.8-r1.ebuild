@@ -24,11 +24,10 @@ SLOT="1"
 # We need both, apache and perl but either apache without threads or perl with
 # ithreads, bug 373943
 DEPEND="
-	>=www-servers/apache-2.4
-	>=dev-perl/Apache-Test-1.360
-	>=virtual/perl-CGI-3.08
 	dev-lang/perl
-	www-servers/apache
+	>=dev-perl/Apache-Test-1.360
+	>=dev-perl/CGI-3.08
+	>=www-servers/apache-2.4
 	|| ( www-servers/apache[-threads] dev-lang/perl[ithreads] )
 	test? ( dev-perl/HTML-Parser )
 "
