@@ -7,7 +7,7 @@ DEPEND=>=app-admin/webapp-config-1.50.15 dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Horde Application Framework
 LICENSE=LGPL-2
 IUSE=mysql vhosts vhosts
-SRC_URI=http://ftp.horde.org/pub/snaps/2015-08-05/horde-git.tar.gz
+SRC_URI=http://ftp.horde.org/pub/snaps/2015-08-07/horde-git.tar.gz
 KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86
 HOMEPAGE=http://www.horde.org/
 RDEPEND=dev-lang/php[session,xml] >=dev-libs/libxml2-2.4.21 dev-php/PEAR-Log dev-php/PEAR-Mail_Mime >=sys-devel/gettext-0.10.40 >=www-apps/horde-pear-1.3 mysql? ( dev-php/PEAR-DB ) >=app-admin/webapp-config-1.50.15 dev-lang/php >=dev-php/pear-1.8.1
