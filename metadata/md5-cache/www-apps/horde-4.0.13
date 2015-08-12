@@ -1,13 +1,13 @@
-_eclasses_=toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	php-pear-r1	775902054fe3b812a6afa7cdde2e0b40	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	webapp	2442891c368d310c1d3fe77d9c77fe5b	horde-v2	1b6d4943a7ffa6c1fb34828da0da9039	eutils	351a78113be5b393c09a2c948701ad36
-_md5_=d70c9c666729b6589445e16c9ba6cccb
-SLOT=4.0.13
 DEFINED_PHASES=install postinst prerm setup unpack
-EAPI=4
 DEPEND=>=app-admin/webapp-config-1.50.15 dev-lang/php >=dev-php/pear-1.8.1
 DESCRIPTION=Horde Application Framework
-LICENSE=LGPL-2
-IUSE=mysql vhosts vhosts
-SRC_URI=http://pear.horde.org/get/horde-4.0.13.tgz
-KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86
+EAPI=4
 HOMEPAGE=http://www.horde.org/
+IUSE=mysql vhosts vhosts
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~sparc ~x86
+LICENSE=LGPL-2
 RDEPEND=dev-lang/php[session,xml] >=dev-libs/libxml2-2.4.21 dev-php/PEAR-Log dev-php/PEAR-Mail_Mime >=sys-devel/gettext-0.10.40 >=www-apps/horde-pear-1.3 mysql? ( dev-php/PEAR-DB ) >=app-admin/webapp-config-1.50.15 dev-lang/php >=dev-php/pear-1.8.1
+SLOT=4.0.13
+SRC_URI=http://pear.horde.org/get/horde-4.0.13.tgz
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	horde-v2	1b6d4943a7ffa6c1fb34828da0da9039	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	php-pear-r1	775902054fe3b812a6afa7cdde2e0b40	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	webapp	2442891c368d310c1d3fe77d9c77fe5b
+_md5_=d70c9c666729b6589445e16c9ba6cccb

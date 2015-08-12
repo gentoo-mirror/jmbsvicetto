@@ -1,13 +1,13 @@
-_eclasses_=webapp	2442891c368d310c1d3fe77d9c77fe5b
-_md5_=e2fa3f5253c593449adc655195bfcef
-SLOT=0.5.18
 DEFINED_PHASES=install postinst prerm setup unpack
-EAPI=2
 DEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
 DESCRIPTION=PHP LDAP Virtual Hosting Manager
-LICENSE=GPL-2 amavis? ( FDL-1.2 ) ftp? ( BSD ) radius? ( as-is ) samba? ( GPL-3 )
-IUSE=amavis ftp radius samba vhosts
-SRC_URI=http://open.rhx.it/phamm/phamm-0.5.18.tar.gz amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
-KEYWORDS=~amd64
+EAPI=2
 HOMEPAGE=http://www.phamm.org/
+IUSE=amavis ftp radius samba vhosts
+KEYWORDS=~amd64
+LICENSE=GPL-2 amavis? ( FDL-1.2 ) ftp? ( BSD ) radius? ( as-is ) samba? ( GPL-3 )
 RDEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
+SLOT=0.5.18
+SRC_URI=http://open.rhx.it/phamm/phamm-0.5.18.tar.gz amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
+_eclasses_=webapp	2442891c368d310c1d3fe77d9c77fe5b
+_md5_=0e2fa3f5253c593449adc655195bfcef
