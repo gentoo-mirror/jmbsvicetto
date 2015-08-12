@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst prerm setup unpack
+DEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
+DESCRIPTION=PHP LDAP Virtual Hosting Manager
+EAPI=5
+HOMEPAGE=http://www.phamm.org/
+IUSE=amavis ftp radius samba vhosts
+KEYWORDS=~amd64
+LICENSE=GPL-2 amavis? ( FDL-1.2 ) ftp? ( BSD ) radius? ( as-is ) samba? ( GPL-3 )
+RDEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
+SLOT=0.6.2
+SRC_URI=http://open.rhx.it/phamm/phamm-0.6.2.tar.gz amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
+_eclasses_=webapp	2442891c368d310c1d3fe77d9c77fe5b
+_md5_=319c8e2c353a9efdedb1746e88bf3897

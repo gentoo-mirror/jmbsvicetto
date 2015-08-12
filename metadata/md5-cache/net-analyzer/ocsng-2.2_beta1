@@ -1,0 +1,14 @@
+DEFINED_PHASES=compile install postinst preinst
+DEPEND=dev-lang/perl comm? ( sys-devel/make )
+DESCRIPTION=OCS Inventory NG Management Server
+EAPI=5
+HOMEPAGE=http://ocsinventory.sourceforge.net/
+IUSE=+comm admin logrotate soap
+KEYWORDS=~amd64
+LICENSE=GPL-2 LGPL-2
+RDEPEND=dev-lang/perl comm? ( sys-devel/make ) >=dev-perl/Apache-DBI-0.93 >=dev-perl/DBI-1.40 >=dev-perl/DBD-mysql-2.9004 >=dev-perl/Net-IP-1.21 >=dev-perl/XML-Simple-2.12 virtual/perl-Compress-Raw-Zlib www-apache/mod_perl >=www-servers/apache-1.3 admin? ( dev-lang/php[mysqli,xml] ) logrotate? ( app-admin/logrotate ) soap? ( dev-perl/SOAP-Lite )
+REQUIRED_USE=|| ( admin comm )
+SLOT=0
+SRC_URI=http://launchpad.net/ocsinventory-server/stable-2.2/2.2beta1/+download/OCSNG_UNIX_SERVER-2.2beta1.tar.gz
+_eclasses_=depend.php	c595f1a83ba4052bfe96c06daee20004	eutils	351a78113be5b393c09a2c948701ad36	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
+_md5_=bfd276a6413128054f681c3edd94c73c

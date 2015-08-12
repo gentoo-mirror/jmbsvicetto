@@ -1,0 +1,10 @@
+DEFINED_PHASES=compile install preinst prepare setup unpack
+DEPEND=sys-apps/fakeroot sys-fs/lvm2 >=sys-kernel/genkernel-3.4.49.1 =sys-kernel/hardened-sources-3.13.2-r3
+DESCRIPTION=Package to build kernel + initramfs for Gentoo infra boxes
+EAPI=5
+HOMEPAGE=http://wiki.gentoo.org/wiki/Project:Infrastructure
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+SLOT=0
+_eclasses_=eutils	351a78113be5b393c09a2c948701ad36	flag-o-matic	02090c5a622458303e6bf68837ac6b96	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_md5_=f2f28897a9017304cfe2ce5b81ef0af2
