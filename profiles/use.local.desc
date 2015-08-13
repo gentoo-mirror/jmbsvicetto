@@ -1,1 +1,35 @@
-#kde-base/kcontrol:logitech-mouse - Build the Control Center module to configure logitech mice
+# This file is deprecated as per GLEP 56 in favor of metadata.xml. Please add
+# your descriptions to your package's metadata.xml ONLY.
+# * generated automatically using pmaint *
+
+app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
+app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
+dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
+games-strategy/x3:bonuspack - Install the bonus pack
+games-strategy/x3:cockpit - Install the cockpit mod
+games-strategy/x3:modkit - Install the modkit
+games-strategy/x3:xtm - Install the eXTended mod
+net-analyzer/cacti:doc - install html documentation
+net-analyzer/nagios-plugins:jabber - Install the script for sending IM notifications over Jabber with Nagios.
+net-analyzer/nagios-plugins:nagios-dns - Install net-dns/bind-tools required for monitoring DNS servers. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:nagios-game - Install games-util/qstat required for monitoring FPS servers. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:nagios-ntp - Install net-misc/ntp required for monitoring NTP servers and drifts. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:nagios-ping - Install net-analyzer/fping required for fancy ping monitoring. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:nagios-ssh - Install net-misc/openssh required for monitoring SSH servers. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:smart - Install sys-apps/smartmontools required for S.M.A.R.T. disk monitoring. Disabling the flag removes the plugin file. This plugin also requires the sudo flag to be enable.
+net-analyzer/nagios-plugins:snmp - Install dev-perl/Net-SNMP required for monitoring SNMP values. Disabling the flag does not remove any plugin file.
+net-analyzer/nagios-plugins:sudo - Install a file to allow the nagios user to execute some commands via app-admin/sudo, so that the scripts can access devices and features that wouldn't be otherwise allowed by nagios.
+net-analyzer/nagios-plugins:suid - Give root privileges to the ICMP, DHCP and IDE S.M.A.R.T. check binaries. This allows them to ignore the access controls that would disallow the nagios user from running the check.
+net-analyzer/nagios-plugins:ups - Install sys-power/nut required for monitoring compatible UPS units. Disabling the flag does not remove any plugin file.
+net-analyzer/ocsng:admin - Enable the administration console for ocsng.
+net-analyzer/ocsng:comm - Enable the communication server that clients contact using dev-lang/perl to send the inventory information.
+net-analyzer/ocsng:logrotate - Install the logrotate file.
+sci-geosciences/osm-gps-map:introspection - Use dev-libs/gobject-introspection for introspection
+www-apps/drupal:accelerator - Add dependency on a php accelerator
+www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
+www-apps/phamm:amavis - Install the amavisd-new schema.
+www-apps/phamm:ftp - Install the proftpd schema.
+www-apps/phamm:radius - Install the radius schema.
+www-apps/phamm:samba - Install the samba schema.
+www-apps/wordpress:akismet - Installs Akismet comment spam plug-in
+www-apps/wordpress:themes - Installs themes (including default theme)
