@@ -52,6 +52,10 @@ src_install() {
 	insinto "${MY_HTDOCSDIR}"
 	doins -r .
 
+	# Copy custom .htaccess that works with both apache 2.2 and 2.4
+	insinto "${MY_HTDOCSDIR}/conf"
+	newins "${FILESDIR}/htaccess" ".htaccess"
+
 	for x in $(find data/ -not -name '.htaccess'); do
 		webapp_serverowned "${MY_HTDOCSDIR}"/${x}
 	done
