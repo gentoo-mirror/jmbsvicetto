@@ -34,3 +34,4 @@ www-apps/horde 4.0.13 9998 9999: Horde Application Framework
 www-apps/horde-webmail 4.0.6 5.1.4: browser based communication suite
 www-apps/phamm 0.5.18 0.6.2 9999: PHP LDAP Virtual Hosting Manager
 www-apps/wordpress 4.2.4: Wordpress PHP and MySQL based content management system (CMS)
+www-misc/awstats 7.4: AWStats is short for Advanced Web Statistics
