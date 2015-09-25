@@ -8,5 +8,5 @@ RDEPEND=sys-boot/grub:2
 RESTRICT=fetch
 SLOT=0
 SRC_URI=amd64? ( infra-kernel-kernel-x86_64-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86_64-3.13.6-r3-infra27.tbz2 ) x86? ( infra-kernel-kernel-x86-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86-3.13.6-r3-infra27.tbz2 )
-_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	4b8d3388c0a6e798504e20ba30b49361
+_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf	multilib	df4e4d5cfd3d137d0c248e1991c0e4d6	toolchain-funcs	1dfcad7b3f439dbc511d76c49f23da0d
 _md5_=e37d5b49b4d30d385908da6c55a4143e
