@@ -1,0 +1,13 @@
+DEFINED_PHASES=install postinst preinst prerm setup
+DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
+DESCRIPTION=GLPI is the Information Resource-Manager with an additional Administration- Interface.
+EAPI=0
+HOMEPAGE=http://www.glpi-project.org/
+IUSE=vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/php virtual/mysql >=app-admin/webapp-config-1.50.15
+SLOT=0.90
+SRC_URI=https://github.com/glpi-project/glpi/releases/download/0.90/glpi-0.90.tar.gz
+_eclasses_=webapp	42c6ef7af496b228f9854b3c81e4b226
+_md5_=b2fce7b8f908ba1b76072fb21b5c3a1f
