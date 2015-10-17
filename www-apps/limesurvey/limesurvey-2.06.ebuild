@@ -12,7 +12,7 @@ MY_PV="${PV}_plus_${MY_DATE}"
 
 DESCRIPTION="LimeSurvey is a popular Free Open Source Software survey tool"
 HOMEPAGE="https://www.limesurvey.org/"
-SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/${MY_P}.tar.gz -> ${P}.tar.gz"
+SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE="+gd ldap mssql mysql postgres zip"
