@@ -9,6 +9,6 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php[gd?,hash,ldap?,session,zip?,zlib] mssql? ( dev-lang/php[mssql] ) mysql? ( dev-lang/php[mysqli] ) postgres? ( dev-lang/php[postgres] ) >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=^^ ( mssql mysql postgres )
 SLOT=2.06
-SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/.tar.gz -> limesurvey-2.06.tar.gz
+SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.06_plus_151016.tar.gz -> limesurvey-2.06.tar.gz
 _eclasses_=webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=7480affc4778d2f45b103aafaa7dbac5
+_md5_=aac4302dacc0ae0a347068a7fc2527fe
