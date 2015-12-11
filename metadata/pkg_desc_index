@@ -1,5 +1,5 @@
 app-admin/apache-tools 2.2.22: Useful Apache tools - htdigest, htpasswd, ab, htdbm
-app-misc/gramps 3.4.9 4.1.3: Genealogical Research and Analysis Management Programming System
+app-misc/gramps 4.1.3: Genealogical Research and Analysis Management Programming System
 dev-db/libdbi 0.8.4: libdbi is a database-independent abstraction layer in C, similar to the DBI/DBD layer in Perl.
 dev-db/libdbi-drivers 0.8.3-r2: The libdbi-drivers project maintains drivers for libdbi.
 dev-db/phpmyadmin 4.0.10.10-r1 4.1.14.8-r1 4.2.13.3-r1 4.3.13.3 4.4.15.1 4.5.1: Web-based administration for MySQL database in PHP
