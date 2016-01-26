@@ -4,7 +4,6 @@
 
 app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
 app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
-dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
 games-strategy/x3:bonuspack - Install the bonus pack
 games-strategy/x3:cockpit - Install the cockpit mod
 games-strategy/x3:modkit - Install the modkit
