@@ -10,5 +10,5 @@ RDEPEND=dev-lang/php[session,xml] >=dev-libs/libxml2-2.4.21 dev-php/PEAR-Log dev
 RESTRICT=mirror
 SLOT=9999
 _eclass_exported_funcs=pkg_prerm:webapp pkg_postinst:- pkg_setup:horde-v2 src_unpack:- src_install:horde-v2
-_eclasses_=eutils	28fb3e5852485af1c348d446b0b98389	git-2	df00117322129fb906bb0a53c3d6a020	horde-v2	1b6d4943a7ffa6c1fb34828da0da9039	multilib	3972ca401cf7dbb430df9995f5d8d580	php-pear-r1	a9c774888f87b59856e139e796fa7501	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	webapp	42c6ef7af496b228f9854b3c81e4b226
+_eclasses_=eutils	28fb3e5852485af1c348d446b0b98389	git-2	df00117322129fb906bb0a53c3d6a020	horde-v2	1b6d4943a7ffa6c1fb34828da0da9039	multilib	3972ca401cf7dbb430df9995f5d8d580	php-pear-r1	7d1434952f2d1483feac6ad812d605dd	toolchain-funcs	7a212e5e01adfa4805c9978366e6ee85	webapp	42c6ef7af496b228f9854b3c81e4b226
 _md5_=d70c9c666729b6589445e16c9ba6cccb
