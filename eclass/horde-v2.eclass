@@ -1,10 +1,11 @@
-# Copyright 1999-2011 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 # @ECLASS: horde-v2.eclass
 # @MAINTAINER:
 # Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+# @BLURB: Eclass to install horde project packages
 # @DESCRIPTION:
 # Help manage the horde project http://www.horde.org/
 #
