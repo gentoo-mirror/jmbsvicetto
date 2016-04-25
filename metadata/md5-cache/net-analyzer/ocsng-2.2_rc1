@@ -12,4 +12,4 @@ SLOT=0
 SRC_URI=https://github.com/OCSInventory-NG/Releases/raw/master/OCSNG_UNIX_SERVER-2.2RC1.tar.gz
 _eclass_exported_funcs=pkg_preinst:- pkg_postinst:- src_unpack:- src_compile:- src_install:-
 _eclasses_=depend.php	c595f1a83ba4052bfe96c06daee20004	eutils	792f83d5ec9536cb5ccef375469d8bde	multilib	23ae8c186171e6476af098d2a50d0ee0	toolchain-funcs	d513d423d449877e49d99af3f7af7acb	versionator	99ae9d758cbe7cfed19170e7d48f5a9c
-_md5_=d6d3797361173983e21e414f825d2059
+_md5_=777be4347cad4f2328fabdb7a2503e99

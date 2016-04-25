@@ -11,4 +11,4 @@ SLOT=20140505e
 SRC_URI=http://download.dokuwiki.org/src/dokuwiki/dokuwiki-2014-05-05e.tgz
 _eclass_exported_funcs=pkg_prerm:webapp pkg_postinst:webapp pkg_setup:webapp src_prepare:- src_install:-
 _eclasses_=webapp	42c6ef7af496b228f9854b3c81e4b226
-_md5_=5d36aab5d80cefbc3e5bdc1a8a6f22a6
+_md5_=4ae1c14ec83b561e1a8e67de1b347acc
