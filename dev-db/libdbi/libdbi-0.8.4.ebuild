@@ -1,6 +1,6 @@
 # Copyright 1999-2012 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/dev-db/libdbi/libdbi-0.8.4.ebuild,v 1.12 2012/10/07 15:42:06 armin76 Exp $
+# $Id$
 
 EAPI=4
 
