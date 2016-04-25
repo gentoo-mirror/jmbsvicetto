@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
-<maintainer>
-  <email>beandog@gentoo.org</email>
-  <name>Steve Dibb</name>
-</maintainer>
-<maintainer>
-  <email>fauli@gentoo.org</email>
-  <name>Christian Faulhammer</name>
-</maintainer>
-<maintainer>
+<maintainer type="person">
   <email>jmbsvicetto@gentoo.org</email>
   <name>Jorge Manuel B. S. Vicetto</name>
 </maintainer>
