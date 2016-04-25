@@ -1,6 +1,6 @@
 # Copyright 1999-2011 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: $
+# $Id$
 
 EAPI="2"
 
@@ -98,7 +98,7 @@ src_install() {
 			cat <<- EOF > "${D}etc/logrotate.d/ocsng"
 				# Copyright 1999-2010 Gentoo Foundation
 				# Distributed under the terms of the GNU General Public License v2
-				# $Header: $
+				# $Id$
 				#
 				# OCSNG logrotate config for Gentoo Linux
 				# Contributed by Jorge Manuel B. S. Vicetto (jmbsvicetto) jmbsvicetto@gentoo.org

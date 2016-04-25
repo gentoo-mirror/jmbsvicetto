@@ -1,6 +1,6 @@
 # Copyright 1999-2009 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/net-misc/vde/vde-2.2.2.ebuild,v 1.4 2009/03/06 22:36:38 lu_zero Exp $
+# $Id$
 
 inherit base eutils
 
