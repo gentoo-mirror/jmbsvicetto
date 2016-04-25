@@ -1,6 +1,6 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
-# $Header: /var/cvsroot/gentoo-x86/www-apps/wordpress/wordpress-4.2.2.ebuild,v 1.1 2015/05/08 17:10:33 sping Exp $
+# $Id$
 
 EAPI=5
 
@@ -21,10 +21,6 @@ S=${WORKDIR}/${PN}
 need_httpd_cgi
 
 IUSE="+akismet examples +themes vhosts"
-
-# Override default of SLOT="${PVR}"
-WEBAPP_MANUAL_SLOT=yes
-SLOT="${PV}"
 
 src_install() {
 	webapp_src_preinst
