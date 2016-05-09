@@ -40,13 +40,7 @@ src_prepare() {
 
 	cp "${FILESDIR}/nagibot.conf" "${S}"
 	cp "${FILESDIR}/nagibot.cfg" "${S}"
-	if ( use icinga ); then
-		sed -i -e "s:PREFIX=nagios:PREFIX=icinga:" nagibot.conf
-
-		sed -i -e "s:PREFIX:icinga:" nagibot.cfg
-	else
-		sed -i -e "s:PREFIX:nagios:" nagibot.cfg
-	fi
+	sed -i -e "s:PREFIX:nagios:" nagibot.cfg
 }
 
 src_install() {
