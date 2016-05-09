@@ -1,16 +1,18 @@
-# Copyright 1999-2013 Gentoo Foundation
+# Copyright 1999-2016 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 # $Id$
 
-EAPI=4
+EAPI=5
 
 MY_PN="Nagibot"
-SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-v${PV}.tar.gz"
 DESCRIPTION="Perl extension that uses XMPP for nagios notifications"
+HOMEPAGE="https://github.com/ajobs/NagiBot"
+SRC_URI="mirror://sourceforge/${PN}/${MY_PN}-v${PV}.tar.gz"
+LICENSE="GPL-2"
 
 SLOT="0"
 KEYWORDS="~amd64 ~x86"
-IUSE="icinga"
+IUSE=""
 
 RDEPEND="
 	dev-perl/AnyEvent
@@ -19,10 +21,12 @@ RDEPEND="
 	dev-perl/Nagios-Status-HostStatus
 	dev-perl/Nagios-Status-ServiceStatus
 	dev-perl/Sys-CpuLoad
-	dev-perl/yaml
+	dev-perl/YAML
 	virtual/perl-Text-ParseWords
-	icinga? ( net-analyzer/icinga )
-	!icinga? ( net-analyzer/nagios )
+	|| (
+		net-analyzer/icinga
+		net-analyzer/nagios
+	)
 "
 DEPEND="${RDEPEND}"
 
