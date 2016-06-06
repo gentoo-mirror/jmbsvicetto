@@ -1,0 +1,12 @@
+DEFINED_PHASES=install postinst prepare
+DEPEND=dev-perl/AnyEvent dev-perl/AnyEvent-XMPP dev-perl/File-Pid dev-perl/Nagios-Status-HostStatus dev-perl/Nagios-Status-ServiceStatus dev-perl/Sys-CpuLoad dev-perl/YAML virtual/perl-Text-ParseWords || ( net-analyzer/icinga net-analyzer/nagios )
+DESCRIPTION=Perl extension that uses XMPP for nagios notifications
+EAPI=5
+HOMEPAGE=https://github.com/ajobs/NagiBot
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-perl/AnyEvent dev-perl/AnyEvent-XMPP dev-perl/File-Pid dev-perl/Nagios-Status-HostStatus dev-perl/Nagios-Status-ServiceStatus dev-perl/Sys-CpuLoad dev-perl/YAML virtual/perl-Text-ParseWords || ( net-analyzer/icinga net-analyzer/nagios )
+SLOT=0
+SRC_URI=https://github.com/ajobs/Nagibot/releases/download/v0.8.4/Nagibot-v0.8.4.tar.gz
+_eclass_exported_funcs=pkg_postinst:- src_prepare:- src_install:-
+_md5_=bcfd96c5e9457f0bf19c11ee623dca00
