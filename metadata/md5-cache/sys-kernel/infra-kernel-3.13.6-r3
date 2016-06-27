@@ -9,5 +9,5 @@ RESTRICT=fetch
 SLOT=0
 SRC_URI=amd64? ( infra-kernel-kernel-x86_64-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86_64-3.13.6-r3-infra27.tbz2 ) x86? ( infra-kernel-kernel-x86-3.13.6-r3-infra27.tbz2 infra-kernel-modules-x86-3.13.6-r3-infra27.tbz2 )
 _eclass_exported_funcs=pkg_pretend:mount-boot pkg_prerm:mount-boot pkg_preinst:- pkg_postrm:mount-boot pkg_postinst:mount-boot src_install:-
-_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	bfd09e8e66991dd5ce9e57610d8d1e6c
+_eclasses_=mount-boot	41ed556fa5641393d5323e421c8e5bcf	multilib	d062ae4ba2fc40a19c11de2ad89b6616	toolchain-funcs	77f907363e91028a361ce5a3e9e7ed1e
 _md5_=90cbc3dace8e2b292a924edb917d31c6
