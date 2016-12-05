@@ -27,7 +27,7 @@ sys-kernel/infra-kernel-sources 3.13.2-r3 3.13.6-r3 3.15.2: Package to build ker
 www-apache/mod_perl 2.0.8-r1 2.0.9: An embedded Perl interpreter for Apache2
 www-apps/dokuwiki 20140505e 20140929d-r1 20150810 20150810a 20160626 20160626a: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.52 8.2.3: PHP-based open-source platform and content management system
-www-apps/glpi 0.84.8 0.85.4 0.85.5 0.90: GLPI is the Information Resource-Manager with an additional Administration- Interface.
+www-apps/glpi 0.84.8 0.85.4 0.85.5 0.90 9.1 9.1.1: GLPI is the Information Resource-Manager with an additional Administration- Interface.
 www-apps/horde 4.0.13 9998 9999: Horde Application Framework
 www-apps/horde-webmail 4.0.6 5.1.4: browser based communication suite
 www-apps/limesurvey 2.06: LimeSurvey is a popular Free Open Source Software survey tool
