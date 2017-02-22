@@ -9,5 +9,5 @@ RDEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
 SLOT=9999
 SRC_URI=amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
 _eclass_exported_funcs=pkg_prerm:webapp pkg_postinst:webapp pkg_setup:- src_unpack:- src_install:-
-_eclasses_=cvs	e94c89c58918dff87fa3db1e817c25be	eutils	ea170b525f6a38a006be05c9d9429f13	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	webapp	42c6ef7af496b228f9854b3c81e4b226
+_eclasses_=cvs	e94c89c58918dff87fa3db1e817c25be	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	webapp	42c6ef7af496b228f9854b3c81e4b226
 _md5_=b29eb049e99ecd8eda5361575242da58
