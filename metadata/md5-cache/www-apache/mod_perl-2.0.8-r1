@@ -1,0 +1,15 @@
+DEFINED_PHASES=compile configure install postinst prepare setup test unpack
+DEPEND=dev-lang/perl >=dev-perl/Apache-Test-1.360 >=dev-perl/CGI-3.08 >=www-servers/apache-2.4 || ( www-servers/apache[-threads] dev-lang/perl[ithreads] ) test? ( dev-perl/HTML-Parser ) =www-servers/apache-2.4* dev-lang/perl:=[-build(-)]
+DESCRIPTION=An embedded Perl interpreter for Apache2
+EAPI=5
+HOMEPAGE=https://projects.apache.org/projects/mod_perl.html
+IUSE=debug test
+KEYWORDS=~alpha ~amd64 ~hppa ~ia64 ~ppc ~ppc64 ~sparc ~x86
+LICENSE=GPL-2
+PDEPEND=>=dev-perl/Apache-Reload-0.11 >=dev-perl/Apache-SizeLimit-0.95
+RDEPEND=dev-lang/perl >=dev-perl/Apache-Test-1.360 >=dev-perl/CGI-3.08 >=www-servers/apache-2.4 || ( www-servers/apache[-threads] dev-lang/perl[ithreads] ) test? ( dev-perl/HTML-Parser ) =www-servers/apache-2.4* dev-lang/perl:=[-build(-)]
+SLOT=1
+SRC_URI=mirror://debian//pool/main/liba/libapache2-mod-perl2/libapache2-mod-perl2_2.0.8+httpd24-r1449661.orig.tar.gz
+_eclass_exported_funcs=pkg_postinst:- pkg_setup:depend.apache src_unpack:perl-module src_prepare:- src_configure:- src_compile:perl-module src_test:- src_install:-
+_eclasses_=apache-module	5e66430013d92dfe0bf8672b05319b6d	depend.apache	7aeacf4ba074b9aa0047e2ba05c1010f	eutils	708f85bc1bf00876604e223fb56e062a	multilib	165fc17c38d1b11dac2008280dab6e80	multiprocessing	eb9be4b678c4e71f3f530a767df31912	perl-functions	aac50de73be0a80ebe780e0b20850130	perl-module	f6549146ea31a902e20b5f2e6f244358	toolchain-funcs	1b1da0c45c555989dc5d832b54880783	unpacker	45d07319df5f40ee6af58418b0f930be
+_md5_=b0dbd04c3e67f9bb1d9a4557b62cc817
