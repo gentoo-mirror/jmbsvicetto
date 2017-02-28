@@ -11,5 +11,5 @@ REQUIRED_USE=^^ ( mssql mysql postgres )
 SLOT=2.06
 SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.06_plus_151016.tar.gz -> limesurvey-2.06.tar.gz
 _eclass_exported_funcs=pkg_prerm:webapp pkg_preinst:- pkg_postinst:webapp pkg_setup:webapp src_install:-
-_eclasses_=webapp	42c6ef7af496b228f9854b3c81e4b226
+_eclasses_=webapp	a76ebd3cb5649737496e8238992dd7ca
 _md5_=aac4302dacc0ae0a347068a7fc2527fe
