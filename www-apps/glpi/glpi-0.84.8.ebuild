@@ -1,9 +1,9 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2017 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
 inherit webapp
 
-DESCRIPTION="GLPI is the Information Resource-Manager with an additional Administration- Interface."
+DESCRIPTION="The Information Resource-Manager with an additional Administration Interface."
 HOMEPAGE="http://www.glpi-project.org/"
 SRC_URI="https://forge.indepnet.net/attachments/download/1873/${P}.tar.gz"
 LICENSE="GPL-2"
