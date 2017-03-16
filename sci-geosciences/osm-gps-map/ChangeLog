@@ -1,9 +1,0 @@
-# ChangeLog for sci-geosciences/osm-gps-map
-# Copyright 1999-2011 Gentoo Foundation; Distributed under the GPL v2
-# $Header: $
-
-  21 Oct 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
-  osm-gps-map-0.7.3.ebuild, +files/osm-gps-map-disable-compiler-warnings.patch:
-  [sci-geosciences/osm-gps-map] Updated package and added PDEP on
-  dev-python/python-osmgpsmap.
-
