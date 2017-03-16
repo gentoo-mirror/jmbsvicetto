@@ -8,8 +8,8 @@ KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
 RDEPEND=dev-lang/php[gd?,hash,ldap?,session,zip?,zlib] mssql? ( dev-lang/php[mssql] ) mysql? ( dev-lang/php[mysqli] ) postgres? ( dev-lang/php[postgres] ) >=app-admin/webapp-config-1.50.15
 REQUIRED_USE=^^ ( mssql mysql postgres )
-SLOT=2.06
-SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.06_plus_151016.tar.gz -> limesurvey-2.06.tar.gz
+SLOT=2.57.1
+SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.57.1+161205.tar.gz -> limesurvey-2.57.1.tar.gz https://www.limesurvey.org/stable-release?download=1948:limesurvey%161205targz -> limesurvey-2.57.1.tar.gz
 _eclass_exported_funcs=pkg_prerm:webapp pkg_preinst:- pkg_postinst:webapp pkg_setup:webapp src_install:-
 _eclasses_=webapp	a76ebd3cb5649737496e8238992dd7ca
-_md5_=1dad8595180f92b41e0fa73689b7b703
+_md5_=8c75fd44f7510f88f76ed0c18109b75a
