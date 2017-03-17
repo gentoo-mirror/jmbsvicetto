@@ -6,7 +6,7 @@ EAPI=6
 inherit webapp
 
 MY_PN="LimeSurvey"
-MY_DATE="170310"
+MY_DATE="170305"
 MY_PV="${PV}+${MY_DATE}"
 
 DESCRIPTION="LimeSurvey is a popular Free Open Source Software survey tool"
