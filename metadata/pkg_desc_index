@@ -16,5 +16,5 @@ www-apache/mod_perl 2.0.8-r1 2.0.9: An embedded Perl interpreter for Apache2
 www-apps/dokuwiki 20160626b 20170219b: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.54 8.2.7 8.3.0_rc2: PHP-based open-source platform and content management system
 www-apps/glpi 0.84.8 0.85.4 0.85.5 0.90 9.1 9.1.1: The Information Resource-Manager with an additional Administration Interface.
-www-apps/limesurvey 2.06 2.57.0 2.57.1 2.64.1: LimeSurvey is a popular Free Open Source Software survey tool
+www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1: LimeSurvey is a popular Free Open Source Software survey tool
 www-apps/phamm 0.5.18 0.6.2 9999: PHP LDAP Virtual Hosting Manager
