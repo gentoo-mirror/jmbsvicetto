@@ -1,0 +1,115 @@
+# ChangeLog for net-analyzer/ocsng
+# Copyright 1999-2017 Gentoo Foundation; Distributed under the GPL v2
+# $Header: $
+
+*ocsng-2.0.4 (11 Mar 2012)
+
+  11 Mar 2012; <atlantis@gentoo.org> +ocsng-2.0.4.ebuild:
+  [net-analyzer/ocsng] 2.0.4 version bump.
+
+*ocsng-2.0.3 (30 Nov 2011)
+
+  30 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-2.0.3.ebuild:
+  [net-analyzer/ocsng] 2.0.3 version bump.
+
+*ocsng-2.0.2 (21 Nov 2011)
+
+  21 Nov 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-2.0.2.ebuild:
+  [net-analyzer/ocsng] 2.0.2 version bump.
+
+*ocsng-2.0-r1 (24 Aug 2011)
+
+  24 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-2.0-r1.ebuild:
+  [net-analyzer/ocsng] Revbumped the 2.0 ebuild to use EAPI-4's REQUIRED_USE
+  and drop pkg_setup tests.
+  Reviewed dev-lang/php dependency.
+  Thanks to Maxim Koltsov (maksbotan) for poking me and getting me to work on
+  the updates.
+
+  23 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ocsng-1.01.ebuild, -ocsng-1.02.1.ebuild, ocsng-1.3.ebuild,
+  ocsng-1.3.1.ebuild, ocsng-1.3.2.ebuild, ocsng-2.0.ebuild, +metadata.xml,
+  files/postinstall-en.txt:
+  [net-analyzer/ocsng-2.0] Update install instructions and install snmp_com.txt
+  file.
+  Add metadata.xml and use flags descriptions. Fix variable quotes and drop old
+  ebuilds.
+
+*ocsng-2.0 (23 Aug 2011)
+
+  23 Aug 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  -ocsng-2.0_rc3.ebuild, -ocsng-2.0_rc4.ebuild, +ocsng-2.0.ebuild,
+  files/postinstall-en.txt:
+  [net-analyzer/ocsng-2.0] Bumped ocsng to the 2.0 release.
+
+*ocsng-2.0_rc4 (18 Apr 2011)
+
+  18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-2.0_rc4.ebuild:
+  Bumped ocsng to release 2.0_rc4.
+
+*ocsng-2.0_rc3 (18 Apr 2011)
+
+  18 Apr 2011; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.2.ebuild, +ocsng-2.0_rc3.ebuild:
+  Added initial ebuild for release 2.0rc3.
+  Fixed the php dep from virtual/php to dev-lang/php.
+  Added versionator support to drop the hardcoded values on SRC_URI.
+
+  04 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.2.ebuild:
+  Protected the db config file.
+
+*ocsng-1.3.2 (04 Jun 2010)
+
+  04 Jun 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-1.3.2.ebuild:
+  Bumped ocsng to the 1.3.2 release.
+
+*ocsng-1.3.1 (02 Mar 2010)
+
+  02 Mar 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-1.3.1.ebuild:
+  Bumped ocsng to the 1.3.1 release.
+
+  12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.ebuild:
+  Updated ipdiscover-util.pl location.
+
+  12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.3.ebuild:
+  Updating config files location.
+
+*ocsng-1.3 (12 Feb 2010)
+
+  12 Feb 2010; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-1.3.ebuild:
+  Bumped ocsng to the 1.3 release.
+
+  30 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.02.1.ebuild:
+  Fixed all calls to the webapp_server_configfile now.
+
+  30 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.02.1.ebuild:
+  Fix webapp_server_configfile function name and correct path to
+  ipdiscover-util.pl utility.
+
+  30 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.02.1.ebuild:
+  Fixed MY_P and updated ebuild to use the new config files for Apache.
+
+  29 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  ocsng-1.02.1.ebuild:
+  Removed unneeded deploy use flag and tightened permissions.
+
+*ocsng-1.02.1 (28 Jun 2009)
+*ocsng-1.01 (28 Jun 2009)
+
+  28 Jun 2009; Jorge Manuel B. S. Vicetto <jmbsvicetto@gentoo.org>
+  +ocsng-1.01.ebuild, +ocsng-1.02.1.ebuild, +files/postinstall-en.txt:
+  Added initial ebuilds for ocs-ng into the overlay.
+
