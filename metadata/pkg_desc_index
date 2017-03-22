@@ -9,6 +9,8 @@ dev-perl/Nagios-Status-HostStatus 0.010.0: Nagios 3.0 Class to maintain Hosts' S
 dev-perl/Nagios-Status-Service 0.020.0: Nagios 3.0 Container Class for Status Services
 dev-perl/Nagios-Status-ServiceStatus 0.010.0: Nagios 3.0 Class to maintain Services' Status
 dev-perl/Sys-CpuLoad 0.030.0: A module to retrieve system load averages
+net-analyzer/OCSInventory-Server 2.3_rc1 2.3.1: OCS Inventory NG Management Server
+net-analyzer/OCSInventory-ocsreports 2.3_rc 2.3.1: OCS Inventory NG Management Server
 net-analyzer/munin 2.0.25-r1 2.1.9999 2.99.3: Munin Server Monitoring Tool
 net-analyzer/ntopng 2.4: Network traffic analyzer with web interface
 net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
