@@ -9,9 +9,9 @@
 /var/log/ocsng/*.log {
 	daily
 	# rotate 7
-	commpress
+	compress
 	create 0660 root apache
-	notifyempty
+	notifempty
 	missingok
 	# postrotate
 	/etc/init.d/apache2 reload > /dev/null 2>&1 || true
