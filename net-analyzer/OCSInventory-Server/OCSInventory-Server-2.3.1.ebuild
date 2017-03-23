@@ -74,6 +74,27 @@ src_install() {
 	sed -i -e "s:PATH_TO_PLUGINS_PERL_DIRECTORY:${PLUGINS_PERL_DIR}:" etc/ocsinventory/ocsinventory-server.conf
 	dodoc "etc/ocsinventory/ocsinventory-server.conf"
 
+	ADM_STATIC_DIR="/usr/share/ocsng/reports"
+	ADM_REPORTS_ALIAS="/ocsreports"
+	ADM_VAR_DIR="/var/lib/ocsng"
+	IPD_DIR="ipd"
+	IPD_ALIAS="/ipd"
+	PACKAGES_DIR="download"
+	PACKAGES_ALIAS="/download"
+	SNMP_DIR="snmp"
+	SNMP_ALIAS="/snmp"
+
+	# OCSREPORTS example config
+	sed -i -e "s:OCSREPORTS_ALIAS:${ADM_REPORTS_ALIAS}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:PATH_TO_OCSREPORTS_DIR:${ADM_STATIC_DIR}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:IPD_ALIAS:${IPD_ALIAS}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:PATH_TO_IPD_DIR:${IPD_DIR}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:PACKAGES_ALIAS:${PACKAGES_ALIAS}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:PATH_TO_PACKAGES_DIR:${PACKAGES_DIR}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:SNMP_ALIAS:${SNMP_ALIAS}:" etc/ocsinventory/ocsinventory-reports.conf
+	sed -i -e "s:PATH_TO_SNMP_DIR:${SNMP_DIR}:" etc/ocsinventory/ocsinventory-reports.conf
+	dodoc "etc/ocsinventory/ocsinventory-reports.conf"
+
 	# Create dirs
 	for dir in ${PLUGINS_CONFIG_DIR} ${PLUGINS_PERL_DIR} ; do
 		dodir "${dir}" || die "Unable to create ${dir}"
