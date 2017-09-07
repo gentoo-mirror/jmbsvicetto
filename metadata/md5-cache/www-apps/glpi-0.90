@@ -9,6 +9,5 @@ LICENSE=GPL-2
 RDEPEND=dev-lang/php virtual/mysql >=app-admin/webapp-config-1.50.15
 SLOT=0.90
 SRC_URI=https://github.com/glpi-project/glpi/releases/download/0.90/glpi-0.90.tar.gz
-_eclass_exported_funcs=pkg_prerm:webapp pkg_preinst:- pkg_postinst:webapp pkg_setup:webapp src_install:-
 _eclasses_=webapp	a76ebd3cb5649737496e8238992dd7ca
 _md5_=bdef1ed26550d203a02c42d146a5fa5f

@@ -10,6 +10,5 @@ RDEPEND=dev-lang/php[gd?,hash,ldap?,session,zip?,zlib] mssql? ( dev-lang/php[mss
 REQUIRED_USE=^^ ( mssql mysql postgres )
 SLOT=2.57.0
 SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.57.0+161202.tar.gz -> limesurvey-2.57.0.tar.gz
-_eclass_exported_funcs=pkg_prerm:webapp pkg_postinst:- pkg_setup:webapp src_install:-
 _eclasses_=webapp	a76ebd3cb5649737496e8238992dd7ca
 _md5_=e81e8dd6de0a5c4c6550b18a3303b331
