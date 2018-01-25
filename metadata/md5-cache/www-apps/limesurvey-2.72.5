@@ -1,0 +1,14 @@
+DEFINED_PHASES=install postinst preinst prerm setup
+DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
+DESCRIPTION=LimeSurvey is a popular Free Open Source Software survey tool
+EAPI=6
+HOMEPAGE=https://www.limesurvey.org/
+IUSE=+gd ldap mssql mysql postgres zip vhosts
+KEYWORDS=~amd64 ~x86
+LICENSE=GPL-2
+RDEPEND=dev-lang/php[gd?,hash,ldap?,session,zip?,zlib] mssql? ( dev-lang/php[mssql] ) mysql? ( dev-lang/php[mysqli] ) postgres? ( dev-lang/php[postgres] ) >=app-admin/webapp-config-1.50.15
+REQUIRED_USE=^^ ( mssql mysql postgres )
+SLOT=2.72.5
+SRC_URI=https://github.com/LimeSurvey/LimeSurvey/archive/2.72.5+171121.tar.gz -> limesurvey-2.72.5.tar.gz
+_eclasses_=webapp	a76ebd3cb5649737496e8238992dd7ca
+_md5_=313d78b03ca52c3b2acc53b44930b363
