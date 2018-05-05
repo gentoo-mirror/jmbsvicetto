@@ -1,4 +1,4 @@
-DEFINED_PHASES=install postinst prerm setup
+DEFINED_PHASES=config install postinst prerm setup
 DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
 DESCRIPTION=LimeSurvey is a popular Free Open Source Software survey tool
 EAPI=5
