@@ -1,9 +1,9 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=6
 
-inherit qmake-utils desktop systemd user libtool
+inherit desktop libtool qmake-utils systemd user
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -18,51 +18,55 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 libressl logwatch mysql postgres qt5 readline +sqlite ssl static tcpd vim-syntax X"
 
 DEPEND="
-	dev-libs/gmp:0
 	!bacula-clientonly? (
-		postgres? ( dev-db/postgresql:=[threads] )
-		mysql? ( virtual/mysql )
-		sqlite? ( dev-db/sqlite:3 )
 		!bacula-nodir? ( virtual/mta )
+		postgres? ( dev-db/postgresql:=[threads] )
+		mysql? ( || ( dev-db/mysql-connector-c dev-db/mariadb-connector-c ) )
+		sqlite? ( dev-db/sqlite:3 )
 	)
+	dev-libs/gmp:0
 	qt5? (
 		dev-qt/qtsvg:5
 		x11-libs/qwt:6
 	)
 	logwatch? ( sys-apps/logwatch )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	readline? ( sys-libs/readline:0 )
 	static? (
-		acl? ( virtual/acl[static-libs] )
-		sys-libs/zlib[static-libs]
 		dev-libs/lzo[static-libs]
 		sys-libs/ncurses:=[static-libs]
+		sys-libs/zlib[static-libs]
+		acl? ( virtual/acl[static-libs] )
 		ssl? (
 			!libressl? ( dev-libs/openssl:0=[static-libs] )
 			libressl? ( dev-libs/libressl:0=[static-libs] )
 		)
 	)
 	!static? (
-		acl? ( virtual/acl )
-		sys-libs/zlib
 		dev-libs/lzo
 		sys-libs/ncurses:=
+		sys-libs/zlib
+		acl? ( virtual/acl )
 		ssl? (
 			!libressl? ( dev-libs/openssl:0= )
 			libressl? ( dev-libs/libressl:0= )
 		)
-	)"
+	)
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+"
 RDEPEND="${DEPEND}
 	!bacula-clientonly? (
 		!bacula-nosd? (
-			sys-block/mtx
 			app-arch/mt-st
+			sys-block/mtx
 		)
 	)
-	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+"
 
-REQUIRED_USE="!bacula-clientonly? ( ^^ ( mysql postgres sqlite ) )
-				static? ( bacula-clientonly )"
+REQUIRED_USE="
+	!bacula-clientonly? ( ^^ ( mysql postgres sqlite ) )
+	static? ( bacula-clientonly )
+"
 
 S=${WORKDIR}/${MY_P}
 
