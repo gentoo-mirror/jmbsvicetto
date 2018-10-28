@@ -1,9 +1,9 @@
 # Copyright 1999-2018 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI="6"
+EAPI=6
 
-inherit qmake-utils desktop systemd user libtool
+inherit desktop libtool qmake-utils systemd user
 
 MY_PV=${PV/_beta/-b}
 MY_P=${PN}-${MY_PV}
@@ -18,51 +18,55 @@ KEYWORDS="~amd64 ~ppc ~sparc ~x86"
 IUSE="acl bacula-clientonly bacula-nodir bacula-nosd examples ipv6 libressl logwatch mysql postgres qt5 readline +sqlite ssl static tcpd vim-syntax X"
 
 DEPEND="
-	dev-libs/gmp:0
 	!bacula-clientonly? (
-		postgres? ( dev-db/postgresql:=[threads] )
-		mysql? ( virtual/mysql )
-		sqlite? ( dev-db/sqlite:3 )
 		!bacula-nodir? ( virtual/mta )
+		postgres? ( dev-db/postgresql:=[threads] )
+		mysql? ( || ( dev-db/mysql-connector-c dev-db/mariadb-connector-c ) )
+		sqlite? ( dev-db/sqlite:3 )
 	)
+	dev-libs/gmp:0
 	qt5? (
 		dev-qt/qtsvg:5
 		x11-libs/qwt:6
 	)
 	logwatch? ( sys-apps/logwatch )
-	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
 	readline? ( sys-libs/readline:0 )
 	static? (
-		acl? ( virtual/acl[static-libs] )
-		sys-libs/zlib[static-libs]
 		dev-libs/lzo[static-libs]
 		sys-libs/ncurses:=[static-libs]
+		sys-libs/zlib[static-libs]
+		acl? ( virtual/acl[static-libs] )
 		ssl? (
 			!libressl? ( dev-libs/openssl:0=[static-libs] )
 			libressl? ( dev-libs/libressl:0=[static-libs] )
 		)
 	)
 	!static? (
-		acl? ( virtual/acl )
-		sys-libs/zlib
 		dev-libs/lzo
 		sys-libs/ncurses:=
+		sys-libs/zlib
+		acl? ( virtual/acl )
 		ssl? (
 			!libressl? ( dev-libs/openssl:0= )
 			libressl? ( dev-libs/libressl:0= )
 		)
-	)"
+	)
+	tcpd? ( >=sys-apps/tcp-wrappers-7.6 )
+"
 RDEPEND="${DEPEND}
 	!bacula-clientonly? (
 		!bacula-nosd? (
-			sys-block/mtx
 			app-arch/mt-st
+			sys-block/mtx
 		)
 	)
-	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )"
+	vim-syntax? ( || ( app-editors/vim app-editors/gvim ) )
+"
 
-REQUIRED_USE="!bacula-clientonly? ( ^^ ( mysql postgres sqlite ) )
-				static? ( bacula-clientonly )"
+REQUIRED_USE="
+	!bacula-clientonly? ( ^^ ( mysql postgres sqlite ) )
+	static? ( bacula-clientonly )
+"
 
 S=${WORKDIR}/${MY_P}
 
@@ -176,7 +180,7 @@ src_prepare() {
 	fi
 
 	# Don't let program instal man pages directly
-	rm $"{S}"/manpages/Makefile.in || die "Unable to remove man pages Makefile.in"
+	rm "${S}"/manpages/Makefile.in || die "Unable to remove man pages Makefile.in"
 	eapply -p1 "${FILESDIR}/bacula-fix-manpages.patch"
 
 	# fix bundled libtool (bug 466696)
@@ -235,7 +239,7 @@ src_configure() {
 		--htmldir=/usr/share/doc/${PF}/html \
 		--with-pid-dir=/var/run \
 		--sysconfdir=/etc/bacula \
-		--with-archivedir=/var/lib/bacula/backups \
+		--with-archivedir=/var/lib/bacula/tmp \
 		--with-subsys-dir=/var/lock/subsys \
 		--with-working-dir=/var/lib/bacula \
 		--with-logdir=/var/lib/bacula \
@@ -314,11 +318,6 @@ src_install() {
 	fi
 	rm -vf "${D}"/usr/share/man/man1/bacula-tray-monitor.1*
 
-	if ! ( use bacula-clientonly || use bacula-nodir ) ; then
-		doman "${S}"/manpages/bacula-dir.8*
-		doman "${S}"/manpages/dbcheck.8*
-		doman "${S}"/manpages/bsmtp.1*
-	fi
 	if use bacula-clientonly || use bacula-nodir ; then
 		rm -vf "${D}"/usr/libexec/bacula/create_*_database
 		rm -vf "${D}"/usr/libexec/bacula/drop_*_database
@@ -328,14 +327,6 @@ src_install() {
 		rm -vf "${D}"/usr/libexec/bacula/grant_*_privileges
 		rm -vf "${D}"/usr/libexec/bacula/*_catalog_backup
 	fi
-	if ! ( use bacula-clientonly || use bacula-nosd ) ; then
-		doman "${S}"/manpages/bacula-sd.8*
-		doman "${S}"/manpages/bcopy.8*
-		doman "${S}"/manpages/bextract.8*
-		doman "${S}"/manpages/bls.8*
-		doman "${S}"/manpages/bscan.8*
-		doman "${S}"/manpages/btape.8*
-	fi
 	if use bacula-clientonly || use bacula-nosd; then
 		rm -vf "${D}"/usr/libexec/bacula/disk-changer
 		rm -vf "${D}"/usr/libexec/bacula/mtx-changer
@@ -344,6 +335,9 @@ src_install() {
 
 	# documentation
 	dodoc ChangeLog ReleaseNotes SUPPORT
+
+	# Install all man pages
+	doman "${S}"/manpages/*
 
 	# install examples (bug #457504)
 	if use examples; then
@@ -441,4 +435,6 @@ pkg_postinst() {
 	einfo "Please note that 'bconsole' will always be installed. To compile 'bat'"
 	einfo "you have to enable 'USE=qt5'."
 	einfo
+	einfo "/var/lib/bacula/tmp was configured for archivedir. This dir will be used during"
+	einfo "restores, so be sure to set it to an appropriate in dir in the bacula config."
 }
