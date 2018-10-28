@@ -180,7 +180,7 @@ src_prepare() {
 	fi
 
 	# Don't let program instal man pages directly
-	rm $"{S}"/manpages/Makefile.in || die "Unable to remove man pages Makefile.in"
+	rm "${S}"/manpages/Makefile.in || die "Unable to remove man pages Makefile.in"
 	eapply -p1 "${FILESDIR}/bacula-fix-manpages.patch"
 
 	# fix bundled libtool (bug 466696)
@@ -239,7 +239,7 @@ src_configure() {
 		--htmldir=/usr/share/doc/${PF}/html \
 		--with-pid-dir=/var/run \
 		--sysconfdir=/etc/bacula \
-		--with-archivedir=/var/lib/bacula/backups \
+		--with-archivedir=/var/lib/bacula/tmp \
 		--with-subsys-dir=/var/lock/subsys \
 		--with-working-dir=/var/lib/bacula \
 		--with-logdir=/var/lib/bacula \
@@ -318,11 +318,6 @@ src_install() {
 	fi
 	rm -vf "${D}"/usr/share/man/man1/bacula-tray-monitor.1*
 
-	if ! ( use bacula-clientonly || use bacula-nodir ) ; then
-		doman "${S}"/manpages/bacula-dir.8*
-		doman "${S}"/manpages/dbcheck.8*
-		doman "${S}"/manpages/bsmtp.1*
-	fi
 	if use bacula-clientonly || use bacula-nodir ; then
 		rm -vf "${D}"/usr/libexec/bacula/create_*_database
 		rm -vf "${D}"/usr/libexec/bacula/drop_*_database
@@ -332,14 +327,6 @@ src_install() {
 		rm -vf "${D}"/usr/libexec/bacula/grant_*_privileges
 		rm -vf "${D}"/usr/libexec/bacula/*_catalog_backup
 	fi
-	if ! ( use bacula-clientonly || use bacula-nosd ) ; then
-		doman "${S}"/manpages/bacula-sd.8*
-		doman "${S}"/manpages/bcopy.8*
-		doman "${S}"/manpages/bextract.8*
-		doman "${S}"/manpages/bls.8*
-		doman "${S}"/manpages/bscan.8*
-		doman "${S}"/manpages/btape.8*
-	fi
 	if use bacula-clientonly || use bacula-nosd; then
 		rm -vf "${D}"/usr/libexec/bacula/disk-changer
 		rm -vf "${D}"/usr/libexec/bacula/mtx-changer
@@ -348,6 +335,9 @@ src_install() {
 
 	# documentation
 	dodoc ChangeLog ReleaseNotes SUPPORT
+
+	# Install all man pages
+	doman "${S}"/manpages/*
 
 	# install examples (bug #457504)
 	if use examples; then
@@ -445,4 +435,6 @@ pkg_postinst() {
 	einfo "Please note that 'bconsole' will always be installed. To compile 'bat'"
 	einfo "you have to enable 'USE=qt5'."
 	einfo
+	einfo "/var/lib/bacula/tmp was configured for archivedir. This dir will be used during"
+	einfo "restores, so be sure to set it to an appropriate in dir in the bacula config."
 }
