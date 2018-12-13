@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2018 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -6,10 +6,12 @@ EAPI=6
 inherit webapp
 
 MY_PN="glpi-project"
+MY_P=${P/_/-}
+MY_PV=${PV/_/-}
 
 DESCRIPTION="The Information Resource-Manager with an additional Administration Interface."
 HOMEPAGE="http://www.glpi-project.org/"
-SRC_URI="https://github.com/${MY_PN}/${PN}/releases/download/${PV}/${P}.tgz"
+SRC_URI="https://github.com/${MY_PN}/${PN}/releases/download/${MY_PV}/${MY_P}.tgz"
 LICENSE="GPL-2"
 KEYWORDS="~amd64 ~x86"
 IUSE=""
