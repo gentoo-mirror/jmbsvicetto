@@ -1,13 +1,13 @@
 DEFINED_PHASES=config install postinst preinst prerm setup
 DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
 DESCRIPTION=The Information Resource-Manager with an additional Administration Interface.
-EAPI=0
+EAPI=6
 HOMEPAGE=http://www.glpi-project.org/
 IUSE=vhosts
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-lang/php virtual/mysql >=app-admin/webapp-config-1.50.15
-SLOT=0.85.4
-SRC_URI=https://forge.indepnet.net/attachments/download/2020/glpi-0.85.4.tar.gz
+RDEPEND=dev-lang/php[curl,json,mysqli,session,unicode] virtual/mysql >=app-admin/webapp-config-1.50.15
+SLOT=9.3.3
+SRC_URI=https://github.com/glpi-project/glpi/releases/download/9.3.3/glpi-9.3.3.tgz
 _eclasses_=webapp	6ae2395d7f341093c36057cb4f69101a
-_md5_=17409f3446ffbd1800359d196cc60f5d
+_md5_=e03260cd4689a31f4048d51ad0c3f3bb
