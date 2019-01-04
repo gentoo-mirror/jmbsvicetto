@@ -1,4 +1,4 @@
-# Copyright 1999-2018 Gentoo Authors
+# Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -58,8 +58,6 @@ src_install() {
 
 	dodir "${MY_HTDOCSDIR}"/files
 	webapp_serverowned "${MY_HTDOCSDIR}"/files
-	webapp_serverowned "${MY_HTDOCSDIR}"/sites/default
-	webapp_serverowned "${MY_HTDOCSDIR}"/sites/default/settings.php
 
 	webapp_configfile "${MY_HTDOCSDIR}"/sites/default/settings.php
 	webapp_configfile "${MY_HTDOCSDIR}"/.htaccess
