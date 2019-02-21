@@ -9,5 +9,5 @@ LICENSE=GPL-2 amavis? ( FDL-1.2 ) ftp? ( BSD ) radius? ( as-is ) samba? ( GPL-3 
 RDEPEND=dev-lang/php[ldap,xml] >=app-admin/webapp-config-1.50.15
 SLOT=0.5.18
 SRC_URI=http://open.rhx.it/phamm/phamm-0.5.18.tar.gz amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
-_eclasses_=webapp	6ae2395d7f341093c36057cb4f69101a
+_eclasses_=webapp	16783e418aca3ffa461d68310bf7ab12
 _md5_=878c46b981671cc04bdb81d902a11e76
