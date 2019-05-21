@@ -2,7 +2,12 @@
 <!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
 <pkgmetadata>
 <maintainer type="person">
-	<email>jmbsvicetto@gentoo.org</email>
-	<name>Jorge Manuel B. S. Vicetto</name>
+  <email>jmbsvicetto@gentoo.org</email>
+  <name>Jorge Manuel B. S. Vicetto</name>
 </maintainer>
+<use>
+  <flag name="rest">
+    Include support for sending and receiving HTTP requests
+  </flag>
+</use>
 </pkgmetadata>
