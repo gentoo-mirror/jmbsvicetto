@@ -2,3 +2,20 @@
 # Please add your descriptions to your package's metadata.xml ONLY.
 # * generated automatically using pmaint *
 
+app-backup/bacula:bacula-clientonly - Disable DB support, and just build a client
+app-backup/bacula:bacula-nodir - Disable building of director
+app-backup/bacula:bacula-nosd - Disable building of storage daemon
+app-backup/bacula:logwatch - Install support files for logwatch
+app-misc/gramps:reports - All external software that is needed for graphical reports will be installed
+app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
+dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
+net-analyzer/OCSInventory-Server:rest - Include support for sending and receiving HTTP requests
+www-apps/drupal:accelerator - Add dependency on a php accelerator
+www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
+www-apps/limesurvey:gd - Used for captchas and nice charts
+www-apps/limesurvey:ldap - Import tokens using LDAP
+www-apps/limesurvey:zip - Add zip support for template upload and resourcees import
+www-apps/phamm:amavis - Install the amavisd-new schema.
+www-apps/phamm:ftp - Install the proftpd schema.
+www-apps/phamm:radius - Install the radius schema.
+www-apps/phamm:samba - Install the samba schema.
