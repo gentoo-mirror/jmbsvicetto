@@ -29,6 +29,7 @@ net-analyzer/OCSInventory-Server 2.3_rc1 2.3.1 2.4.1 2.5 2.6: OCS Inventory NG M
 net-analyzer/OCSInventory-ocsreports 2.3_rc 2.3.1 2.4.1 2.5 2.6: OCS Inventory NG Management Server
 net-analyzer/ntopng 2.4: Network traffic analyzer with web interface
 net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
+net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
 www-apache/mod_perl 2.0.8-r1 2.0.9: An embedded Perl interpreter for Apache2
 www-apps/dokuwiki 20160626e 20170219e 20180422a 20180422b: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.67 8.6.16 8.7.2 8.7.3 8.7.4 8.7.5 8.7.6: PHP-based open-source platform and content management system
