@@ -3,7 +3,7 @@
 
 EAPI=6
 
-inherit eutils webapp
+inherit webapp
 
 MY_PN="phpLDAPadmin"
 DESCRIPTION="phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server"
