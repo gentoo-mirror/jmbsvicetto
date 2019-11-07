@@ -14,20 +14,13 @@ HOMEPAGE="https://www.drupal.org/"
 SRC_URI="https://ftp.drupal.org/files/projects/${MY_P}.tar.gz"
 
 LICENSE="GPL-2"
-KEYWORDS="-alpha ~amd64 -ppc ~x86"
+KEYWORDS="~amd64 ~x86"
 IUSE="+mysql postgres sqlite +uploadprogress"
 
 RDEPEND="
-	dev-lang/php[gd,hash(+),pdo,postgres?,simplexml,xml]
+	dev-lang/php[gd,hash(+),mysql?,pdo,postgres?,simplexml,sqlite?,xml]
 	virtual/httpd-php
 	uploadprogress? ( dev-php/pecl-uploadprogress )
-	mysql? (
-		|| (
-			dev-lang/php[mysql]
-			dev-lang/php[mysqli]
-		)
-	)
-	sqlite? ( dev-lang/php[sqlite] )
 "
 
 need_httpd_cgi
