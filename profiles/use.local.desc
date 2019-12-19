@@ -10,7 +10,6 @@ app-misc/gramps:reports - All external software that is needed for graphical rep
 app-misc/gramps:webkit - Use Webkit-based rendering for geographical data view.
 dev-db/phpmyadmin:setup - Installs the phpMyAdmin setup utility. Users who don't use the utility should disable this USE flag for security reasons as the setup tool was the target of various exploits in the past.
 net-analyzer/OCSInventory-Server:rest - Include support for sending and receiving HTTP requests
-www-apps/drupal:accelerator - Add dependency on a php accelerator
 www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/limesurvey:gd - Used for captchas and nice charts
 www-apps/limesurvey:ldap - Import tokens using LDAP
