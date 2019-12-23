@@ -39,7 +39,7 @@ src_install () {
 	doins -r .
 
 	# Protect config files
-	webapp_configfile -R config .htaccess
+	webapp_configfile "${MY_HTDOCSDIR}/".htaccess
 
 	# Allow writing to the config and files directories
 	for dir in config files .htaccess ; do
