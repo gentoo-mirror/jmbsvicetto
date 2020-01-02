@@ -1,7 +1,7 @@
 # Copyright 1999-2019 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
+EAPI=7
 
 inherit eutils webapp
 
@@ -37,7 +37,7 @@ pkg_setup() {
 src_install() {
 	webapp_src_preinst
 
-	dodoc README RELEASE-DATE-${MY_PV} ChangeLog || die
+	dodoc README RELEASE-DATE-${MY_PV} ChangeLog
 	rm -f LICENSE README* RELEASE-DATE-${MY_PV}
 
 	if ! use setup; then
