@@ -25,7 +25,7 @@ dev-php/sebastian-exporter 3.1.0: Export PHP variables for visualization
 dev-php/sebastian-global-state 2.0.0: Snapshotting of global state
 dev-php/sebastian-object-enumerator 3.0.3: Traverses array structures and object graphs to enumerate all referenced objects
 dev-php/sebastian-resource-operations 2.0.1: Provides a list of PHP built-in functions that operate on resources
-net-analyzer/OCSInventory-Server 2.3_rc1 2.3.1 2.4.1 2.5 2.6: OCS Inventory NG Management Server
+net-analyzer/OCSInventory-Server 2.3_rc1 2.3.1 2.4.1 2.5 2.6 2.6-r1: OCS Inventory NG Management Server
 net-analyzer/OCSInventory-ocsreports 2.3_rc 2.3.1 2.4.1 2.5 2.6: OCS Inventory NG Management Server
 net-analyzer/ntopng 2.4: Network traffic analyzer with web interface
 net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
