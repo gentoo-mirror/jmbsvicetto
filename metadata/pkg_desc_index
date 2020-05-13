@@ -36,4 +36,4 @@ www-apps/drupal 7.69 8.7.12 8.7.13 8.8.4 8.8.5 8.9.0_beta2 9.0.0_beta2: PHP-base
 www-apps/glpi 9.4.5: The Information Resource-Manager with an additional Administration Interface.
 www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1 2.72.5: LimeSurvey is a popular Free Open Source Software survey tool
 www-apps/phamm 0.5.18 0.6.2 9999: PHP LDAP Virtual Hosting Manager
-www-misc/awstats 7.5 7.8: AWStats is short for Advanced Web Statistics
+www-misc/awstats 7.5 7.8 7.8-r1: AWStats is short for Advanced Web Statistics
