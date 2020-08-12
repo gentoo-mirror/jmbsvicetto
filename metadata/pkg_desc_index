@@ -32,7 +32,7 @@ net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
 net-misc/anydesk 5.5.4 5.5.6 6.0.0: Feature rich multi-platform remote desktop application
 net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
 www-apache/mod_perl 2.0.8-r1 2.0.9: An embedded Perl interpreter for Apache2
-www-apps/dokuwiki 20180422b 20180422c 20200609_rc3: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
+www-apps/dokuwiki 20180422b 20180422c 20200609_rc3 20200729: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.72 8.8.8 8.9.1 8.9.2 8.9.3 9.0.1 9.0.2 9.0.3: PHP-based open-source platform and content management system
 www-apps/glpi 9.4.5: The Information Resource-Manager with an additional Administration Interface.
 www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1 2.72.5: LimeSurvey is a popular Free Open Source Software survey tool
