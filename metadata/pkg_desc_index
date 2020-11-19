@@ -33,7 +33,7 @@ net-misc/anydesk 5.5.4 5.5.6 6.0.0: Feature rich multi-platform remote desktop a
 net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
 www-apache/mod_perl 2.0.8-r1 2.0.9: An embedded Perl interpreter for Apache2
 www-apps/dokuwiki 20180422b 20180422c 20200609_rc3 20200729: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
-www-apps/drupal 7.73 7.74 8.8.10 8.8.11 8.9.6 8.9.7 8.9.9 9.0.6 9.0.7 9.0.8: PHP-based open-source platform and content management system
+www-apps/drupal 7.74 8.8.11 8.9.9 9.0.8: PHP-based open-source platform and content management system
 www-apps/glpi 9.4.5 9.5.2: The Information Resource-Manager with an additional Administration Interface.
 www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1 2.72.5: LimeSurvey is a popular Free Open Source Software survey tool
 www-apps/phamm 0.5.18 0.6.2 9999: PHP LDAP Virtual Hosting Manager
