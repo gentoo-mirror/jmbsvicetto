@@ -1,4 +1,4 @@
-# Copyright 1999-2016 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -25,7 +25,7 @@ RDEPEND="
 	dev-perl/YAML
 	virtual/perl-Text-ParseWords
 	|| (
-		net-analyzer/icinga
+		net-analyzer/icinga2
 		net-analyzer/nagios
 	)
 "
