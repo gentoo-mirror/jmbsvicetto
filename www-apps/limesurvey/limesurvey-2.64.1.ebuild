@@ -1,4 +1,4 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -13,7 +13,7 @@ DESCRIPTION="LimeSurvey is a popular Free Open Source Software survey tool"
 HOMEPAGE="https://www.limesurvey.org/"
 SRC_URI="https://github.com/${MY_PN}/${MY_PN}/archive/${MY_PV}.tar.gz -> ${P}.tar.gz"
 LICENSE="GPL-2"
-KEYWORDS=""
+KEYWORDS="~amd64 ~x86"
 IUSE="+gd ldap mssql mysql postgres zip"
 REQUIRED_USE="^^ ( mssql mysql postgres )"
 
