@@ -1,4 +1,4 @@
-# Copyright 1999-2015 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=6
@@ -16,7 +16,7 @@ IUSE=""
 
 DEPEND=""
 RDEPEND="
-    dev-lang/php[cli,ctype,json,simplexml]
+	dev-lang/php[cli,ctype,json,simplexml]
 	dev-php/PEAR-Console_Table
 "
 
@@ -56,7 +56,7 @@ src_install() {
 
 	exeinto /usr/share/drush
 	doexe drush
-	dosym /usr/share/drush/drush /usr/bin/drush
+	dosym ../share/drush/drush /usr/bin/drush
 
 	keepdir /etc/drush
 	newbashcomp drush.complete.sh drush
