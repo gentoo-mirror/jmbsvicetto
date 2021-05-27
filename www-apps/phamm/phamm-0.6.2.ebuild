@@ -1,4 +1,4 @@
-# Copyright 1999-2014 Gentoo Foundation
+# Copyright 1999-2021 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=5
@@ -30,12 +30,12 @@ LICENSE="
 	GPL-2
 	amavis? ( FDL-1.2 )
 	ftp? ( BSD )
-	radius? ( as-is )
+	radius? ( public-domain )
 	samba? ( GPL-3 )
 "
 
 IUSE="amavis ftp radius samba"
-DEPEND="dev-lang/php[ldap,xml]"
+DEPEND="dev-lang/php:=[ldap,xml]"
 RDEPEND="${DEPEND}"
 
 pkg_setup() {
