@@ -10,5 +10,5 @@ PROPERTIES=live
 RDEPEND=dev-lang/php:=[ldap,xml] >=app-admin/webapp-config-1.50.15
 SLOT=9999
 SRC_URI=amavis? ( http://www.ijs.si/software/amavisd/LDAP.schema.txt -> amavisd-new.schema ) ftp? ( http://open.rhx.it/phamm/schema/pureftpd.schema -> pureftpd-phamm.schema ) radius? ( http://open.rhx.it/phamm/schema/radius.schema -> radius-phamm.schema ) samba? ( http://open.rhx.it/phamm/schema/samba.schema -> samba-phamm.schema )
-_eclasses_=cvs	8f8740beb4ce1deaae8393cfc28d2ed1	webapp	990ad6a000cf18d1ef87117e8c7b0a54
+_eclasses_=cvs	8f8740beb4ce1deaae8393cfc28d2ed1	webapp	cd327e73cdb307ceb80dcca6b8ad8b52
 _md5_=962576b136b1ef68f32322e45b3b92dd
