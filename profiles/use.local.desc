@@ -8,7 +8,3 @@ www-apps/drupal:uploadprogress - Install dev-php/pecl-uploadprogress package
 www-apps/limesurvey:gd - Used for captchas and nice charts
 www-apps/limesurvey:ldap - Import tokens using LDAP
 www-apps/limesurvey:zip - Add zip support for template upload and resourcees import
-www-apps/phamm:amavis - Install the amavisd-new schema.
-www-apps/phamm:ftp - Install the proftpd schema.
-www-apps/phamm:radius - Install the radius schema.
-www-apps/phamm:samba - Install the samba schema.
