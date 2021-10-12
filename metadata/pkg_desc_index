@@ -10,7 +10,6 @@ dev-perl/Nagios-Status-ServiceStatus 0.010.0: Nagios 3.0 Class to maintain Servi
 dev-perl/Sys-CpuLoad 0.030.0: A module to retrieve system load averages
 net-analyzer/OCSInventory-Server 2.4.1 2.5 2.6 2.6-r1: OCS Inventory NG Management Server
 net-analyzer/OCSInventory-ocsreports 2.4.1 2.5 2.6: OCS Inventory NG Management Server
-net-analyzer/ntopng 2.4: Network traffic analyzer with web interface
 net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
 net-misc/anydesk 6.0.0-r1 6.0.1 6.1.0 6.1.1: Feature rich multi-platform remote desktop application
 net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
