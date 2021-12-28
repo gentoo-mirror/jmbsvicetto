@@ -1,5 +1,5 @@
 DEFINED_PHASES=config install postinst prerm setup
-DEPEND=app-admin/webapp-config >=app-admin/webapp-config-1.50.15
+DEPEND=app-admin/webapp-config app-admin/webapp-config
 DESCRIPTION=The Information Resource-Manager with an additional Administration Interface.
 EAPI=7
 HOMEPAGE=http://www.glpi-project.org/
@@ -7,8 +7,8 @@ INHERIT=webapp
 IUSE=vhosts
 KEYWORDS=~amd64 ~x86
 LICENSE=GPL-2
-RDEPEND=dev-lang/php[curl,json,mysqli,session,unicode] virtual/mysql >=app-admin/webapp-config-1.50.15
+RDEPEND=dev-lang/php[curl,json,mysqli,session,unicode] virtual/mysql app-admin/webapp-config
 SLOT=9.5.2
 SRC_URI=https://github.com/glpi-project/glpi/releases/download/9.5.2/glpi-9.5.2.tgz
-_eclasses_=webapp	cd327e73cdb307ceb80dcca6b8ad8b52
+_eclasses_=webapp	60f2eb31dec733d05e8114cc078ebc33
 _md5_=e058ef422378f451a29c156f2fae0092
