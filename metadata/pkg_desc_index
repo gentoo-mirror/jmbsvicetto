@@ -1,13 +1,5 @@
 app-admin/drush 6.7.0 7.3.0 8.1.6: Command line shell and scripting interface for Drupal
 dev-db/phpmyadmin 4.9.5 4.9.6 5.0.2 5.0.3 5.1.1: Web-based administration for MySQL database in PHP
-dev-perl/AnyEvent-XMPP 0.540.0 0.550.0: An implementation of the XMPP Protocol
-dev-perl/DBD-XBase 1.03 1.05: DBI driver for XBase compatible database files
-dev-perl/File-Pid 1.010.0: Pid File Manipulation
-dev-perl/Nagios-Status-Host 0.010.0: Nagios 3.0 Container Class for Status Hosts
-dev-perl/Nagios-Status-HostStatus 0.010.0: Nagios 3.0 Class to maintain Hosts' Status
-dev-perl/Nagios-Status-Service 0.020.0: Nagios 3.0 Container Class for Status Services
-dev-perl/Nagios-Status-ServiceStatus 0.010.0: Nagios 3.0 Class to maintain Services' Status
-dev-perl/Sys-CpuLoad 0.030.0: A module to retrieve system load averages
 net-analyzer/OCSInventory-Server 2.4.1 2.5 2.6 2.6-r1: OCS Inventory NG Management Server
 net-analyzer/OCSInventory-ocsreports 2.4.1 2.5 2.6: OCS Inventory NG Management Server
 net-im/nagibot 0.8.4: Perl extension that uses XMPP for nagios notifications
