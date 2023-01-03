@@ -1,13 +1,8 @@
 app-admin
-app-misc
-dev-perl
-dev-php
-dev-python
-games-strategy
+dev-db
 net-analyzer
 net-misc
-sci-geosciences
-www-apache
+net-nds
+net-vpn
 www-apps
 www-misc
-www-servers
