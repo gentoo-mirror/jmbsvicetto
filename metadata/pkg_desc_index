@@ -7,5 +7,5 @@ net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all as
 www-apps/dokuwiki 20180422b 20180422c 20200609_rc3 20200729: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.82-r1 8.9.18 9.1.12 9.2.4: PHP-based open-source platform and content management system
 www-apps/glpi 9.4.5 9.5.2: The Information Resource-Manager with an additional Administration Interface.
-www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1 2.72.5: LimeSurvey is a popular Free Open Source Software survey tool
+www-apps/limesurvey 2.06 2.57.0 2.57.1 2.63.1 2.64.1 2.72.5 5.3.22: LimeSurvey is a popular Free Open Source Software survey tool
 www-misc/awstats 7.5 7.8 7.8-r1: AWStats is short for Advanced Web Statistics
