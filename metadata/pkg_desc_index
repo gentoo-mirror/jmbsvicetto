@@ -1,4 +1,4 @@
-app-admin/drush 6.7.0 7.3.0 8.1.6: Command line shell and scripting interface for Drupal
+app-admin/drush 7.3.0 8.1.6: Command line shell and scripting interface for Drupal
 dev-db/phpmyadmin 4.9.5 4.9.6 5.0.2 5.0.3 5.1.1: Web-based administration for MySQL database in PHP
 net-analyzer/OCSInventory-Server 2.4.1 2.5 2.6 2.6-r1: OCS Inventory NG Management Server
 net-analyzer/OCSInventory-ocsreports 2.4.1 2.5 2.6: OCS Inventory NG Management Server
