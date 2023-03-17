@@ -11,5 +11,5 @@ RDEPEND=dev-lang/php[gd?,hash,ldap?,session,zip?,zlib] mssql? ( dev-lang/php[mss
 REQUIRED_USE=^^ ( mssql mysql postgres )
 SLOT=5.3.22
 SRC_URI=https://download.limesurvey.org/latest-stable-release/limesurvey5.3.22+220628.zip
-_eclasses_=webapp	67df5bab481d0b9428f9ab7b3de690e4
+_eclasses_=webapp	ad783226c3d38ede384db5643af60dbd
 _md5_=081bf6908d34a0e75010897bc4a2048d
