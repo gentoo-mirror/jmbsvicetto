@@ -1,6 +1,5 @@
 dev-db/phpmyadmin 4.9.5 4.9.6 5.0.2 5.0.3 5.1.1: Web-based administration for MySQL database in PHP
 net-misc/anydesk 6.0.0-r1 6.0.1 6.1.0 6.1.1: Feature rich multi-platform remote desktop application
-net-nds/phpldapadmin 1.2.5: phpLDAPadmin is a web-based tool for managing all aspects of your LDAP server
 www-apps/dokuwiki 20180422b 20180422c 20200729: DokuWiki is a simple to use Wiki aimed at a small company's documentation needs.
 www-apps/drupal 7.82-r1 8.9.18 9.1.12 9.2.4: PHP-based open-source platform and content management system
 www-apps/glpi 9.4.5 9.5.2: The Information Resource-Manager with an additional Administration Interface.
